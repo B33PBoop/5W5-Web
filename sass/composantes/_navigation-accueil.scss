@@ -1,0 +1,40 @@
+.menu-header-container{
+    /*ces valeur vont probablement changer entre les périphériques*/
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    #menu-header{
+        list-style: none;
+
+        width: 75%;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+
+        .menu-item{
+            
+            width: 20%;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            a{
+                /*ces couleurs seront à ajuster*/
+                color: #FF52A4;
+                &:hover{
+                    color: #b30e60;
+                }
+                &:active{
+                    color: #04467c;
+                }
+            }
+        }
+    }
+}

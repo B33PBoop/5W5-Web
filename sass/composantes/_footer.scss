@@ -1,0 +1,22 @@
+/*Les règles de positionement sont temporaires, je jure de ne pas abuser de position:absolute dans le futur*/
+
+.footer{
+    position: absolute;
+    bottom: 0;
+
+    width: 100vw;
+    height: 10%;
+
+    background-color: rgba(64, 7, 102, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p{
+        width: 75%;
+        text-align: center;
+        color: white;   
+    }
+}

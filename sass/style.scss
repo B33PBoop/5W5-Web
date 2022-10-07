@@ -6,3 +6,20 @@ Description: Ce thème fut créé dans le cadre du cours de Projet Web en équip
 Version: 0.1
 Text Domain: pw-5w5
 */
+
+/*Cette règle est juste pour le contraste, elle sera enlevée dans les prochaines versions*/
+body{
+    background-color: gray;
+}
+
+/*------------
+Initialisation
+------------*/
+@import "initialisation/normalize";
+
+/*---------
+Composantes
+---------*/
+@import "composantes/header.scss";
+@import "composantes/footer.scss";
+@import "composantes/navigation-accueil.scss";
