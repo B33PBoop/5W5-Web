@@ -323,9 +323,8 @@ template {
 /*---------
 Composantes
 ---------*/
-
-.main {
-  background-image: url("images/bkg.png");
+body {
+  background-color: darkslategray;
 }
 
 .header {
@@ -392,11 +391,8 @@ Composantes
 .menu-header-container #menu-header .menu-item.unclickable a {
   pointer-events: none;
 }
+
 .menu-header-container #menu-header .menu-item.unclickable:hover {
   cursor: default;
 }
-
-/*-------
-Variables
--------*//*# sourceMappingURL=style.css.map */
-
+/*# sourceMappingURL=style.css.map */
