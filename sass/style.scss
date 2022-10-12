@@ -9,6 +9,7 @@ Text Domain: pw-5w5
 
 /*Cette règle est juste pour le contraste, elle sera enlevée dans les prochaines versions*/
 
+
 /*------------
 Initialisation
 ------------*/
@@ -17,7 +18,15 @@ Initialisation
 /*---------
 Composantes
 ---------*/
+
 @import "composantes/main";
+@import "composantes/contenu";
 @import "composantes/header";
 @import "composantes/footer";
 @import "composantes/navigation-accueil";
+
+/*-------
+Variables
+-------*/
+@import "variables/structure";
+

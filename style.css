@@ -323,8 +323,9 @@ template {
 /*---------
 Composantes
 ---------*/
-body {
-  background-image: url("img/shapes_final_rdux.png");
+
+.main {
+  background-image: url("images/bkg.png");
 }
 
 .header {
@@ -377,6 +378,7 @@ body {
 .menu-header-container #menu-header .menu-item a {
   /*ces couleurs seront à ajuster*/
   color: #FF52A4;
+  text-decoration: none;
 }
 
 .menu-header-container #menu-header .menu-item a:hover {
@@ -386,4 +388,15 @@ body {
 .menu-header-container #menu-header .menu-item a:active {
   color: #04467c;
 }
-/*# sourceMappingURL=style.css.map */
+
+.menu-header-container #menu-header .menu-item.unclickable a {
+  pointer-events: none;
+}
+.menu-header-container #menu-header .menu-item.unclickable:hover {
+  cursor: default;
+}
+
+/*-------
+Variables
+-------*//*# sourceMappingURL=style.css.map */
+
