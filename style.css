@@ -321,10 +321,14 @@ template {
 }
 
 /*---------
+Variables
+---------*/
+/*---------
 Composantes
 ---------*/
 body {
-  background-color: darkslategray;
+  background-image: url("img/shapes_final_rdux.png");
+  color: white;
 }
 
 .header {
