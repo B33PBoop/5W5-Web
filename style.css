@@ -8,10 +8,6 @@ Version: 0.1
 Text Domain: pw-5w5
 */
 /*Cette règle est juste pour le contraste, elle sera enlevée dans les prochaines versions*/
-body {
-  background-color: gray;
-}
-
 /*------------
 Initialisation
 ------------*/
@@ -327,6 +323,10 @@ template {
 /*---------
 Composantes
 ---------*/
+.main {
+  background-image: url("images/bkg.png");
+}
+
 .header {
   background-color: rgba(68, 4, 110, 0.25);
 }
@@ -373,10 +373,21 @@ Composantes
 .menu-header-container #menu-header .menu-item a {
   /*ces couleurs seront à ajuster*/
   color: #FF52A4;
+  text-decoration: none;
 }
 .menu-header-container #menu-header .menu-item a:hover {
   color: #b30e60;
 }
 .menu-header-container #menu-header .menu-item a:active {
   color: #04467c;
-}/*# sourceMappingURL=style.css.map */
+}
+.menu-header-container #menu-header .menu-item.unclickable a {
+  pointer-events: none;
+}
+.menu-header-container #menu-header .menu-item.unclickable:hover {
+  cursor: default;
+}
+
+/*-------
+Variables
+-------*//*# sourceMappingURL=style.css.map */

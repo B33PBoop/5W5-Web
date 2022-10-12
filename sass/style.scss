@@ -8,9 +8,7 @@ Text Domain: pw-5w5
 */
 
 /*Cette règle est juste pour le contraste, elle sera enlevée dans les prochaines versions*/
-body{
-    background-color: gray;
-}
+
 
 /*------------
 Initialisation
@@ -20,6 +18,12 @@ Initialisation
 /*---------
 Composantes
 ---------*/
-@import "composantes/header.scss";
-@import "composantes/footer.scss";
-@import "composantes/navigation-accueil.scss";
+@import "composantes/contenu";
+@import "composantes/header";
+@import "composantes/footer";
+@import "composantes/navigation-accueil";
+
+/*-------
+Variables
+-------*/
+@import "variables/structure";

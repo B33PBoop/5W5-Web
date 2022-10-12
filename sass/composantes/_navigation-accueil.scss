@@ -28,11 +28,21 @@
             a{
                 /*ces couleurs seront à ajuster*/
                 color: #FF52A4;
+                text-decoration: none;
                 &:hover{
                     color: #b30e60;
                 }
                 &:active{
                     color: #04467c;
+                }
+            }
+
+            &.unclickable{
+                a{
+                    pointer-events: none;
+                }
+                &:hover{
+                    cursor: default;
                 }
             }
         }
