@@ -5,7 +5,7 @@
 ?>
 <?php get_header() ?>
     
-    <main class="main">
+    <main class="main_template_a_propos">
         <?php 
             if(have_posts()):
                 while(have_posts()):
@@ -15,7 +15,6 @@
                 endwhile;
             endif;
         ?>
-        <p>bro!! Ne pas oublier de modifier <a href="404.php">la page 404</a> pour les prochaines versions !! new new new</p>
+       
     </main>
     
-<?php get_footer() ?>
