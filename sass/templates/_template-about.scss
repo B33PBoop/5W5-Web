@@ -1,5 +1,5 @@
 //bruh
-.main_template_a_propos {
+.main_about {
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -34,7 +34,7 @@
 }
 
 @media only screen and (min-device-width : $media-width-tablette){
-    .main_template_a_propos{
+    .main_about{
         gap: 40px;
         div{
             border-radius: 10px;
