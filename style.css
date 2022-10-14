@@ -426,13 +426,13 @@ Templates
   text-align: center;
 }
 
-.main_template_a_propos div figure img {
+.main_template_a_propos div figure {
   margin: 0px;
   width: 100vw;
   height: 150px;
 }
 
-.main_template_a_propos div figure {
+.main_template_a_propos div figure img {
   margin: 0px;
   width: 100vw;
   height: 150px;

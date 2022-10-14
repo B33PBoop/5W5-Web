@@ -1,3 +1,4 @@
+//bruh
 .main_template_a_propos {
     display: flex;
     flex-direction: column;
@@ -17,18 +18,19 @@
         display: flex;
         flex-direction: column;
         text-align: center;
-    }
-    div figure img{
+
+        figure{
         margin: 0px;
         width: 100vw;
         height: 150px;
-    }
-    div figure{
+
+        img{
         margin: 0px;
         width: 100vw;
-        height: 150px
+        height: 150px;
+        }
+        }
     }
-
 }
 
 @media only screen and (min-device-width : $media-width-tablette){
