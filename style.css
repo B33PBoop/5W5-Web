@@ -182,9 +182,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -192,9 +192,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -203,9 +203,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -249,8 +249,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -258,8 +258,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -267,7 +267,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -275,7 +275,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -321,10 +321,15 @@ template {
 }
 
 /*---------
+Variables
+---------*/
+/*---------
 Composantes
 ---------*/
-.main {
-  background-image: url("images/bkg.png");
+body {
+  background-image: url("img/shapes_final_rdux.png");
+  color: white;
+  overflow-x: hidden;
 }
 
 .header {
@@ -343,6 +348,7 @@ Composantes
   justify-content: center;
   align-items: center;
 }
+
 .footer p {
   width: 75%;
   text-align: center;
@@ -356,6 +362,7 @@ Composantes
   align-items: center;
   justify-content: center;
 }
+
 .menu-header-container #menu-header {
   list-style: none;
   width: 75%;
@@ -364,30 +371,100 @@ Composantes
   justify-content: center;
   align-items: center;
 }
+
 .menu-header-container #menu-header .menu-item {
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .menu-header-container #menu-header .menu-item a {
   /*ces couleurs seront à ajuster*/
   color: #FF52A4;
   text-decoration: none;
 }
+
 .menu-header-container #menu-header .menu-item a:hover {
   color: #b30e60;
 }
+
 .menu-header-container #menu-header .menu-item a:active {
   color: #04467c;
 }
+
 .menu-header-container #menu-header .menu-item.unclickable a {
   pointer-events: none;
 }
+
 .menu-header-container #menu-header .menu-item.unclickable:hover {
   cursor: default;
 }
 
-/*-------
-Variables
--------*//*# sourceMappingURL=style.css.map */
+/*---------
+Templates
+---------*/
+.main_template_a_propos {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.main_template_a_propos h2 {
+  border-top: 4px solid #c0006a;
+  border-bottom: 4px solid #c0006a;
+  background-color: #3d263d;
+  padding: clamp(15px, 2vh, 30px);
+  text-align: center;
+}
+
+.main_template_a_propos div {
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.411);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main_template_a_propos div figure {
+  margin: 0px;
+  width: 100vw;
+  height: 150px;
+}
+
+.main_template_a_propos div figure img {
+  margin: 0px;
+  width: 100vw;
+  height: 150px;
+}
+
+@media only screen and (min-device-width: 768px) {
+  .main_template_a_propos {
+    gap: 40px;
+  }
+  .main_template_a_propos div {
+    border-radius: 10px;
+    width: 90%;
+    background-color: #0c0c0c;
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    align-items: center;
+  }
+  .main_template_a_propos div figure img {
+    border-radius: 20px;
+    margin: 0px;
+    width: 100vw;
+    height: 370px;
+  }
+  .main_template_a_propos div figure {
+    border-radius: 20px;
+    margin: 0px;
+    width: 100vw;
+    height: 370px;
+  }
+  .main_template_a_propos div p {
+    padding-left: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

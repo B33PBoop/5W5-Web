@@ -16,14 +16,23 @@ Initialisation
 @import "initialisation/normalize";
 
 /*---------
+Variables
+---------*/
+@import "variables/colors";
+@import "variables/structure";
+
+
+/*---------
 Composantes
 ---------*/
+
 @import "composantes/contenu";
 @import "composantes/header";
 @import "composantes/footer";
 @import "composantes/navigation-accueil";
 
-/*-------
-Variables
--------*/
-@import "variables/structure";
+/*---------
+Templates
+---------*/
+
+@import "templates/template-a-propos"
