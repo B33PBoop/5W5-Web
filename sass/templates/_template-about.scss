@@ -13,11 +13,11 @@
         
     }
     div{
+        // padding: 0px 20px;
         margin: 0;
         background-color: rgba(0, 0, 0, 0.411);
         display: flex;
         flex-direction: column;
-        text-align: center;
 
         figure{
         margin: 0px;
@@ -31,34 +31,51 @@
         }
         }
     }
+    //class ajouté dans la data base
+    .container_text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        p:first-of-type{
+            color:rgb(192, 0, 106);
+            font-size: clamp(15px, 5vw, 25px);
+        }
+    }
 }
 
 @media only screen and (min-device-width : $media-width-tablette){
     .main_about{
-        gap: 40px;
+        gap: 70px;
         div{
-            border-radius: 10px;
-            width: 90%;
+            border-radius: 20px;
+            width: 97%;
             background-color: rgb(12, 12, 12);
             display: flex;
             flex-direction: row;
             height: 400px;
-            align-items: center;
+
+            figure{
+                border-radius: 20px;
+                margin: 0px;
+                width: 100vw;
+                height: 370px;
+
+                img{
+                    border-radius: 20px;
+                    margin: 0px;
+                    width: 100vw;
+                    height: 370px;
+                }
+            }
         }
-        div figure img{
-            border-radius: 20px;
-            margin: 0px;
-            width: 100vw;
-            height: 370px;
-        }
-        div figure{
-            border-radius: 20px;
-            margin: 0px;
-            width: 100vw;
-            height: 370px;
-        }
-        div p{
+        //class ajouter dans la data base
+        .container_text{
             padding-left: 20px;
+            text-align:left;
+        }
+        .container:nth-of-type(even){
+            align-self: flex-end;
         }
     }
 }
