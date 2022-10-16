@@ -20,9 +20,11 @@
         flex-direction: column;
 
         figure{
-        margin: 0px;
+        
+        display: flex;
+        align-items: center;
         width: 100vw;
-        height: 150px;
+        height: 100%;
 
         img{
         margin: 0px;
@@ -46,36 +48,49 @@
 
 @media only screen and (min-device-width : $media-width-tablette){
     .main_about{
-        gap: 70px;
+        gap: 60px;
+        .container{
+            background-color: rgb(14, 14, 14);
+            border-radius: 0px 20px 20px 0px;
+        }
+        .container:nth-of-type(odd){
+            border-radius: 20px 0px 0px 20px;
+        }
         div{
-            border-radius: 20px;
             width: 97%;
-            background-color: rgb(12, 12, 12);
             display: flex;
-            flex-direction: row;
-            height: 400px;
+            flex-direction: row-reverse;
+            background-color: rgba(255, 255, 255, 0);
+            height: 350px;
 
-            figure{
+            .wp-block-image img{
                 border-radius: 20px;
                 margin: 0px;
-                width: 100vw;
-                height: 370px;
-
-                img{
-                    border-radius: 20px;
-                    margin: 0px;
-                    width: 100vw;
-                    height: 370px;
-                }
+                width: 50vw;
+                height: 330px;
+            }
+            figure{
+                margin-left: 10px;
+                
+            }
+            figure:nth-of-type(odd){
+                margin-right: 10px;
             }
         }
         //class ajouter dans la data base
         .container_text{
-            padding-left: 20px;
             text-align:left;
+            p{
+                padding-left: 7%;
+            }
         }
-        .container:nth-of-type(even){
+        .container_text:nth-of-type(even){
+            padding-right: 5%;
+        }
+        .container:nth-of-type(odd){
             align-self: flex-end;
+            flex-direction: row;
         }
+
     }
 }

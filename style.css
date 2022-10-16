@@ -426,9 +426,10 @@ Templates
 }
 
 .main_about div figure {
-  margin: 0px;
+  display: flex;
+  align-items: center;
   width: 100vw;
-  height: 150px;
+  height: 100%;
 }
 
 .main_about div figure img {
@@ -450,34 +451,46 @@ Templates
 
 @media only screen and (min-device-width: 768px) {
   .main_about {
-    gap: 70px;
+    gap: 60px;
+  }
+  .main_about .container {
+    background-color: #0e0e0e;
+    border-radius: 0px 20px 20px 0px;
+  }
+  .main_about .container:nth-of-type(odd) {
+    border-radius: 20px 0px 0px 20px;
   }
   .main_about div {
-    border-radius: 20px;
     width: 97%;
-    background-color: #0c0c0c;
     display: flex;
-    flex-direction: row;
-    height: 400px;
+    flex-direction: row-reverse;
+    background-color: rgba(255, 255, 255, 0);
+    height: 350px;
+  }
+  .main_about div .wp-block-image img {
+    border-radius: 20px;
+    margin: 0px;
+    width: 50vw;
+    height: 330px;
   }
   .main_about div figure {
-    border-radius: 20px;
-    margin: 0px;
-    width: 100vw;
-    height: 370px;
+    margin-left: 10px;
   }
-  .main_about div figure img {
-    border-radius: 20px;
-    margin: 0px;
-    width: 100vw;
-    height: 370px;
+  .main_about div figure:nth-of-type(odd) {
+    margin-right: 10px;
   }
   .main_about .container_text {
-    padding-left: 20px;
     text-align: left;
   }
-  .main_about .container:nth-of-type(even) {
+  .main_about .container_text p {
+    padding-left: 7%;
+  }
+  .main_about .container_text:nth-of-type(even) {
+    padding-right: 5%;
+  }
+  .main_about .container:nth-of-type(odd) {
     align-self: flex-end;
+    flex-direction: row;
   }
 }
 /*# sourceMappingURL=style.css.map */
