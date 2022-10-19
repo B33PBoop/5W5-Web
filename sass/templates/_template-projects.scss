@@ -1,0 +1,40 @@
+.main-projects{
+    padding: 0px;
+    margin: 0px;
+
+    h2{
+        border-top: 4px solid rgb(192, 0, 106);
+        border-bottom: 4px solid rgb(192, 0, 106);
+        background-color: rgb(61, 38, 61);
+
+        padding: clamp(15px, 2vh, 30px);
+        text-align: center;
+        
+    }
+    img{
+        width: clamp(600px, 50vw, 600px);
+        height: clamp(400px, 30vw, 600px);
+    }
+    .container{ 
+        display: flex;
+        flex-direction: row;
+        p:first-of-type{
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        div{
+            padding: 0px;
+            width:clamp(600px, 50vw, 600px);
+            height: clamp(400px, 30vw, 600px);
+            background-color: rgba(0, 0, 0, 0);
+            color: rgba(255, 255, 255, 0);    
+            transform: translateX(-100%);
+            transition: 1s;
+        }
+
+        div:hover{
+            background-color: rgba(0, 0, 0, 0.651);
+            color: white;
+        }
+    }
+}

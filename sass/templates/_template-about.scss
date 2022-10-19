@@ -15,7 +15,7 @@
     div{
         // padding: 0px 20px;
         margin: 0;
-        background-color: rgba(0, 0, 0, 0.411);
+        background-color: rgba(0, 0, 0, 0.274);
         display: flex;
         flex-direction: column;
 
@@ -38,16 +38,34 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        
+        p{
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
 
         p:first-of-type{
-            color:rgb(192, 0, 106);
+            height: 25px;
+            // padding: 5px 0px;
+            width: 40%;
+            margin: 0px;
+            position:relative;
+            border-radius: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.616);
+            bottom: 100px;
+            left: 30vw;
             font-size: clamp(15px, 5vw, 25px);
         }
     }
+    .container_text:nth-of-type(even){
+        padding-right: 0px;
+    }
 }
 
-@media only screen and (min-device-width : $media-width-tablette){
-    .main_about{
+@media only screen and (min-width : $media-width-tablette){
+    .main_about{        
         gap: 60px;
         .container{
             background-color: rgb(14, 14, 14);
@@ -61,13 +79,13 @@
             display: flex;
             flex-direction: row-reverse;
             background-color: rgba(255, 255, 255, 0);
-            height: 350px;
+            height: clamp(350px, 16vw, 500px);
 
             .wp-block-image img{
                 border-radius: 20px;
                 margin: 0px;
                 width: 50vw;
-                height: 330px;
+                height: clamp(330px, 15vw, 470px);
             }
             figure{
                 margin-left: 10px;
@@ -81,7 +99,17 @@
         .container_text{
             text-align:left;
             p{
+                padding-left: 6%;
+            }
+            p:first-of-type{
+                position:static;
+                height: 50px;
                 padding-left: 7%;
+                padding-top: 10px;
+                color:rgb(192, 0, 106);
+                background-color: rgba(0, 0, 0, 0);
+                text-align: left;
+                font-size: clamp(15px, 5vw, 25px);
             }
         }
         .container_text:nth-of-type(even){
