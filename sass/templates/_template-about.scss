@@ -10,7 +10,7 @@
 
         padding: clamp(15px, 2vh, 30px);
         text-align: center;
-        
+
     }
     div{
         // padding: 0px 20px;
@@ -29,7 +29,7 @@
         img{
         margin: 0px;
         width: 100vw;
-        height: 150px;
+        height: clamp(150px, 30vw, 200px);;
         }
         }
     }
@@ -54,7 +54,7 @@
             border-radius: 20px;
             text-align: center;
             background-color: rgba(0, 0, 0, 0.616);
-            bottom: 100px;
+            bottom: clamp(100px, 20vw, 130px);
             left: 30vw;
             font-size: clamp(15px, 5vw, 25px);
         }

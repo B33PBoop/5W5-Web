@@ -1,9 +1,4 @@
-// function droite(){
-//     console.log("droite");
-// }
-// function gauche(){
-//     console.log("gauche");
-// }
+
 let mouvement = 0;
 
 function carousel(side){
