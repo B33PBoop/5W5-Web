@@ -1,14 +1,62 @@
 .main-accueil{
-
-    img{
-        width: calc(25vw);
-        height: 400px;
-        margin: 0px;
-        padding: 0px;
-    }
     .container_carousel{
-        overflow-x: hidden;
-        width: 300vw;
-        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        display: none;
+    }
+    img{
+        width: 100vw;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+    }
+
+    
+    
+    
+
+    @media only screen and (min-width : $media-width-tablette){
+        img{
+            width: 30vw;
+            height: 50vh;
+            margin: 0px;
+            padding: 0px;
+        }
+        .container_carousel{
+            overflow-x: hidden;
+            width: 300vw;
+            transition: 0.5s;
+            display: flex;
+            flex-direction: row;
+        }
+        button{
+            position: absolute;
+            top:clamp(20%, 10vw, 40%);
+            z-index: 2;
+            height: 5vh;
+            background-color: black;
+            opacity: 0;
+            border: none;
+            opacity: 30%;
+            display: contents;
+            display: flex;
+            flex-direction: column;
+        }
+        button:hover{
+            cursor: pointer;
+            opacity: 80%;
+            
+        }
+        .bouton_droite{
+            left: 1%;
+            
+        }
+        .bouton_gauche{
+            
+            right: 1%;
+        }
+
     }
 }
