@@ -10,55 +10,115 @@
 
         padding: clamp(15px, 2vh, 30px);
         text-align: center;
-        
+
     }
     div{
+        // padding: 0px 20px;
         margin: 0;
-        background-color: rgba(0, 0, 0, 0.411);
+        background-color: rgba(0, 0, 0, 0.274);
         display: flex;
         flex-direction: column;
-        text-align: center;
 
         figure{
-        margin: 0px;
+        
+        display: flex;
+        align-items: center;
         width: 100vw;
-        height: 150px;
+        height: 100%;
 
         img{
         margin: 0px;
         width: 100vw;
-        height: 150px;
+        height: clamp(150px, 30vw, 200px);;
         }
         }
     }
+    //class ajouté dans la data base
+    .container_text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        
+        p{
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+        }
+
+        p:first-of-type{
+            height: 25px;
+            // padding: 5px 0px;
+            width: 40%;
+            margin: 0px;
+            position:relative;
+            border-radius: 20px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.616);
+            bottom: clamp(100px, 20vw, 130px);
+            left: 30vw;
+            font-size: clamp(15px, 5vw, 25px);
+        }
+    }
+    .container_text:nth-of-type(even){
+        padding-right: 0px;
+    }
 }
 
-@media only screen and (min-device-width : $media-width-tablette){
-    .main_about{
-        gap: 40px;
+@media only screen and (min-width : $media-width-tablette){
+    .main_about{        
+        gap: 60px;
+        .container{
+            background-color: rgb(14, 14, 14);
+            border-radius: 0px 20px 20px 0px;
+        }
+        .container:nth-of-type(odd){
+            border-radius: 20px 0px 0px 20px;
+        }
         div{
-            border-radius: 10px;
-            width: 90%;
-            background-color: rgb(12, 12, 12);
+            width: 97%;
             display: flex;
+            flex-direction: row-reverse;
+            background-color: rgba(255, 255, 255, 0);
+            height: clamp(400px, 17vw, 550px);
+
+            .wp-block-image img{
+                border-radius: 20px;
+                margin: 0px;
+                width: 50vw;
+                height: clamp(380px, 16vw, 530px);
+            }
+            figure{
+                margin-left: 10px;
+                
+            }
+            figure:nth-of-type(odd){
+                margin-right: 10px;
+            }
+        }
+        //class ajouter dans la data base
+        .container_text{
+            text-align:left;
+            p{
+                padding-left: 6%;
+            }
+            p:first-of-type{
+                position:static;
+                height: 50px;
+                padding-left: 7%;
+                padding-top: 10px;
+                color:rgb(192, 0, 106);
+                background-color: rgba(0, 0, 0, 0);
+                text-align: left;
+                font-size: clamp(15px, 5vw, 25px);
+            }
+        }
+        .container_text:nth-of-type(even){
+            padding-right: 5%;
+        }
+        .container:nth-of-type(odd){
+            align-self: flex-end;
             flex-direction: row;
-            height: 400px;
-            align-items: center;
         }
-        div figure img{
-            border-radius: 20px;
-            margin: 0px;
-            width: 100vw;
-            height: 370px;
-        }
-        div figure{
-            border-radius: 20px;
-            margin: 0px;
-            width: 100vw;
-            height: 370px;
-        }
-        div p{
-            padding-left: 20px;
-        }
+
     }
 }

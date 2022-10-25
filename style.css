@@ -181,9 +181,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -191,9 +191,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -202,9 +202,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -248,8 +248,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -257,8 +257,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -266,7 +266,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -274,7 +274,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -327,8 +327,9 @@ Composantes
 ---------*/
 body {
   background-image: url("images/bkg.png");
-  color: rgb(255, 255, 255);
+  color: white;
   overflow-x: hidden;
+  font-family: sans-serif;
 }
 
 .header {
@@ -347,6 +348,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .footer p {
   width: 75%;
   text-align: center;
@@ -360,6 +362,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .menu-header-container #menu-header {
   list-style: none;
   width: 75%;
@@ -368,26 +371,32 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .menu-header-container #menu-header .menu-item {
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .menu-header-container #menu-header .menu-item a {
   /*ces couleurs seront à ajuster*/
   color: #FF52A4;
   text-decoration: none;
 }
+
 .menu-header-container #menu-header .menu-item a:hover {
   color: #b30e60;
 }
+
 .menu-header-container #menu-header .menu-item a:active {
   color: #04467c;
 }
+
 .menu-header-container #menu-header .menu-item.unclickable a {
   pointer-events: none;
 }
+
 .menu-header-container #menu-header .menu-item.unclickable:hover {
   cursor: default;
 }
@@ -400,57 +409,235 @@ Templates
   flex-direction: column;
   gap: 0px;
 }
+
 .main_about h2 {
-  border-top: 4px solid rgb(192, 0, 106);
-  border-bottom: 4px solid rgb(192, 0, 106);
-  background-color: rgb(61, 38, 61);
+  border-top: 4px solid #c0006a;
+  border-bottom: 4px solid #c0006a;
+  background-color: #3d263d;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
 }
+
 .main_about div {
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.411);
+  background-color: rgba(0, 0, 0, 0.274);
+  display: flex;
+  flex-direction: column;
+}
+
+.main_about div figure {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+}
+
+.main_about div figure img {
+  margin: 0px;
+  width: 100vw;
+  height: clamp(150px, 30vw, 200px);
+}
+
+.main_about .container_text {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.main_about div figure {
-  margin: 0px;
-  width: 100vw;
-  height: 150px;
-}
-.main_about div figure img {
-  margin: 0px;
-  width: 100vw;
-  height: 150px;
+
+.main_about .container_text p {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
 
-@media only screen and (min-device-width: 768px) {
+.main_about .container_text p:first-of-type {
+  height: 25px;
+  width: 40%;
+  margin: 0px;
+  position: relative;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.616);
+  bottom: clamp(100px, 20vw, 130px);
+  left: 30vw;
+  font-size: clamp(15px, 5vw, 25px);
+}
+
+.main_about .container_text:nth-of-type(even) {
+  padding-right: 0px;
+}
+
+@media only screen and (min-width: 780px) {
   .main_about {
-    gap: 40px;
+    gap: 60px;
+  }
+  .main_about .container {
+    background-color: #0e0e0e;
+    border-radius: 0px 20px 20px 0px;
+  }
+  .main_about .container:nth-of-type(odd) {
+    border-radius: 20px 0px 0px 20px;
   }
   .main_about div {
-    border-radius: 10px;
-    width: 90%;
-    background-color: rgb(12, 12, 12);
+    width: 97%;
     display: flex;
-    flex-direction: row;
-    height: 400px;
-    align-items: center;
+    flex-direction: row-reverse;
+    background-color: rgba(255, 255, 255, 0);
+    height: clamp(400px, 17vw, 550px);
   }
-  .main_about div figure img {
+  .main_about div .wp-block-image img {
     border-radius: 20px;
     margin: 0px;
-    width: 100vw;
-    height: 370px;
+    width: 50vw;
+    height: clamp(380px, 16vw, 530px);
   }
   .main_about div figure {
-    border-radius: 20px;
-    margin: 0px;
-    width: 100vw;
-    height: 370px;
+    margin-left: 10px;
   }
-  .main_about div p {
-    padding-left: 20px;
+  .main_about div figure:nth-of-type(odd) {
+    margin-right: 10px;
   }
-}/*# sourceMappingURL=style.css.map */
+  .main_about .container_text {
+    text-align: left;
+  }
+  .main_about .container_text p {
+    padding-left: 6%;
+  }
+  .main_about .container_text p:first-of-type {
+    position: static;
+    height: 50px;
+    padding-left: 7%;
+    padding-top: 10px;
+    color: #c0006a;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: left;
+    font-size: clamp(15px, 5vw, 25px);
+  }
+  .main_about .container_text:nth-of-type(even) {
+    padding-right: 5%;
+  }
+  .main_about .container:nth-of-type(odd) {
+    align-self: flex-end;
+    flex-direction: row;
+  }
+}
+
+.main-projects {
+  padding: 0px;
+  margin: 0px;
+}
+
+.main-projects h2 {
+  margin: 50px 0px;
+  border-top: 4px solid #c0006a;
+  border-bottom: 4px solid #c0006a;
+  background-color: #3d263d;
+  padding: clamp(15px, 2vh, 30px);
+  text-align: center;
+}
+
+.main-projects img {
+  width: 100vw;
+  height: clamp(300px, 30vw, 400px);
+}
+
+.main-projects .container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.main-projects .container p:first-of-type {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.main-projects .container div {
+  position: relative;
+  padding: 0px;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.733);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+}
+
+.main-projects .container div p {
+  padding-left: 30px;
+  margin-right: 30px;
+}
+
+.main-projects .container div p:last-of-type {
+  padding-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 780px) {
+  .main-projects .group {
+    margin: 0px 30px;
+  }
+  .main-projects .group div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+  }
+  .main-projects img {
+    width: clamp(400px, 50vw, 500px);
+    height: clamp(300px, 30vw, 400px);
+  }
+  .main-projects .container {
+    display: flex;
+    flex-direction: row;
+    width: clamp(400px, 50vw, 500px);
+  }
+  .main-projects .container p:first-of-type {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+  .main-projects .container div {
+    position: absolute;
+    padding: 0px;
+    width: clamp(400px, 50vw, 500px);
+    height: clamp(300px, 30vw, 400px);
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0);
+    transition: 0.5s;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0px;
+  }
+  .main-projects .container div p {
+    text-align: left;
+    padding-left: 30px;
+    margin-right: 30px;
+  }
+  .main-projects .container div p:last-of-type {
+    padding-bottom: 30px;
+    font-size: 1.2rem;
+  }
+  .main-projects .container div:hover {
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.main-accueil img {
+  width: calc(25vw);
+  height: 400px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-accueil .container_carousel {
+  overflow-x: hidden;
+  width: 300vw;
+  transition: 0.5s;
+}
+/*# sourceMappingURL=style.css.map */
