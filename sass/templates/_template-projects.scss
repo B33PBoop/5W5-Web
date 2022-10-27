@@ -82,6 +82,7 @@
             }
             //block par decu l'img
             div{
+                text-align: left;
                 position: absolute;
                 padding: 0px;
                 width:clamp(400px, 50vw, 500px);
@@ -90,14 +91,13 @@
                 color: rgba(255, 255, 255, 0);    
                 transition: 0.5s;
 
-                text-align: left;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
+                align-items: flex-start;
                 gap: 0px;
                 
                 p{
-                    text-align: left;
                     padding-left: 30px;
                     margin-right: 30px;
                 }
