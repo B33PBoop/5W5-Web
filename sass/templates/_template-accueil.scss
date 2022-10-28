@@ -32,6 +32,11 @@
                 height: 400px;
             }
 
+            img{
+                width: calc(25vw);
+                height: 400px;
+            }
+
             p{
                 z-index: 10;
                 transform: translateY(-80px);
@@ -41,7 +46,7 @@
                 border-radius: 10px;
                 background-color: rgba(0, 0, 0, 0.774);
                 width: 50%;
-                margin: 0px auto;   
+                margin: 0px auto;
             }
         }
     }
@@ -68,6 +73,7 @@
             
     }
     .bouton_gauche{      
+
         right: 1%;
         }
 
