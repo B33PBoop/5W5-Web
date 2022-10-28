@@ -494,14 +494,14 @@ Templates
     display: flex;
     flex-direction: row-reverse;
     background-color: rgba(255, 255, 255, 0);
-    height: clamp(400px, 25vw, 500px);
+    height: clamp(300px, 24vw, 450px);
   }
   .main_about div .wp-block-image img {
     object-fit: cover;
     border-radius: 20px;
     margin: 0px;
     width: 50vw;
-    height: clamp(380px, 24vw, 490px);
+    height: clamp(280px, 23vw, 430px);
   }
   .main_about div figure {
     margin-left: 10px;
@@ -551,6 +551,7 @@ Templates
 .main-projects img {
   width: 100vw;
   height: clamp(300px, 30vw, 400px);
+  object-fit: cover;
 }
 
 .main-projects .container {
@@ -649,6 +650,7 @@ Templates
 }
 
 .main-accueil img {
+  object-fit: cover;
   width: 100vw;
   height: 10vh;
   margin: 0;
