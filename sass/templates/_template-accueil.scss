@@ -26,6 +26,11 @@
             width: calc(25vw);
             height: 400px;
             overflow-y: hidden;
+                
+            img{
+                width: calc(25vw);
+                height: 400px;
+            }
 
             img{
                 width: calc(25vw);
@@ -61,13 +66,14 @@
     button:hover{
         cursor: pointer;
         opacity: 80%;
-
+            
         }
     .bouton_droite{
         left: 1%;
-
+            
     }
-    .bouton_gauche{
+    .bouton_gauche{      
+
         right: 1%;
         }
 
