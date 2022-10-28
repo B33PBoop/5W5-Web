@@ -433,6 +433,7 @@ Templates
 }
 
 .main_about div figure img {
+  object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(150px, 30vw, 200px);
@@ -486,6 +487,7 @@ Templates
     height: clamp(400px, 17vw, 550px);
   }
   .main_about div .wp-block-image img {
+    object-fit: cover;
     border-radius: 20px;
     margin: 0px;
     width: 50vw;
