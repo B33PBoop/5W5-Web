@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
 theme name: ProjetWeb5W5
-Author: Jean-Romain Roy & Team
+Author: Jean-Romain Roy & Team bros
 Author URI: https://github.com/B33PBoop/5W5-Web
 Description: Ce thème fut créé dans le cadre du cours de Projet Web en équipe 5W5
 Version: 0.1
@@ -336,6 +336,16 @@ body {
   background-color: rgba(68, 4, 110, 0.25);
 }
 
+.nav {
+  font-size: 1vw;
+}
+
+@media only screen and (max-width: 780px) {
+  .nav {
+    font-size: 1.5vw;
+  }
+}
+
 /*Les règles de positionement sont temporaires, je jure de ne pas abuser de position:absolute dans le futur*/
 .footer {
   position: absolute;
@@ -433,6 +443,7 @@ Templates
 }
 
 .main_about div figure img {
+  object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(150px, 30vw, 200px);
@@ -483,13 +494,14 @@ Templates
     display: flex;
     flex-direction: row-reverse;
     background-color: rgba(255, 255, 255, 0);
-    height: clamp(400px, 17vw, 550px);
+    height: clamp(300px, 24vw, 450px);
   }
   .main_about div .wp-block-image img {
+    object-fit: cover;
     border-radius: 20px;
     margin: 0px;
     width: 50vw;
-    height: clamp(380px, 16vw, 530px);
+    height: clamp(280px, 23vw, 430px);
   }
   .main_about div figure {
     margin-left: 10px;
@@ -539,6 +551,7 @@ Templates
 .main-projects img {
   width: 100vw;
   height: clamp(300px, 30vw, 400px);
+  object-fit: cover;
 }
 
 .main-projects .container {
@@ -627,36 +640,73 @@ Templates
   }
 }
 
-.main-accueil img {
-  width: calc(25vw);
-  height: 400px;
-  margin: 0px;
-  padding: 0px;
-}
-
 .main-accueil .container_carousel {
   display: flex;
-  flex-direction: row;
-  overflow-x: hidden;
-  width: 300vw;
-  transition: 0.5s;
+  flex-direction: column;
 }
 
-.main-accueil .container_carousel .container_img_caption {
-  width: calc(25vw);
-  height: 400px;
-  overflow-y: hidden;
+.main-accueil button {
+  display: none;
 }
 
-.main-accueil .container_carousel .container_img_caption p {
-  z-index: 10;
-  transform: translateY(-80px);
-  text-align: center;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.774);
-  width: 50%;
-  margin: 0px auto;
+.main-accueil img {
+  object-fit: cover;
+  width: 100vw;
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 780px) {
+  .main-accueil .container_carousel {
+    overflow-x: hidden;
+    width: 300vw;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+  }
+  .main-accueil .container_carousel .container_img_caption {
+    width: calc(25vw);
+    height: 400px;
+    overflow-y: hidden;
+  }
+  .main-accueil .container_carousel .container_img_caption img {
+    width: calc(25vw);
+    height: 400px;
+  }
+  .main-accueil .container_carousel .container_img_caption p {
+    z-index: 10;
+    transform: translateY(-80px);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.774);
+    width: 50%;
+    margin: 0px auto;
+  }
+  .main-accueil button {
+    position: absolute;
+    top: clamp(20%, 10vw, 40%);
+    z-index: 2;
+    height: 5vh;
+    background-color: black;
+    opacity: 0;
+    border: none;
+    opacity: 30%;
+    display: contents;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-accueil button:hover {
+    cursor: pointer;
+    opacity: 80%;
+  }
+  .main-accueil .bouton_droite {
+    left: 1%;
+  }
+  .main-accueil .bouton_gauche {
+    right: 1%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
