@@ -1,6 +1,13 @@
 body{
+    position: relative;
+    min-height: 100vh;
+
     background-image: url("images/bkg.png");
-    color: $Default_Font_color;
+    color: $Font_Default_color;
     overflow-x: hidden;
     font-family: sans-serif;
+
+    main{
+        padding-bottom: 200px;
+    }
 }
