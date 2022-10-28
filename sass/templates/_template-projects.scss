@@ -55,25 +55,25 @@
     .main-projects{
         
         .group {
-    
-            margin: 0px 30px;
-    
+
             div{
-                display: flex;
+                margin: 0px auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
                 flex-wrap: wrap;
-                gap: 30px;
                 justify-content: space-around;
+                gap: 10px;
             }
         }
         img{
-            width: clamp(400px, 50vw, 500px);
-            height: clamp(300px, 30vw, 400px);
+            width: clamp(250px, 30vw, 400px);
+            height: clamp(200px, 25vw, 300px);
         }
         //block img et text
         .container{ 
             display: flex;
             flex-direction: row;
-            width: clamp(400px, 50vw, 500px);
+            width: clamp(250px, 30vw, 400px);
     
             //titre de la carte
             p:first-of-type{
@@ -85,8 +85,8 @@
                 text-align: left;
                 position: absolute;
                 padding: 0px;
-                width:clamp(400px, 50vw, 500px);
-                height: clamp(300px, 30vw, 400px);
+                width:clamp(250px, 30vw, 400px);
+                height: clamp(200px, 25vw, 300px);
                 background-color: rgba(0, 0, 0, 0);
                 color: rgba(255, 255, 255, 0);    
                 transition: 0.5s;
@@ -95,7 +95,8 @@
                 flex-direction: column;
                 justify-content: flex-end;
                 align-items: flex-start;
-                gap: 0px;
+                
+                transform: translateX(-2.45%);
                 
                 p{
                     padding-left: 30px;
