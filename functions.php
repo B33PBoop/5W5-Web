@@ -11,7 +11,8 @@ add_action("wp_enqueue_scripts", "web_5w5_enqueue");
 
 function web_5w5_register_nav_menus(){
     register_nav_menus( array(
-        'menu_header' => __('Menu Header', 'web_5w5')
+        'menu_header' => __('Menu Header', 'web_5w5'),
+        'menu_footer' => __('Menu Footer', 'web_5w5')
     ) );
 }
 add_action('after_setup_theme', 'web_5w5_register_nav_menus', 0);
