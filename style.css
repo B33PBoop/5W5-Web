@@ -656,12 +656,6 @@ Templates
 }
 
 @media only screen and (min-width: 780px) {
-  .main-accueil img {
-    width: 30vw;
-    height: 50vh;
-    margin: 0px;
-    padding: 0px;
-  }
   .main-accueil .container_carousel {
     overflow-x: hidden;
     width: 300vw;
@@ -673,6 +667,10 @@ Templates
     width: calc(25vw);
     height: 400px;
     overflow-y: hidden;
+  }
+  .main-accueil .container_carousel .container_img_caption img {
+    width: calc(25vw);
+    height: 400px;
   }
   .main-accueil .container_carousel .container_img_caption p {
     z-index: 10;
