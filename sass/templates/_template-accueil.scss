@@ -1,35 +1,77 @@
 .main-accueil{
-
-    img{
-        width: calc(25vw);
-        height: 400px;
-        margin: 0px;
-        padding: 0px;
-    }
     .container_carousel{
-        display:flex;
-        flex-direction: row;
-        overflow-x: hidden;
-        width: 300vw;
-        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        display: none;
+    }
+    img{
+        width: 100vw;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+    }
 
-        .container_img_caption{
-            width: calc(25vw);
-            height: 400px;
-            overflow-y: hidden;
+    @media only screen and (min-width : $media-width-tablette){
+        img{
+            width: 30vw;
+            height: 50vh;
+            margin: 0px;
+            padding: 0px;
+        }
+        .container_carousel{
+            overflow-x: hidden;
+            width: 300vw;
+            transition: 0.5s;
+            display: flex;
+            flex-direction: row;
 
-            p{
-                z-index: 10;
-                transform: translateY(-80px);
-                text-align: center;
-                color: white;
-                padding: 10px;
-                border-radius: 10px;
-                background-color: rgba(0, 0, 0, 0.774);
-                width: 50%;
-                margin: 0px auto;   
+            .container_img_caption{
+                width: calc(25vw);
+                height: 400px;
+                overflow-y: hidden;
+    
+                p{
+                    z-index: 10;
+                    transform: translateY(-80px);
+                    text-align: center;
+                    color: white;
+                    padding: 10px;
+                    border-radius: 10px;
+                    background-color: rgba(0, 0, 0, 0.774);
+                    width: 50%;
+                    margin: 0px auto;   
+                }
             }
         }
+        button{
+            position: absolute;
+            top:clamp(20%, 10vw, 40%);
+            z-index: 2;
+            height: 5vh;
+            background-color: black;
+            opacity: 0;
+            border: none;
+            opacity: 30%;
+            display: contents;
+            display: flex;
+            flex-direction: column;
+        }
+        button:hover{
+            cursor: pointer;
+            opacity: 80%;
+            
+        }
+        .bouton_droite{
+            left: 1%;
+            
+        }
+        .bouton_gauche{
+            
+            right: 1%;
+        }
+
     }
 
 }
