@@ -14,7 +14,7 @@ function carousel(side){
                 container.style.transform = `translateX(${mouvement}px)`;
             }
     }else if(side == "gauche"){
-            if(mouvement > maxGauche){
+            if(mouvement-40 > maxGauche){
                 mouvement -= deplacement;
                 container.style.transform = `translateX(${mouvement}px)`;
             }

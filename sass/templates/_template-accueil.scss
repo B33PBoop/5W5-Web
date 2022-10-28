@@ -7,8 +7,29 @@
         padding: 0px;
     }
     .container_carousel{
+        display:flex;
+        flex-direction: row;
         overflow-x: hidden;
         width: 300vw;
         transition: 0.5s;
+
+        .container_img_caption{
+            width: calc(25vw);
+            height: 400px;
+            overflow-y: hidden;
+
+            p{
+                z-index: 10;
+                transform: translateY(-80px);
+                text-align: center;
+                color: white;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.774);
+                width: 50%;
+                margin: 0px auto;   
+            }
+        }
     }
+
 }
