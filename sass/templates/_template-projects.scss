@@ -56,25 +56,30 @@
     .main-projects{
         
         .group {
-
+            width: clamp(700px, 93%, 30000px);
+            margin: 0px auto;
+            padding: 10px 0px;
+            background-color:  rgb(14, 14, 14);
+            border-radius: 20px;
             div{
                 margin: 0px auto;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 flex-wrap: wrap;
                 justify-content: space-around;
-                gap: 10px;
+                
             }
         }
         img{
-            width: clamp(250px, 30vw, 400px);
+            width: clamp(250px, 30vw, 450px);
             height: clamp(200px, 25vw, 300px);
+            padding: 5px 0px;
         }
         //block img et text
         .container{ 
             display: flex;
             flex-direction: row;
-            width: clamp(250px, 30vw, 400px);
+            width: clamp(250px, 30vw, 450px);
     
             //titre de la carte
             p:first-of-type{
@@ -86,7 +91,7 @@
                 text-align: left;
                 position: absolute;
                 padding: 0px;
-                width:clamp(250px, 30vw, 400px);
+                width:clamp(250px, 30vw, 450px);
                 height: clamp(200px, 25vw, 300px);
                 background-color: rgba(0, 0, 0, 0);
                 color: rgba(255, 255, 255, 0);    
@@ -97,7 +102,7 @@
                 justify-content: flex-end;
                 align-items: flex-start;
                 
-                transform: translateX(-2.45%);
+                
                 
                 p{
                     padding-left: 30px;
@@ -105,7 +110,7 @@
                 }
                 //description
                 p:last-of-type{
-                    padding-bottom: 30px;
+                    padding-bottom: 20px;
                     font-size: 1.2rem;
                 }
     
