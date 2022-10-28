@@ -612,32 +612,69 @@ Templates
     cursor: pointer;
   }
 }
-.main-accueil img {
-  width: 25vw;
-  height: 400px;
-  margin: 0px;
-  padding: 0px;
-}
 .main-accueil .container_carousel {
   display: flex;
-  flex-direction: row;
-  overflow-x: hidden;
-  width: 300vw;
-  transition: 0.5s;
+  flex-direction: column;
 }
-.main-accueil .container_carousel .container_img_caption {
-  width: 25vw;
-  height: 400px;
-  overflow-y: hidden;
+.main-accueil button {
+  display: none;
 }
-.main-accueil .container_carousel .container_img_caption p {
-  z-index: 10;
-  transform: translateY(-80px);
-  text-align: center;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.774);
-  width: 50%;
-  margin: 0px auto;
+.main-accueil img {
+  object-fit: cover;
+  width: 100vw;
+  height: 10vh;
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (min-width: 780px) {
+  .main-accueil .container_carousel {
+    overflow-x: hidden;
+    width: 300vw;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: row;
+  }
+  .main-accueil .container_carousel .container_img_caption {
+    width: 25vw;
+    height: 400px;
+    overflow-y: hidden;
+  }
+  .main-accueil .container_carousel .container_img_caption img {
+    width: 25vw;
+    height: 400px;
+  }
+  .main-accueil .container_carousel .container_img_caption p {
+    z-index: 10;
+    transform: translateY(-80px);
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.774);
+    width: 50%;
+    margin: 0px auto;
+  }
+  .main-accueil button {
+    position: absolute;
+    top: clamp(20%, 10vw, 40%);
+    z-index: 2;
+    height: 5vh;
+    background-color: black;
+    opacity: 0;
+    border: none;
+    opacity: 30%;
+    display: contents;
+    display: flex;
+    flex-direction: column;
+  }
+  .main-accueil button:hover {
+    cursor: pointer;
+    opacity: 80%;
+  }
+  .main-accueil .bouton_droite {
+    left: 1%;
+  }
+  .main-accueil .bouton_gauche {
+    right: 1%;
+  }
 }/*# sourceMappingURL=style.css.map */
