@@ -69,7 +69,7 @@
     .main_about{        
         gap: 60px;
         .container{
-            background-color: rgb(14, 14, 14);
+            background-color: $Background_Container;
             border-radius: 0px 20px 20px 0px;
         }
         .container:nth-of-type(odd){
