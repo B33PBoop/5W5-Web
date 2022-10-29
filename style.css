@@ -433,9 +433,9 @@ Templates
 }
 
 .main_about h2 {
-  border-top: 4px solid #c0006a;
-  border-bottom: 4px solid #c0006a;
-  background-color: #3d263d;
+  border-top: 4px solid #BF4381;
+  border-bottom: 4px solid #BF4381;
+  background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
 }
@@ -532,7 +532,7 @@ Templates
     height: 50px;
     padding-left: 7%;
     padding-top: 10px;
-    color: #c0006a;
+    color: #BF4381;
     background-color: rgba(0, 0, 0, 0);
     text-align: left;
     font-size: clamp(15px, 5vw, 25px);
@@ -553,9 +553,9 @@ Templates
 
 .main-projects h2 {
   margin: 50px 0px;
-  border-top: 4px solid #c0006a;
-  border-bottom: 4px solid #c0006a;
-  background-color: #3d263d;
+  border-top: 4px solid #BF4381;
+  border-bottom: 4px solid #BF4381;
+  background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
 }
@@ -668,7 +668,7 @@ Templates
 
 .main-accueil .container_description .savoir_plus {
   width: clamp(100px, 40vw, 300px);
-  background-color: #c0006a;
+  background-color: #BF4381;
   border-style: none;
   border-radius: 10px;
   padding: 0px;
@@ -690,9 +690,9 @@ Templates
 
 .main-accueil .container_description .description {
   width: 100vw;
-  border-top: 4px solid #c0006a;
-  border-bottom: 4px solid #c0006a;
-  background-color: #3d263d;
+  border-top: 4px solid #BF4381;
+  border-bottom: 4px solid #BF4381;
+  background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
 }
