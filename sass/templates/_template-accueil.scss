@@ -17,6 +17,7 @@
                 padding: 0px;
                 height: 0px;
                 transform: translateY(-10px);
+                
                 a{
                     text-decoration: none;
                     color: white;
@@ -28,7 +29,6 @@
             border-top: 4px solid $Button_Default_color;
             border-bottom: 4px solid $Button_Default_color;
             background-color: $Background_Container_Title;
-    
             padding: clamp(15px, 2vh, 30px);
             text-align: center;
         }
@@ -40,17 +40,41 @@
     .container_carousel{
         display: flex;
         flex-direction: column;
+        
+        
+        .container_img_caption{
+            width: 100%;
+            height: 10vh;
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 100%;
+                height: 10vh;
+                object-fit: cover;
+                border-top: 3px solid black;
+                
+            }
+
+            p{
+                
+                z-index: 10;
+                transform: translateY(-70px);
+                text-align: center;
+                color: white;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.774);
+                opacity: 80%;
+                width: 40%;
+                margin: 0px auto;
+            }
+        }
     }
     .bouton_carousel{
         display: none;
     }
-    img{
-    object-fit: cover;
-    width: 100vw;
-    height: 10vh;
-    margin: 0;
-    padding: 0;
-    }
+    
 
 @media only screen and (min-width : $media-width-tablette){
     .title{
@@ -74,11 +98,12 @@
             img{
                 width: calc(25vw);
                 height: 400px;
+                border-top: none;
             }
 
             p{
                 z-index: 10;
-                transform: translateY(-80px);
+                transform: translateY(-110px);
                 text-align: center;
                 color: white;
                 padding: 10px;
@@ -91,16 +116,18 @@
     }
     .bouton_carousel{
         position: absolute;
-        top:clamp(20%, 10vw, 40%);
+        top:50%;
         z-index: 2;
         height: 5vh;
         background-color: black;
+        color: white;
         opacity: 0;
         border: none;
         opacity: 30%;
         display: contents;
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
     .bouton_carousel:hover{
         cursor: pointer;
