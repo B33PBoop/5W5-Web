@@ -659,12 +659,54 @@ Templates
   }
 }
 
+.main-accueil .container_description {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-accueil .container_description .savoir_plus {
+  width: clamp(100px, 40vw, 300px);
+  background-color: #c0006a;
+  border-style: none;
+  border-radius: 10px;
+  padding: 0px;
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+
+.main-accueil .container_description .savoir_plus p {
+  color: white;
+  padding: 0px;
+  height: 0px;
+  transform: translateY(-10px);
+}
+
+.main-accueil .container_description .savoir_plus p a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-accueil .container_description .description {
+  width: 100vw;
+  border-top: 4px solid #c0006a;
+  border-bottom: 4px solid #c0006a;
+  background-color: #3d263d;
+  padding: clamp(15px, 2vh, 30px);
+  text-align: center;
+}
+
+.main-accueil .title {
+  display: none;
+}
+
 .main-accueil .container_carousel {
   display: flex;
   flex-direction: column;
 }
 
-.main-accueil button {
+.main-accueil .bouton_carousel {
   display: none;
 }
 
@@ -677,6 +719,11 @@ Templates
 }
 
 @media only screen and (min-width: 780px) {
+  .main-accueil .title {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+  }
   .main-accueil .container_carousel {
     overflow-x: hidden;
     width: 300vw;
@@ -704,7 +751,7 @@ Templates
     width: 50%;
     margin: 0px auto;
   }
-  .main-accueil button {
+  .main-accueil .bouton_carousel {
     position: absolute;
     top: clamp(20%, 10vw, 40%);
     z-index: 2;
@@ -717,7 +764,7 @@ Templates
     display: flex;
     flex-direction: column;
   }
-  .main-accueil button:hover {
+  .main-accueil .bouton_carousel:hover {
     cursor: pointer;
     opacity: 80%;
   }
