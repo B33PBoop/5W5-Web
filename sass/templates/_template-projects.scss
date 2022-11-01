@@ -68,7 +68,6 @@
                 grid-template-columns: 1fr 1fr 1fr;
                 flex-wrap: wrap;
                 justify-content: space-around;
-                gap: 10px;
             }
         }
         img{
@@ -80,7 +79,6 @@
             display: flex;
             flex-direction: row;
             width: clamp(200px, 25vw, 500px);
-    
             //titre de la carte
             p:first-of-type{
                 font-weight: bold;
@@ -91,7 +89,7 @@
                 text-align: left;
                 position: absolute;
                 padding: 0px;
-                width:clamp(270px, 25.2vw, 550px);
+                width:clamp(200px, 25vw, 500px);
                 height: clamp(150px, 23vw, 300px);
                 background-color: rgba(0, 0, 0, 0);
                 color: rgba(255, 255, 255, 0);    
@@ -102,7 +100,6 @@
                 justify-content: flex-end;
                 align-items: flex-start;
                 
-                transform: translateX(-2.6%);
                 
                 p{
                     padding-left: 30px;
