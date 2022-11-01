@@ -1,6 +1,7 @@
 .menu-header-container{
     /*ces valeur vont probablement changer entre les périphériques*/
     width: 100vw;
+    height: 5vh;
 
     display: flex;
     align-items: center;
@@ -30,20 +31,24 @@
                 color: $Font_Default_color;
                 text-decoration: none;
                 &:hover{
-                    color: #b30e60;
+                    color: $Font_Hover_Color;
                 }
                 &:active{
                     color: #04467c;
                 }
             }
 
-            &.unclickable{
-                a{
-                    pointer-events: none;
-                }
+            &.sub-menu-container{
+
                 &:hover{
                     cursor: default;
                 }
+            }
+
+            .sub-menu{
+                display: none;
+                /*ajouter un SVG de flèche et programmer le sub-menu pour s'afficher 
+                avec une animation lorsqu'on clique dessus*/
             }
         }
     }

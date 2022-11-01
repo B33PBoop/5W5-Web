@@ -4,11 +4,32 @@
 
     #menu-footer{
         list-style:none;
+        display: grid;
+
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 50% 50%;
+
+        row-gap: 25px;
 
         .menu-item{
+            display: flex;
+            justify-content: center;
 
+            // &:nth-child(4){
+            //     comment bouger cet enfant vers la gauche?
+            // }
+
+            // &:nth-child(5){
+            //     //et de même pour lui?
+            // }
+            
             a{
+                color: $Font_Default_color;
                 text-decoration: none;
+
+                &:hover{
+                    color: $Font_Hover_Color;
+                }
             }
         }
     }
