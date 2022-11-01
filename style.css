@@ -84,7 +84,8 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /**
@@ -453,7 +454,8 @@ Templates
   height: 100%;
 }
 .main_about div figure img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(150px, 30vw, 200px);
@@ -506,7 +508,8 @@ Templates
     height: clamp(300px, 24vw, 450px);
   }
   .main_about div .wp-block-image img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 20px;
     margin: 0px;
     width: 50vw;
@@ -557,7 +560,8 @@ Templates
 .main-projects img {
   width: 100vw;
   height: clamp(300px, 30vw, 400px);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-projects .container {
   display: flex;
@@ -701,7 +705,8 @@ Templates
 .main-accueil .container_carousel .container_img_caption img {
   width: 100%;
   height: 10vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top: 3px solid black;
 }
 .main-accueil .container_carousel .container_img_caption p {
