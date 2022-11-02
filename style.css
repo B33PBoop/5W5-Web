@@ -181,9 +181,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -191,9 +191,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -202,9 +202,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -248,8 +248,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -257,8 +257,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -266,7 +266,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -274,7 +274,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -329,10 +329,11 @@ body {
   position: relative;
   min-height: 100vh;
   background-image: url("images/bkg.png");
-  color: rgb(255, 255, 255);
+  color: white;
   overflow-x: hidden;
   font-family: sans-serif;
 }
+
 body main {
   padding-bottom: 200px;
 }
@@ -350,6 +351,7 @@ body main {
     font-size: 1.5vw;
   }
 }
+
 /*Les règles de positionement sont temporaires, je jure de ne pas abuser de position:absolute dans le futur*/
 .footer {
   position: absolute;
@@ -371,6 +373,7 @@ body main {
   align-items: center;
   justify-content: center;
 }
+
 .menu-header-container #menu-header {
   list-style: none;
   width: 75%;
@@ -379,35 +382,42 @@ body main {
   justify-content: center;
   align-items: center;
 }
+
 .menu-header-container #menu-header .menu-item {
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .menu-header-container #menu-header .menu-item a {
   /*ces couleurs seront à ajuster*/
-  color: rgb(255, 255, 255);
+  color: white;
   text-decoration: none;
 }
+
 .menu-header-container #menu-header .menu-item a:hover {
   color: #b30e60;
 }
+
 .menu-header-container #menu-header .menu-item a:active {
   color: #04467c;
 }
+
 .menu-header-container #menu-header .menu-item.sub-menu-container:hover {
   cursor: default;
 }
+
 .menu-header-container #menu-header .menu-item .sub-menu {
   display: none;
   /*ajouter un SVG de flèche et programmer le sub-menu pour s'afficher 
-  avec une animation lorsqu'on clique dessus*/
+                avec une animation lorsqu'on clique dessus*/
 }
 
 .menu-footer-container {
   width: 100%;
 }
+
 .menu-footer-container #menu-footer {
   list-style: none;
   display: grid;
@@ -415,17 +425,22 @@ body main {
   grid-template-rows: 50% 50%;
   row-gap: 25px;
 }
+
 .menu-footer-container #menu-footer .menu-item {
   display: flex;
   justify-content: center;
 }
+
 .menu-footer-container #menu-footer .menu-item a {
-  color: rgb(255, 255, 255);
+  color: white;
   text-decoration: none;
 }
+
 .menu-footer-container #menu-footer .menu-item a:hover {
   color: #b30e60;
-} /*---------
+}
+
+/*---------
 Templates
 ---------*/
 .main_about {
@@ -433,45 +448,53 @@ Templates
   flex-direction: column;
   gap: 0px;
 }
+
 .main_about h2 {
   border-top: 4px solid #BF4381;
   border-bottom: 4px solid #BF4381;
-  background-color: rgb(66, 43, 71);
+  background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
 }
+
 .main_about div {
   margin: 0;
   background-color: rgba(0, 0, 0, 0.274);
   display: flex;
   flex-direction: column;
 }
+
 .main_about div figure {
   display: flex;
   align-items: center;
   width: 100vw;
   height: 100%;
 }
+
 .main_about div figure img {
   object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(150px, 30vw, 200px);
 }
+
 .main_about .container {
   gap: 0px;
 }
+
 .main_about .container_text {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
+
 .main_about .container_text p {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
 }
-.main_about .container_text p:first-of-type {
+
+.main_about .container_text h3 {
   height: 25px;
   width: 40%;
   margin: 0px;
@@ -483,48 +506,52 @@ Templates
   left: 30vw;
   font-size: clamp(15px, 5vw, 25px);
 }
+
 .main_about .container_text:nth-of-type(even) {
   padding-right: 0px;
 }
 
 @media only screen and (min-width: 780px) {
-  .main_about {
-    gap: 60px;
-  }
-  .main_about .container {
-    background-color: rgb(14, 14, 14);
-    border-radius: 0px 20px 20px 0px;
-  }
-  .main_about .container:nth-of-type(odd) {
-    border-radius: 20px 0px 0px 20px;
+  .main_about .bouton {
+    display: none;
   }
   .main_about div {
+    gap: 60px;
+  }
+  .main_about div .container {
+    background-color: #0e0e0e;
+    border-radius: 0px 20px 20px 0px;
+  }
+  .main_about div .container:nth-of-type(odd) {
+    border-radius: 20px 0px 0px 20px;
+  }
+  .main_about div div {
     width: 97%;
     display: flex;
     flex-direction: row-reverse;
     background-color: rgba(255, 255, 255, 0);
     height: clamp(300px, 24vw, 450px);
   }
-  .main_about div .wp-block-image img {
+  .main_about div div .wp-block-image img {
     object-fit: cover;
     border-radius: 20px;
     margin: 0px;
     width: 50vw;
     height: clamp(280px, 23vw, 430px);
   }
-  .main_about div figure {
+  .main_about div div figure {
     margin-left: 10px;
   }
-  .main_about div figure:nth-of-type(odd) {
+  .main_about div div figure:nth-of-type(odd) {
     margin-right: 10px;
   }
-  .main_about .container_text {
+  .main_about div .container_text {
     text-align: left;
   }
-  .main_about .container_text p {
+  .main_about div .container_text p {
     padding-left: 6%;
   }
-  .main_about .container_text p:first-of-type {
+  .main_about div .container_text h3 {
     position: static;
     height: 50px;
     padding-left: 7%;
@@ -534,56 +561,64 @@ Templates
     text-align: left;
     font-size: clamp(15px, 5vw, 25px);
   }
-  .main_about .container_text:nth-of-type(even) {
+  .main_about div .container_text:nth-of-type(even) {
     padding-right: 5%;
   }
-  .main_about .container:nth-of-type(odd) {
+  .main_about div .container:nth-of-type(odd) {
     align-self: flex-end;
     flex-direction: row;
   }
 }
+
 .main-projects {
   padding: 0px;
   margin: 0px;
 }
+
 .main-projects h2 {
   margin: 50px 0px;
   border-top: 4px solid #BF4381;
   border-bottom: 4px solid #BF4381;
-  background-color: rgb(66, 43, 71);
+  background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
 }
+
 .main-projects img {
   width: 100vw;
   height: clamp(300px, 30vw, 400px);
   object-fit: cover;
 }
+
 .main-projects .container {
   display: flex;
   flex-direction: column;
   width: 100vw;
 }
+
 .main-projects .container p:first-of-type {
   font-weight: bold;
   font-size: 1.4rem;
 }
+
 .main-projects .container div {
   position: relative;
   padding: 0px;
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.733);
-  color: rgb(255, 255, 255);
+  color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0px;
 }
+
 .main-projects .container div p {
   padding-left: 30px;
   margin-right: 30px;
 }
+
 .main-projects .container div p:last-of-type {
   padding-bottom: 30px;
   font-size: 1.2rem;
@@ -593,7 +628,7 @@ Templates
   .main-projects .group {
     margin: 0px auto;
     width: clamp(700px, 90%, 2000px);
-    background-color: rgb(14, 14, 14);
+    background-color: #0e0e0e;
     border-radius: 20px;
   }
   .main-projects .group div {
@@ -645,9 +680,11 @@ Templates
     cursor: pointer;
   }
 }
+
 .main-accueil {
   overflow-x: hidden;
 }
+
 .main-accueil .container_description {
   width: 100vw;
   display: flex;
@@ -655,6 +692,7 @@ Templates
   align-items: center;
   font-size: 1.8vw;
 }
+
 .main-accueil .container_description .savoir_plus {
   width: clamp(100px, 25vw, 300px);
   height: clamp(8px, 2.3vh, 100px);
@@ -667,30 +705,36 @@ Templates
   justify-content: center;
   cursor: pointer;
 }
+
 .main-accueil .container_description .savoir_plus p {
   color: white;
   margin: 5px 0 0 0;
   font-size: 2.5vw;
 }
+
 .main-accueil .container_description .savoir_plus p a {
   text-decoration: none;
   color: white;
 }
+
 .main-accueil .container_description .description {
   width: 90vw;
   border-top: 4px solid #BF4381;
   border-bottom: 4px solid #BF4381;
-  background-color: rgb(66, 43, 71);
+  background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
 }
+
 .main-accueil .title {
   display: none;
 }
+
 .main-accueil .container_carousel {
   display: flex;
   flex-direction: column;
 }
+
 .main-accueil .container_carousel .container_img_caption {
   width: 100%;
   height: 10vh;
@@ -698,12 +742,14 @@ Templates
   display: flex;
   flex-direction: column;
 }
+
 .main-accueil .container_carousel .container_img_caption img {
   width: 100%;
   height: 10vh;
   object-fit: cover;
   border-top: 3px solid black;
 }
+
 .main-accueil .container_carousel .container_img_caption p {
   z-index: 10;
   transform: translateY(-70px);
@@ -716,9 +762,11 @@ Templates
   width: 40%;
   margin: 0px auto;
 }
+
 .main-accueil .bouton_carousel {
   display: none;
 }
+
 @media only screen and (min-width: 780px) {
   .main-accueil .container_description {
     width: 100%;
@@ -733,7 +781,7 @@ Templates
     width: 100%;
     border-top: 4px solid #BF4381;
     border-bottom: 4px solid #BF4381;
-    background-color: rgb(66, 43, 71);
+    background-color: #422b47;
     text-align: center;
   }
   .main-accueil .container_description .savoir_plus {
@@ -806,7 +854,7 @@ Templates
     overflow-y: hidden;
   }
   .main-accueil .container_carousel .container_img_caption img {
-    width: 25vw;
+    width: calc(25vw);
     height: 400px;
     border-top: none;
   }
@@ -821,4 +869,5 @@ Templates
     width: 50%;
     margin: 0px auto;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

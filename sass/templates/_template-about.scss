@@ -37,6 +37,7 @@
     .container{
         gap: 0px;
     }
+
     //class ajouté dans la data base
     .container_text{
         display: flex;
@@ -49,7 +50,7 @@
             width: 90%;
         }
 
-        p:first-of-type{
+        h3{
             height: 25px;
             // padding: 5px 0px;
             width: 40%;
@@ -69,14 +70,18 @@
 }
 
 @media only screen and (min-width : $media-width-tablette){
-    .main_about{    
-        gap: 60px;    
-        .container{
-            background-color: $Background_Container;
-            border-radius: 0px 20px 20px 0px;
+    .main_about{  
+        .bouton{
+            display: none;
         }
-        .container:nth-of-type(odd){
-            border-radius: 20px 0px 0px 20px;
+        div{
+            gap: 60px;    
+            .container{
+                background-color: $Background_Container;
+                border-radius: 0px 20px 20px 0px;
+        }
+            .container:nth-of-type(odd){
+                border-radius: 20px 0px 0px 20px;
         }
         div{
             width: 97%;
@@ -106,7 +111,7 @@
             p{
                 padding-left: 6%;
             }
-            p:first-of-type{
+            h3{
                 position:static;
                 height: 50px;
                 padding-left: 7%;
@@ -125,5 +130,5 @@
             flex-direction: row;
         }
 
-    }
+    }}  
 }
