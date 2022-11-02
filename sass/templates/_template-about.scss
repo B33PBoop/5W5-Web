@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: 0px;
     h2{
+        margin-bottom: 40px;
         border-top: 4px solid $Button_Default_color;
         border-bottom: 4px solid $Button_Default_color;
         background-color: $Background_Container_Title;
@@ -45,6 +46,7 @@
         text-align: center;
         
         p{
+            text-align: center;
             display: none;
             margin-left: auto;
             margin-right: auto;
@@ -80,21 +82,18 @@
             display: none;
         }
         div{
-            gap: 60px;    
-            .container{
-                background-color: $Background_Container;
-                border-radius: 0px 20px 20px 0px;
-        }
-            .container:nth-of-type(odd){
-                border-radius: 20px 0px 0px 20px;
-        }
-        div{
+            
             width: 97%;
             display: flex;
             flex-direction: row-reverse;
-            background-color: rgba(255, 255, 255, 0);
+            margin-bottom: 30px;
+            background-color: $Background_Container;
             height: clamp(300px, 24vw, 450px);
+            border-radius: 0px 20px 20px 0px;
 
+            &:nth-of-type(odd){
+                border-radius: 20px 0px 0px 20px;
+            }
             .wp-block-image img{
                 object-fit: cover;
                 border-radius: 20px;
@@ -114,6 +113,7 @@
         .container_text{
             text-align:left;
             p{
+                text-align: left;
                 padding-left: 6%;
                 display: flex;
             }
@@ -136,5 +136,5 @@
             flex-direction: row;
         }
 
-    }}  
+    }
 }

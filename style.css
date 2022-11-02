@@ -450,6 +450,7 @@ Templates
 }
 
 .main_about h2 {
+  margin-bottom: 40px;
   border-top: 4px solid #BF4381;
   border-bottom: 4px solid #BF4381;
   background-color: #422b47;
@@ -489,6 +490,7 @@ Templates
 }
 
 .main_about .container_text p {
+  text-align: center;
   display: none;
   margin-left: auto;
   margin-right: auto;
@@ -521,43 +523,39 @@ Templates
     display: none;
   }
   .main_about div {
-    gap: 60px;
-  }
-  .main_about div .container {
-    background-color: #0e0e0e;
-    border-radius: 0px 20px 20px 0px;
-  }
-  .main_about div .container:nth-of-type(odd) {
-    border-radius: 20px 0px 0px 20px;
-  }
-  .main_about div div {
     width: 97%;
     display: flex;
     flex-direction: row-reverse;
-    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 30px;
+    background-color: #0e0e0e;
     height: clamp(300px, 24vw, 450px);
+    border-radius: 0px 20px 20px 0px;
   }
-  .main_about div div .wp-block-image img {
+  .main_about div:nth-of-type(odd) {
+    border-radius: 20px 0px 0px 20px;
+  }
+  .main_about div .wp-block-image img {
     object-fit: cover;
     border-radius: 20px;
     margin: 0px;
     width: 50vw;
     height: clamp(280px, 23vw, 430px);
   }
-  .main_about div div figure {
+  .main_about div figure {
     margin-left: 10px;
   }
-  .main_about div div figure:nth-of-type(odd) {
+  .main_about div figure:nth-of-type(odd) {
     margin-right: 10px;
   }
-  .main_about div .container_text {
+  .main_about .container_text {
     text-align: left;
   }
-  .main_about div .container_text p {
+  .main_about .container_text p {
+    text-align: left;
     padding-left: 6%;
     display: flex;
   }
-  .main_about div .container_text h3 {
+  .main_about .container_text h3 {
     position: static;
     height: 50px;
     padding-left: 7%;
@@ -567,10 +565,10 @@ Templates
     text-align: left;
     font-size: clamp(15px, 5vw, 25px);
   }
-  .main_about div .container_text:nth-of-type(even) {
+  .main_about .container_text:nth-of-type(even) {
     padding-right: 5%;
   }
-  .main_about div .container:nth-of-type(odd) {
+  .main_about .container:nth-of-type(odd) {
     align-self: flex-end;
     flex-direction: row;
   }
@@ -643,7 +641,7 @@ Templates
     padding: 10px;
     grid-template-columns: 1fr 1fr 1fr;
     flex-wrap: wrap;
-    justify-content: space-around;
+    gap: 0px;
   }
   .main-projects img {
     width: clamp(200px, 25vw, 500px);

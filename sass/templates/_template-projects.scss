@@ -67,7 +67,8 @@
                 padding: 10px;
                 grid-template-columns: 1fr 1fr 1fr;
                 flex-wrap: wrap;
-                justify-content: space-around;
+                // justify-content: space-around;
+                gap: 0px;
             }
         }
         img{
