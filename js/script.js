@@ -24,5 +24,12 @@ function carousel(side){
 
 function displayText(nb){
     const containerText = document.querySelector(`.container:nth-of-type(${nb}) .container_text p`);
-    containerText.style.display = "none";
+
+    if(containerText.style.display == "flex"){
+
+        containerText.style.display = "none";
+    }
+    else{
+        containerText.style.display = "flex";
+    }
 }

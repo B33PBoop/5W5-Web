@@ -45,6 +45,7 @@
         text-align: center;
         
         p{
+            display: none;
             margin-left: auto;
             margin-right: auto;
             width: 90%;
@@ -58,15 +59,19 @@
             position:relative;
             border-radius: 20px;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.616);
             bottom: clamp(100px, 20vw, 130px);
             left: 30vw;
             font-size: clamp(15px, 5vw, 25px);
+        }
+        .bouton{
+            position: absolute;
+            left: 46vw;
         }
     }
     .container_text:nth-of-type(even){
         padding-right: 0px;
     }
+
 }
 
 @media only screen and (min-width : $media-width-tablette){
@@ -110,6 +115,7 @@
             text-align:left;
             p{
                 padding-left: 6%;
+                display: flex;
             }
             h3{
                 position:static;

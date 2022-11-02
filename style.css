@@ -489,6 +489,7 @@ Templates
 }
 
 .main_about .container_text p {
+  display: none;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
@@ -501,10 +502,14 @@ Templates
   position: relative;
   border-radius: 20px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.616);
   bottom: clamp(100px, 20vw, 130px);
   left: 30vw;
   font-size: clamp(15px, 5vw, 25px);
+}
+
+.main_about .container_text .bouton {
+  position: absolute;
+  left: 46vw;
 }
 
 .main_about .container_text:nth-of-type(even) {
@@ -550,6 +555,7 @@ Templates
   }
   .main_about div .container_text p {
     padding-left: 6%;
+    display: flex;
   }
   .main_about div .container_text h3 {
     position: static;

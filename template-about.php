@@ -19,7 +19,9 @@ while ( have_posts() ) : the_post();
     foreach($paragraphs as $id){   
         $nb += 1; 
         echo $id;
-        echo "<div class='bouton' onclick='displayText(`$nb`)'>button</div>";
+        if($nb < count($paragraphs)){
+            echo "<div class='bouton' onclick='displayText(`$nb`)'>button</div>";
+        }
         }
     ?>
 
