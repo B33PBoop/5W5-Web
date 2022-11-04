@@ -1,5 +1,5 @@
-//bruh
-.main_about {
+
+.main_about {    
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -16,9 +16,9 @@
     div{
         // padding: 0px 20px;
         margin: 0;
-        background-color: rgba(0, 0, 0, 0.274);
         display: flex;
         flex-direction: column;
+        height: clamp(150px, 30vw, 200px);
 
         figure{
         
@@ -31,7 +31,7 @@
         object-fit: cover;
         margin: 0px;
         width: 100vw;
-        height: clamp(150px, 30vw, 200px);;
+        height: clamp(150px, 30vw, 200px);
         }
         }
     }
@@ -41,33 +41,39 @@
 
     //class ajouté dans la data base
     .container_text{
+        background-color: rgba(0, 0, 0, 0.274);
+        position: absolute;
+        width: 100vw;
         display: flex;
         flex-direction: column;
         text-align: center;
         
+        
+
+
+        h3{
+            height: 25px;
+            // padding: 5px 0px;
+            width: 40%;
+            padding-top: 80px;
+            margin: 0px auto;
+            text-align: center;
+            font-size: clamp(15px, 5vw, 25px);
+        }
         p{
+            position:relative;
+            padding-top: clamp(50px, 12vw, 130px);
+            font-size: clamp(16px, 1.1vw, 40px);
             text-align: center;
             display: none;
             margin-left: auto;
             margin-right: auto;
             width: 90%;
         }
-
-        h3{
-            height: 25px;
-            // padding: 5px 0px;
-            width: 40%;
-            margin: 0px;
-            position:relative;
-            border-radius: 20px;
-            text-align: center;
-            bottom: clamp(100px, 20vw, 130px);
-            left: 30vw;
-            font-size: clamp(15px, 5vw, 25px);
-        }
         .bouton{
             position: absolute;
-            left: 46vw;
+            bottom: clamp(-180px, -27vw, -130px);
+            left: clamp(130px, 46.3vw, 450px);
         }
     }
     .container_text:nth-of-type(even){
@@ -111,13 +117,19 @@
         }
         //class ajouter dans la data base
         .container_text{
+            background-color: rgba(0, 0, 0, 0);
+            position: relative;
             text-align:left;
             p{
+                padding-top: 0px;
+                height: 100%;
+                overflow: visible;
                 text-align: left;
                 padding-left: 6%;
                 display: flex;
             }
             h3{
+                margin: 0px 0px;
                 position:static;
                 height: 50px;
                 padding-left: 7%;

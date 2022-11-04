@@ -460,9 +460,9 @@ Templates
 
 .main_about div {
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.274);
   display: flex;
   flex-direction: column;
+  height: clamp(150px, 30vw, 200px);
 }
 
 .main_about div figure {
@@ -484,12 +484,27 @@ Templates
 }
 
 .main_about .container_text {
+  background-color: rgba(0, 0, 0, 0.274);
+  position: absolute;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
+.main_about .container_text h3 {
+  height: 25px;
+  width: 40%;
+  padding-top: 80px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: clamp(15px, 5vw, 25px);
+}
+
 .main_about .container_text p {
+  position: relative;
+  padding-top: clamp(50px, 12vw, 130px);
+  font-size: clamp(16px, 1.1vw, 40px);
   text-align: center;
   display: none;
   margin-left: auto;
@@ -497,21 +512,10 @@ Templates
   width: 90%;
 }
 
-.main_about .container_text h3 {
-  height: 25px;
-  width: 40%;
-  margin: 0px;
-  position: relative;
-  border-radius: 20px;
-  text-align: center;
-  bottom: clamp(100px, 20vw, 130px);
-  left: 30vw;
-  font-size: clamp(15px, 5vw, 25px);
-}
-
 .main_about .container_text .bouton {
   position: absolute;
-  left: 46vw;
+  bottom: clamp(-180px, -27vw, -130px);
+  left: clamp(130px, 46.3vw, 450px);
 }
 
 .main_about .container_text:nth-of-type(even) {
@@ -548,14 +552,20 @@ Templates
     margin-right: 10px;
   }
   .main_about .container_text {
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
     text-align: left;
   }
   .main_about .container_text p {
+    padding-top: 0px;
+    height: 100%;
+    overflow: visible;
     text-align: left;
     padding-left: 6%;
     display: flex;
   }
   .main_about .container_text h3 {
+    margin: 0px 0px;
     position: static;
     height: 50px;
     padding-left: 7%;
@@ -600,7 +610,7 @@ Templates
   width: 100vw;
 }
 
-.main-projects .container p:first-of-type {
+.main-projects .container h3 {
   font-weight: bold;
   font-size: 1.4rem;
 }
@@ -652,7 +662,10 @@ Templates
     flex-direction: row;
     width: clamp(200px, 25vw, 500px);
   }
-  .main-projects .container p:first-of-type {
+  .main-projects .container .bouton {
+    display: none;
+  }
+  .main-projects .container h3 {
     font-weight: bold;
     font-size: 1.4rem;
   }
@@ -670,7 +683,7 @@ Templates
     justify-content: flex-end;
     align-items: flex-start;
   }
-  .main-projects .container div p {
+  .main-projects .container div p, .main-projects .container div h3 {
     padding-left: 30px;
     margin-right: 30px;
   }

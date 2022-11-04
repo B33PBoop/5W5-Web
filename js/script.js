@@ -1,4 +1,28 @@
 
+
+window.addEventListener("resize", ()=>{
+    const container = document.querySelectorAll(".container");
+    const containerText = document.querySelectorAll(`.container .container_text p`);
+    if(window.innerWidth > 780){
+        container.forEach(e => {
+            e.style.marginBottom = "40px";
+
+          })
+        containerText.forEach(e => {
+            e.style.display = "flex";
+
+          })
+    }else if(window.innerWidth < 780){
+        container.forEach(e => {
+            e.style.marginBottom = "0px";
+          })
+        containerText.forEach(e => {
+            e.style.display = "none";
+
+        })
+    }
+})
+
 let mouvement = 0;
 
 function carousel(side){
@@ -24,12 +48,17 @@ function carousel(side){
 
 function displayText(nb){
     const containerText = document.querySelector(`.container:nth-of-type(${nb}) .container_text p`);
+    let otherContainer = parseInt(nb);
+    otherContainer += 1;
+    const containerDessous = document.querySelector(`.container:nth-of-type(${nb})`);
 
     if(containerText.style.display == "flex"){
-
         containerText.style.display = "none";
+        containerDessous.style.marginBottom = "0px";
     }
     else{
         containerText.style.display = "flex";
+
+        containerDessous.style.marginBottom = "150px";
     }
 }
