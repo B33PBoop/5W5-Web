@@ -84,8 +84,7 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -397,13 +396,58 @@ body main {
 .menu-header-container #menu-header .menu-item a:active {
   color: #04467c;
 }
+.menu-header-container #menu-header .menu-item.sub-menu-container {
+  position: relative;
+}
 .menu-header-container #menu-header .menu-item.sub-menu-container:hover {
   cursor: default;
 }
+.menu-header-container #menu-header .menu-item.sub-menu-container #barre_1, .menu-header-container #menu-header .menu-item.sub-menu-container #barre_2 {
+  background-color: white;
+  width: 5%;
+  height: 2px;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+}
+.menu-header-container #menu-header .menu-item.sub-menu-container #barre_1 {
+  transform: rotateZ(45deg);
+  transition: transform 0.2s;
+}
+.menu-header-container #menu-header .menu-item.sub-menu-container #barre_1.ouvert {
+  transform: rotateZ(-45deg);
+  transition: transform 0.2s;
+}
+.menu-header-container #menu-header .menu-item.sub-menu-container #barre_2 {
+  transform: rotateZ(-45deg);
+  transition: transform 0.2s;
+}
+.menu-header-container #menu-header .menu-item.sub-menu-container #barre_2.ouvert {
+  transform: rotateZ(45deg);
+  transition: transform 0.2s;
+}
 .menu-header-container #menu-header .menu-item .sub-menu {
+  position: absolute;
+  top: 0px;
+  height: 100px;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  transform: translateY(0px);
+  transition: transform 0.2s;
   display: none;
-  /*ajouter un SVG de flèche et programmer le sub-menu pour s'afficher 
-  avec une animation lorsqu'on clique dessus*/
+}
+.menu-header-container #menu-header .menu-item .sub-menu.ouvert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: purple;
+  transform: translateY(50px);
+  transition: position 0.2s;
+}
+.menu-header-container #menu-header .menu-item .sub-menu .menu-item {
+  width: 100%;
 }
 
 .menu-footer-container {
@@ -472,8 +516,7 @@ Templates
   height: 100%;
 }
 .main_about div figure img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(150px, 30vw, 200px);
@@ -526,8 +569,7 @@ Templates
     height: clamp(300px, 24vw, 450px);
   }
   .main_about div .wp-block-image img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 20px;
     margin: 0px;
     width: 50vw;
@@ -578,8 +620,7 @@ Templates
 .main-projects img {
   width: 100vw;
   height: clamp(300px, 30vw, 400px);
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .main-projects .container {
   display: flex;
@@ -723,8 +764,7 @@ Templates
 .main-accueil .container_carousel .container_img_caption img {
   width: 100%;
   height: 10vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top: 3px solid black;
 }
 .main-accueil .container_carousel .container_img_caption p {

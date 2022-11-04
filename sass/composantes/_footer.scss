@@ -1,54 +1,17 @@
-.menu-footer-container{
-    width: 100%;
+/*Les règles de positionement sont temporaires, je jure de ne pas abuser de position:absolute dans le futur*/
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 200px;
+
+    background-color: rgba(64, 7, 102, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     
-    #menu-footer{
-        list-style:none;
-        display: grid;
-
-        grid-template-columns: 20% 20% 20% 20% 20%;
-        grid-template-rows: 50% 50%;
-        grid-template-areas: 
-            "accueil . about . cours"
-            ". enseignants . projets ."
-        ;
-
-        row-gap: 25px;
-
-        .menu-item{
-            display: flex;
-            justify-content: center;
-            grid-template-areas: 
-            "accueil . about . cours"
-            ". enseignants . projets ."
-        ;
-
-            &:nth-child(1){
-                grid-area: accueil;
-            }
-
-            &:nth-child(2){
-                grid-area: about;
-            }
-
-            &:nth-child(3){
-                grid-area: cours;
-            }
-
-            &:nth-child(4){
-                grid-area: enseignants;
-            }
-
-            &:nth-child(5){
-                grid-area: projets;
-            }
-
-            a{
-                color: $Font_Default_color;
-                text-decoration: none;
-                &:hover{
-                    color: $Font_Hover_Color;
-                }
-            }
-        }
-    }
 }

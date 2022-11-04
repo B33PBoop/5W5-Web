@@ -39,16 +39,76 @@
             }
 
             &.sub-menu-container{
-
+                position: relative;
                 &:hover{
                     cursor: default;
+                }
+
+                #barre_1, #barre_2{
+                    background-color: white;
+                    width: 5%;
+                    height: 2px;
+                    border-radius: 10px;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                #barre_1{
+                    transform: rotateZ(45deg);
+                    transition: transform 0.2s;
+
+                    &.ouvert{
+                        transform: rotateZ(-45deg);
+                        transition: transform 0.2s;
+                    }
+                }
+
+                #barre_2{
+                    transform: rotateZ(-45deg);
+                    transition: transform 0.2s;
+
+                    &.ouvert{
+                        transform: rotateZ(45deg);
+                        transition: transform 0.2s;
+                    }
                 }
             }
 
             .sub-menu{
+                position: absolute;
+                top: 0px;
+
+                height: 100px;
+                width: 200px;
+
+                padding: 0;
+                margin: 0;
+                transform: translateY(0px);
+
+                transition: transform 0.2s;
+
                 display: none;
-                /*ajouter un SVG de flèche et programmer le sub-menu pour s'afficher 
-                avec une animation lorsqu'on clique dessus*/
+
+                &.ouvert{
+                    display: flex;
+                    flex-direction: column;
+
+                    justify-content: space-around;
+                    align-items: center;
+
+                    background-color: purple;
+
+                    transform: translateY(50px);
+                    transition: position 0.2s;    
+                    
+                    //reste a ajouter une animation
+                    // voir https://stackoverflow.com/questions/8449933/how-to-transition-css-display-opacity-properties
+                    
+                }
+
+                .menu-item{
+                    width: 100%;
+                }
             }
         }
     }
