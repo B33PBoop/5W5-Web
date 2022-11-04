@@ -22,7 +22,7 @@ while ( have_posts() ) : the_post();
         if($nb < count($paragraphs)){
             echo "<div class='bouton' onclick='displayText(`$nb`)'>button</div>";
         }
-        }
+    }
     ?>
 
     <?php

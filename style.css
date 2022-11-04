@@ -450,6 +450,7 @@ Templates
 }
 
 .main_about h2 {
+  position: relative;
   margin-bottom: 40px;
   border-top: 4px solid #BF4381;
   border-bottom: 4px solid #BF4381;
@@ -503,13 +504,14 @@ Templates
 
 .main_about .container_text p {
   position: relative;
-  padding-top: clamp(50px, 12vw, 130px);
-  font-size: clamp(16px, 1.1vw, 40px);
+  margin-top: clamp(30px, 13.5vw, 140px);
+  font-size: clamp(16px, 1.3vw, 50px);
   text-align: center;
   display: none;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  padding: 0px 5%;
 }
 
 .main_about .container_text .bouton {
@@ -557,6 +559,8 @@ Templates
     text-align: left;
   }
   .main_about .container_text p {
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0);
     padding-top: 0px;
     height: 100%;
     overflow: visible;
