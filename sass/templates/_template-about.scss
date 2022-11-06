@@ -14,15 +14,18 @@
         text-align: center;
 
     }
+    .container{
+        padding-bottom: clamp(200px, 12vw, 250px);
+    }
     div{
         // padding: 0px 20px;
-        margin: 0;
+        
         display: flex;
         flex-direction: column;
         height: clamp(150px, 30vw, 200px);
 
         figure{
-        
+        border: 1px solid white;
         display: flex;
         align-items: center;
         width: 100vw;
@@ -36,10 +39,6 @@
         }
         }
     }
-    .container{
-        gap: 0px;
-    }
-
     //class ajouté dans la data base
     .container_text{
         background-color: rgba(0, 0, 0, 0.274);
@@ -59,7 +58,7 @@
             padding-top: 80px;
             margin: 0px auto;
             text-align: center;
-            font-size: clamp(15px, 5vw, 25px);
+            font-size: clamp(18px, 5vw, 60px);
         }
         p{
             position:relative;
@@ -73,9 +72,9 @@
             padding: 0px 5%;
         }
         .bouton{
+            width: 100vw;
             position: absolute;
-            bottom: clamp(-180px, -27vw, -130px);
-            left: clamp(130px, 46.3vw, 450px);
+            bottom: clamp(-170px, -26vw, -130px);
         }
     }
     .container_text:nth-of-type(even){
@@ -111,7 +110,7 @@
             }
             figure{
                 margin-left: 10px;
-                
+                border: 0px solid white;
             }
             figure:nth-of-type(odd){
                 margin-right: 10px;
@@ -136,12 +135,11 @@
                 margin: 0px 0px;
                 position:static;
                 height: 50px;
-                padding-left: 7%;
-                padding-top: 10px;
+                padding: 10px 0px 30px 5.8%;
                 color:$Button_Default_color;
                 background-color: rgba(0, 0, 0, 0);
                 text-align: left;
-                font-size: clamp(15px, 5vw, 25px);
+                font-size: clamp(18px, 2vw, 60px);
             }
         }
         .container_text:nth-of-type(even){
