@@ -10,4 +10,17 @@ body{
     main{
         padding-bottom: 200px;
     }
+
 }
+
+body::-webkit-scrollbar {
+    width: 12px;               
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.801);        
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(206, 206, 206);    
+  }

@@ -338,6 +338,18 @@ body main {
   padding-bottom: 200px;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.801);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #cecece;
+}
+
 .header {
   background-color: rgba(68, 4, 110, 0.25);
 }
@@ -505,7 +517,7 @@ Templates
 .main_about .container_text p {
   position: relative;
   margin-top: clamp(30px, 13.5vw, 140px);
-  font-size: clamp(16px, 1.3vw, 50px);
+  font-size: clamp(18px, 1.3vw, 50px);
   text-align: center;
   display: none;
   margin-left: auto;
@@ -515,6 +527,7 @@ Templates
 }
 
 .main_about .container_text .bouton {
+  cursor: pointer;
   width: 100vw;
   position: absolute;
   bottom: clamp(-170px, -26vw, -130px);
@@ -650,7 +663,7 @@ Templates
   display: none;
   position: relative;
   margin-top: clamp(30px, 15vw, 170px);
-  font-size: clamp(16px, 1.3vw, 50px);
+  font-size: clamp(18px, 1.3vw, 50px);
   text-align: center;
   margin: clamp(30px, 13.5vw, 140px) auto 0px auto;
   width: 90%;
@@ -658,11 +671,62 @@ Templates
 }
 
 .main_projects .group div .container_text .bouton {
+  cursor: pointer;
   text-align: center;
   z-index: 10;
   position: absolute;
   bottom: clamp(-5px, 4vw, 10px);
   width: 100vw;
+}
+
+@media only screen and (min-width: 780px) {
+  .main_projects .group div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90vw;
+    margin: 0px auto;
+  }
+  .main_projects .group div .container {
+    height: 200px;
+    width: 25vw;
+    padding-bottom: 0px;
+  }
+  .main_projects .group div .container .container_text {
+    height: 200px;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.637);
+    opacity: 0%;
+    transition: 0.5s;
+  }
+  .main_projects .group div .container .container_text p {
+    display: flex;
+    text-align: left;
+    margin-top: 0px;
+  }
+  .main_projects .group div .container .container_text .bouton {
+    display: none;
+  }
+  .main_projects .group div .container .container_text h3 {
+    width: 100%;
+    font-size: clamp(18px, 5vw, 30px);
+    text-align: left;
+    padding: 10px 5%;
+  }
+  .main_projects .group div .container .container_text:hover {
+    opacity: 100%;
+  }
+  .main_projects .group div .container div figure {
+    height: 200px;
+    width: 25vw;
+    border: 0px solid white;
+  }
+  .main_projects .group div .container div figure img {
+    height: 200px;
+    width: 25vw;
+  }
 }
 
 .main-accueil {

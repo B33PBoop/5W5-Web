@@ -63,7 +63,7 @@
         p{
             position:relative;
             margin-top: clamp(30px, 13.5vw, 140px);
-            font-size: clamp(16px, 1.3vw, 50px);
+            font-size: clamp(18px, 1.3vw, 50px);
             text-align: center;
             display: none;
             margin-left: auto;
@@ -72,6 +72,7 @@
             padding: 0px 5%;
         }
         .bouton{
+            cursor: pointer;
             width: 100vw;
             position: absolute;
             bottom: clamp(-170px, -26vw, -130px);
