@@ -5,7 +5,7 @@ window.addEventListener("resize", ()=>{
     if(window.innerWidth > 780){
         //réajuste le css de chaque container
         container.forEach(e => {
-            e.style.marginBottom = "40px";
+            e.style.marginBottom = "0px";
             e.style.paddingTop = "0px";
             e.style.backgroundColor = "rgb(14, 14, 14)";
           })
@@ -52,7 +52,7 @@ function displayText(nb){
 //function pour créer les bouton dans le DOM
 function createButton(){
     //seclectionne chaque container .container_text et leur donne un bouton
-    const target = document.querySelectorAll(".container .container_text");
+    const target = document.querySelectorAll(".container .add_button");
     for (i=0; i < target.length; i++){
         const element = document.createElement("div");
         element.classList.add("bouton");
