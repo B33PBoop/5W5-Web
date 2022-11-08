@@ -415,15 +415,61 @@ body::-webkit-scrollbar-thumb {
 .menu-header-container #menu-header .menu-item a:active {
   color: #04467c;
 }
-
+.menu-header-container #menu-header .menu-item.sub-menu-container {
+  position: relative;
+}
 .menu-header-container #menu-header .menu-item.sub-menu-container:hover {
   cursor: default;
 }
+.menu-header-container #menu-header .menu-item.sub-menu-container #barre_1, .menu-header-container #menu-header .menu-item.sub-menu-container #barre_2 {
+  background-color: white;
+  width: 5%;
+  height: 2px;
+  border-radius: 10px;
+  padding: 0;
+  margin: 0;
+}
+.menu-header-container #menu-header .menu-item.sub-menu-container #barre_1 {
+  transform: rotateZ(45deg);
+  transition: transform 0.2s;
+}
+.menu-header-container #menu-header .menu-item.sub-menu-container #barre_1.ouvert {
+  transform: rotateZ(-45deg);
+  transition: transform 0.2s;
+}
+.menu-header-container #menu-header .menu-item.sub-menu-container #barre_2 {
+  transform: rotateZ(-45deg);
+  transition: transform 0.2s;
+}
+.menu-header-container #menu-header .menu-item.sub-menu-container #barre_2.ouvert {
+  transform: rotateZ(45deg);
+  transition: transform 0.2s;
+}
 
 .menu-header-container #menu-header .menu-item .sub-menu {
+  position: absolute;
+  top: 0px;
+  height: 100px;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+  transform: translateY(0px);
+  transition: transform 0.2s;
   display: none;
-  /*ajouter un SVG de flèche et programmer le sub-menu pour s'afficher 
-                avec une animation lorsqu'on clique dessus*/
+
+}
+.menu-header-container #menu-header .menu-item .sub-menu.ouvert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: purple;
+  transform: translateY(50px);
+  transition: position 0.2s;
+}
+.menu-header-container #menu-header .menu-item .sub-menu .menu-item {
+  width: 100%;
+
 }
 
 .menu-footer-container {
@@ -433,14 +479,31 @@ body::-webkit-scrollbar-thumb {
 .menu-footer-container #menu-footer {
   list-style: none;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 50% 50%;
+  grid-template-areas: "accueil . about . cours" ". enseignants . projets .";
   row-gap: 25px;
 }
 
 .menu-footer-container #menu-footer .menu-item {
   display: flex;
   justify-content: center;
+}
+
+grid .menu-footer-container #menu-footer .menu-item:nth-child(1) {
+  grid-area: accueil;
+}
+.menu-footer-container #menu-footer .menu-item:nth-child(2) {
+  grid-area: about;
+}
+.menu-footer-container #menu-footer .menu-item:nth-child(3) {
+  grid-area: cours;
+}
+.menu-footer-container #menu-footer .menu-item:nth-child(4) {
+  grid-area: enseignants;
+}
+.menu-footer-container #menu-footer .menu-item:nth-child(5) {
+  grid-area: projets;
 }
 
 .menu-footer-container #menu-footer .menu-item a {

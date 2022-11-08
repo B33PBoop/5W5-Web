@@ -6,22 +6,39 @@
         list-style:none;
         display: grid;
 
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 50% 50%;
+        grid-template-areas: 
+            "accueil . about . cours"
+            ". enseignants . projets ."
+        ;
 
         row-gap: 25px;
 
         .menu-item{
             display: flex;
             justify-content: center;
+            grid
 
-            // &:nth-child(4){
-            //     comment bouger cet enfant vers la gauche?
-            // }
+            &:nth-child(1){
+                grid-area: accueil;
+            }
 
-            // &:nth-child(5){
-            //     //et de même pour lui?
-            // }
+            &:nth-child(2){
+                grid-area: about;
+            }
+
+            &:nth-child(3){
+                grid-area: cours;
+            }
+
+            &:nth-child(4){
+                grid-area: enseignants;
+            }
+
+            &:nth-child(5){
+                grid-area: projets;
+            }
             
             a{
                 color: $Font_Default_color;
