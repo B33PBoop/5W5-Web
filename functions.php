@@ -7,10 +7,14 @@ function web_5w5_enqueue(){
     wp_enqueue_script( "web_5w5-js-carousel" , get_template_directory_uri() . "/js/carousel.js", array(), true);
     wp_enqueue_script( "web_5w5-js-dropdown-icon", get_template_directory_uri() . "/js/dropdown_icon.js", array(), true);
     wp_enqueue_script( "web_5w5-js-dropdown-menu", get_template_directory_uri() . "/js/dropdown_menu.js", array(), true);
+    wp_enqueue_script( "web_5w5-js-display_text" , get_template_directory_uri() . "/js/textDisplay.js", array(), true);
+
 
 }
 
+
 add_action("wp_enqueue_scripts", "web_5w5_enqueue");
+
 
 function web_5w5_register_nav_menus(){
     register_nav_menus( array(
