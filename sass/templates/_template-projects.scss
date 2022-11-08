@@ -2,6 +2,12 @@
     display: flex;
     flex-direction: column;
     gap: 0px;
+
+    .wp-block-site-logo{
+        display: flex;
+        justify-content: center;
+    }
+    
     h2{
         position:relative;
         margin-bottom: 40px;

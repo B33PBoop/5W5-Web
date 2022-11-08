@@ -22,7 +22,16 @@ function web_5w5_register_nav_menus(){
         'menu_footer' => __('Menu Footer', 'web_5w5')
     ) );
 }
+
+function web_5w5_custom_logo_setup(){
+    $settings = array(
+        'height' => 100,
+        'width' => 250,
+        'flex-width' => true,
+        'flex-height' => true,
+    );
+    add_theme_support('custom-logo', $settings);
+}
 add_action('after_setup_theme', 'web_5w5_register_nav_menus', 0);
-
-
+add_action('after_setup_theme', 'web_5w5_custom_logo_setup');
 ?>

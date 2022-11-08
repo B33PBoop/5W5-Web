@@ -1,0 +1,26 @@
+.main_enseignants{
+    .wp-block-site-logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .description{
+        position:relative;
+        margin: 40px 0px;
+        border-top: 4px solid $Button_Default_color;
+        border-bottom: 4px solid $Button_Default_color;
+        background-color: $Background_Container_Title;
+
+        padding: 0px;
+        text-align: center;
+        width: 100vw;
+        h2{
+            color: $Button_Default_color;
+        }
+        p{
+            width: 90vw;
+            margin: 0px auto;
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,4 +1,12 @@
 .main-accueil{
+    .wp-block-site-logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container{
+        display: none;
+    }
     overflow-x: hidden;
     .container_description{
         width: 100vw;
