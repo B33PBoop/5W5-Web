@@ -1,7 +1,7 @@
 // event listener pour réajuster le style quand la page est redimensionner
 window.addEventListener("resize", ()=>{
     const container = document.querySelectorAll(".container");
-    const containerText = document.querySelectorAll(`.container .container_text p`);
+    const containerText = document.querySelectorAll(`.container .add_button p`);
     if(window.innerWidth > 780){
         //réajuste le css de chaque container
         container.forEach(e => {
