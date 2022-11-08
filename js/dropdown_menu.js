@@ -1,13 +1,11 @@
 let dropdown_container
 let dropdown_menu
-let dropdown_icon_left
-let dropdown_icon_right
+let dropdown_icon
 
 function addEvents(){
     dropdown_container = document.querySelector(".sub-menu-container")
     dropdown_menu = document.querySelector(".sub-menu")
-    dropdown_icon_left = document.querySelector("#barre_1")
-    dropdown_icon_right = document.querySelector("#barre_2")
+    dropdown_icon = document.querySelector("#icon")
 
     dropdown_container.addEventListener("click", toggleDropdown);
     console.log("EventListener Activé!")
@@ -18,7 +16,12 @@ setTimeout(() => {
 }, 10);
 
 function toggleDropdown(){
-    dropdown_icon_left.classList.toggle("ouvert");
-    dropdown_icon_right.classList.toggle("ouvert");
+    
+    if(dropdown_icon.innerHTML == "keyboard_arrow_down"){
+        dropdown_icon.innerHTML = "keyboard_arrow_up"
+    } else {
+        dropdown_icon.innerHTML = "keyboard_arrow_down"
+    }
+
     dropdown_menu.classList.toggle("ouvert")
 }

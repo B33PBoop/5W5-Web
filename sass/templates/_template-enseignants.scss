@@ -1,0 +1,71 @@
+.main_enseignants{
+    .wp-block-site-logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .description{
+        position:relative;
+        margin: 40px 0px;
+        border-top: 4px solid $Button_Default_color;
+        border-bottom: 4px solid $Button_Default_color;
+        background-color: $Background_Container_Title;
+
+        padding: 0px;
+        text-align: center;
+        width: 100vw;
+
+        margin-bottom: 80px;
+        h2{
+            color: $Button_Default_color;
+        }
+        p{
+            width: 90vw;
+            margin: 0px auto;
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
+    .container_prof{
+        margin-bottom: 100px;
+        display: flex;
+        gap: 0px;
+        padding-bottom: 0px;
+        background-color: $Background_Container;
+        div{
+            width: 100vw;
+            figure{
+                margin: 0px auto;
+                width: 75vw;
+                height: 100vw;
+                transform: translateY(-20px);
+                
+                img{
+                    object-fit: cover;
+                    width: 75vw;
+                    height: 100vw;
+                    border-radius: 40px;
+                    border: 10px solid $Background_Container;
+                }
+            }
+        }
+        .container_text{
+            text-align: center;
+            width: 100vw;
+            background-color: $Background_Container;
+            padding-bottom: clamp(10px, 5vw, 30px);
+
+            h3{
+                font-size: clamp(19.5px, 4vw, 40px);
+            }
+
+            p{
+                width: 90%;
+                margin: 0px auto;
+                font-size: clamp(17px, 3vw, 30px);
+            }
+        }
+    }
+}

@@ -12,15 +12,8 @@
 /* The loop */
 while ( have_posts() ) : the_post();
 
-    the_title("<h2 class='title'>", "</h2>");
-
-    $text = apply_filters('the_content', get_the_content() );
-    $paragraphs = explode('</p>', $text);
+    the_content() 
     ?>
-    <div class="container_description">
-    <div class="description"> <?php echo $paragraphs[0]?></div>
-    <button class="savoir_plus"> <?php echo $paragraphs[1]?> </button>
-    </div>
     <?php
     if ( $gallery = get_post_gallery( get_the_ID(), false ) ) :
         // Loop through all the image and output them one by one.

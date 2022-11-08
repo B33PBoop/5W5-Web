@@ -2,19 +2,13 @@ function addDivs(){
     const main_menu = document.querySelector(".sub-menu-container")
     
 
-    const barre_1 = document.createElement("div")
-    barre_1.setAttribute("id", "barre_1")
+    const icon = document.createElement("span")
+    icon.setAttribute("id", "icon")
+    icon.setAttribute("class", "material-symbols-outlined")
+    icon.innerHTML = "keyboard_arrow_down"
 
-    const barre_2 = document.createElement("div")
-    barre_2.setAttribute("id", "barre_2")
-
-    main_menu.appendChild(barre_1)
-    main_menu.appendChild(barre_2)
-
-    console.log(document.querySelector("#barre_1"))
-
-    console.log(document.querySelector("#barre_2"))
-
+    main_menu.appendChild(icon)
+    console.log(document.querySelector("#icon"))
 }
 
 setTimeout(() => {

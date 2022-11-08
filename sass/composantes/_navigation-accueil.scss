@@ -43,40 +43,12 @@
                 &:hover{
                     cursor: default;
                 }
-
-                #barre_1, #barre_2{
-                    background-color: white;
-                    width: 5%;
-                    height: 2px;
-                    border-radius: 10px;
-                    padding: 0;
-                    margin: 0;
-                }
-
-                #barre_1{
-                    transform: rotateZ(45deg);
-                    transition: transform 0.2s;
-
-                    &.ouvert{
-                        transform: rotateZ(-45deg);
-                        transition: transform 0.2s;
-                    }
-                }
-
-                #barre_2{
-                    transform: rotateZ(-45deg);
-                    transition: transform 0.2s;
-
-                    &.ouvert{
-                        transform: rotateZ(45deg);
-                        transition: transform 0.2s;
-                    }
-                }
             }
 
             .sub-menu{
                 position: absolute;
                 top: 0px;
+                z-index: 100;
 
                 height: 100px;
                 width: 200px;
