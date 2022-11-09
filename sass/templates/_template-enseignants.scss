@@ -59,14 +59,68 @@
             padding-bottom: clamp(10px, 5vw, 30px);
 
             h3{
-                font-size: clamp(19.5px, 4vw, 40px);
+                font-size: clamp(18px, 1.8vw, 60px);
             }
 
             p{
                 width: 90%;
                 margin: 0px auto;
-                font-size: clamp(17px, 3vw, 30px);
+                font-size: clamp(18px, 1.3vw, 50px);
             }
         }
     }
 
+@media only screen and (min-width : $media-width-tablette){
+.main_enseignants{
+    .description{
+        margin-bottom: 150px;
+    }
+    .container_prof{
+        margin-bottom: 150px;
+        display: flex;
+        flex-direction: row;
+        width: 94vw;
+        height: clamp(300px, 24vw, 450px);
+        border-radius: 0px 20px 20px 0px;
+        div{
+            width: 20vw;
+            figure{
+                margin-left: 12%;
+                width: clamp(350px, 30vw, 2000px);
+                height: clamp(400px, 30vw, 550px);
+                transform: translateY(-50px);
+                img{
+                    width: clamp(200px, 30vw, 2000px);
+                    height: clamp(400px, 30vw, 550px);
+                }
+            }
+        }
+
+        .container_text{
+            width: 45vw;
+            text-align: left;
+            border-radius: 20px;
+            p{
+                padding: 0px;
+                margin: 0px;
+            }
+        }
+
+    }
+    .container_prof:nth-of-type(even){
+        margin-left: auto;
+        flex-direction: row-reverse;
+        border-radius: 20px 0px 0px 20px;
+        div{
+            figure{
+
+                img{
+
+                }
+            }
+        }
+        .container_text{
+            border-radius: 20px;
+        }
+    }
+}}
