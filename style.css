@@ -577,7 +577,7 @@ Templates
 
 .main_about .container_text p {
   position: relative;
-  margin-top: clamp(30px, 13.5vw, 140px);
+  margin-top: clamp(30px, 15vw, 150px);
   font-size: clamp(18px, 1.3vw, 50px);
   text-align: center;
   display: none;
@@ -808,58 +808,49 @@ Templates
   }
 }
 
-.main-accueil {
-  overflow-x: hidden;
-}
-
 .main-accueil .wp-block-site-logo {
   display: flex;
   justify-content: center;
 }
 
-.main-accueil .container {
-  display: none;
-}
-
-.main-accueil .container_description {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.8vw;
-}
-
-.main-accueil .container_description .savoir_plus {
-  width: clamp(100px, 25vw, 300px);
-  height: clamp(8px, 2.3vh, 100px);
-  background-color: #BF4381;
-  border-style: none;
-  border-radius: 10px;
+.main-accueil .description {
+  position: relative;
+  margin: 40px 0px;
+  border-top: 4px solid #BF4381;
+  border-bottom: 4px solid #BF4381;
+  background-color: #422b47;
   padding: 0px;
-  transform: translateY(-13px);
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
+  text-align: center;
+  width: 100vw;
+  margin-bottom: 80px;
 }
 
-.main-accueil .container_description .savoir_plus p {
-  color: white;
-  margin: 5px 0 0 0;
-  font-size: 2.5vw;
+.main-accueil .description div p {
+  width: 90vw;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
 
-.main-accueil .container_description .savoir_plus p a {
+.main-accueil .description div p:first-of-type {
+  padding-top: 20px;
+}
+
+.main-accueil .description div .savoir_plus {
+  background-color: #BF4381;
+  width: clamp(150px, 13vw, 400px);
+  border-radius: 20px;
+  padding: 5px 0px;
+  transform: translateY(30px);
+}
+
+.main-accueil .description div .savoir_plus a {
   text-decoration: none;
   color: white;
 }
 
-.main-accueil .container_description .description {
-  width: 90vw;
-  border-top: 4px solid #BF4381;
-  border-bottom: 4px solid #BF4381;
-  background-color: #422b47;
-  padding: clamp(15px, 2vh, 30px);
-  text-align: center;
+.main-accueil .container {
+  display: none;
 }
 
 .main-accueil .title {
@@ -877,6 +868,7 @@ Templates
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
+  border: 1px solid white;
 }
 
 .main-accueil .container_carousel .container_img_caption img {
@@ -888,15 +880,14 @@ Templates
 
 .main-accueil .container_carousel .container_img_caption p {
   z-index: 10;
-  transform: translateY(-70px);
+  transform: translateY(-120px);
   text-align: center;
   color: white;
-  padding: 10px;
-  border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.774);
   opacity: 80%;
-  width: 40%;
+  width: 100%;
   margin: 0px auto;
+  padding: 50px 0px;
 }
 
 .main-accueil .bouton_carousel {
@@ -904,43 +895,8 @@ Templates
 }
 
 @media only screen and (min-width: 780px) {
-  .main-accueil .container_description {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.1vw;
-    margin-bottom: 80px;
-    margin-top: 70px;
-  }
-  .main-accueil .container_description .description {
-    width: 100%;
-    border-top: 4px solid #BF4381;
-    border-bottom: 4px solid #BF4381;
-    background-color: #422b47;
-    text-align: center;
-  }
-  .main-accueil .container_description .savoir_plus {
-    width: clamp(100px, 25vw, 300px);
-    height: 40px;
-    background-color: #BF4381;
-    border-style: none;
-    border-radius: 10px;
-    padding: 0px;
-    transform: translateY(-20px);
-    cursor: pointer;
-  }
-  .main-accueil .container_description .savoir_plus p {
-    color: white;
-    padding: 0px;
-    height: 0px;
-    font-size: 1.2vw;
-    display: flex;
-    justify-content: center;
-  }
-  .main-accueil .container_description .savoir_plus p a {
-    text-decoration: none;
-    color: white;
+  .main-accueil .body {
+    overflow-x: hidden;
   }
   .main-accueil .title {
     width: 100vw;
@@ -976,7 +932,7 @@ Templates
   .main-accueil .container_carousel {
     overflow-x: hidden;
     overflow-y: hidden;
-    width: 300vw;
+    width: 200vw;
     height: 400px;
     transition: 0.5s;
     display: flex;
@@ -988,6 +944,7 @@ Templates
     width: 25vw;
     height: 500px;
     overflow-y: hidden;
+    border: 0px solid white;
   }
   .main-accueil .container_carousel .container_img_caption img {
     width: calc(25vw);
@@ -996,13 +953,12 @@ Templates
   }
   .main-accueil .container_carousel .container_img_caption p {
     z-index: 10;
-    transform: translateY(-110px);
+    transform: translateY(-35px);
     text-align: center;
     color: white;
     padding: 10px;
-    border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.774);
-    width: 50%;
+    width: 100%;
     margin: 0px auto;
   }
 }
@@ -1032,6 +988,7 @@ Templates
   width: 90vw;
   margin: 0px auto;
   margin-bottom: 10px;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
 
 .container_prof {
@@ -1117,8 +1074,18 @@ Templates
     flex-direction: row-reverse;
     border-radius: 20px 0px 0px 20px;
   }
+  .main_enseignants .container_prof:nth-of-type(even) div figure {
+    margin-left: auto;
+    margin-right: 12%;
+  }
   .main_enseignants .container_prof:nth-of-type(even) .container_text {
     border-radius: 20px;
+  }
+  .main_enseignants .container_prof:nth-of-type(even) .container_text h3 {
+    margin-left: 15px;
+  }
+  .main_enseignants .container_prof:nth-of-type(even) .container_text p {
+    margin-left: 15px;
   }
 }
 

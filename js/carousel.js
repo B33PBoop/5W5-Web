@@ -1,5 +1,11 @@
 
+
+
 let mouvement = 0;
+
+window.addEventListener("resize", ()=>{
+    console.log("resize");
+})
 
 // function pour un carousel
 function carousel(side){
@@ -16,7 +22,7 @@ function carousel(side){
                 container.style.transform = `translateX(${mouvement}px)`;
             }
     }else if(side == "gauche"){
-            if(mouvement-40 > maxGauche){
+            if(mouvement-100 > maxGauche){
                 mouvement -= deplacement;
                 container.style.transform = `translateX(${mouvement}px)`;
             }

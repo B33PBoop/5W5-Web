@@ -83,7 +83,7 @@
         }
         p{
             position:relative;
-            margin-top: clamp(30px, 13.5vw, 140px);
+            margin-top: clamp(30px, 15vw, 150px);
             font-size: clamp(18px, 1.3vw, 50px);
             text-align: center;
             display: none;
@@ -172,6 +172,7 @@
         .container:nth-of-type(odd){
             align-self: flex-end;
             flex-direction: row;
+
         }
 
     }

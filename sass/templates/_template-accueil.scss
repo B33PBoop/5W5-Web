@@ -3,47 +3,47 @@
         display: flex;
         justify-content: center;
     }
+    .description{
+        position:relative;
+        margin: 40px 0px;
+        border-top: 4px solid $Button_Default_color;
+        border-bottom: 4px solid $Button_Default_color;
+        background-color: $Background_Container_Title;
 
-    .container{
-        display: none;
-    }
-    overflow-x: hidden;
-    .container_description{
+        padding: 0px;
+        text-align: center;
         width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 1.8vw;
+
+        margin-bottom: 80px;
+        div{
+
+        
+        p{
+            width: 90vw;
+            margin: 0px auto;
+            margin-bottom: 10px;
+            font-size: clamp(18px, 1.3vw, 50px);
+        }
+        p:first-of-type{
+            padding-top: 20px;
+        }
         .savoir_plus{
-            width: clamp(100px, 25vw, 300px);
-            height: clamp(8px, 2.3vh, 100px);
             background-color: $Button_Default_color;
-            border-style: none;
-            border-radius: 10px;
-            padding: 0px;
-            transform: translateY(-13px);
-            display: flex;
-            justify-content: center;
-            
-            cursor: pointer;
-            p{
+            width: clamp(150px, 13vw, 400px);
+            border-radius: 20px;
+            padding: 5px 0px;
+
+            transform: translateY(30px);
+            a{
+                text-decoration: none;
                 color: white;
-                margin: 5px 0 0 0;
-                font-size: 2.5vw;
-                a{
-                    text-decoration: none;
-                    color: white;
-                }
             }
         }
-        .description{
-            width: 90vw;
-            border-top: 4px solid $Button_Default_color;
-            border-bottom: 4px solid $Button_Default_color;
-            background-color: $Background_Container_Title;
-            padding: clamp(15px, 2vh, 30px);
-            text-align: center;
         }
+ 
+    }
+    .container{
+        display: none;
     }
     
     .title{
@@ -60,6 +60,7 @@
             overflow-y: hidden;
             display: flex;
             flex-direction: column;
+            border: 1px solid white;
             img{
                 width: 100%;
                 height: 10vh;
@@ -69,17 +70,18 @@
             }
 
             p{
-                
                 z-index: 10;
-                transform: translateY(-70px);
+                transform: translateY(-120px);
                 text-align: center;
-                color: white;
-                padding: 10px;
-                border-radius: 10px;
+
+                color: white;  
                 background-color: rgba(0, 0, 0, 0.774);
+
                 opacity: 80%;
-                width: 40%;
+                width: 100%;
                 margin: 0px auto;
+                padding: 50px 0px;
+
             }
         }
     }
@@ -89,52 +91,9 @@
 
     @media only screen and (min-width : $media-width-tablette){
     
-    .container_description{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 1.1vw;
-            margin-bottom: 80px;
-            margin-top: 70px;
-            
-            .description{
-                width: 100%;
-                border-top: 4px solid $Button_Default_color;
-                border-bottom: 4px solid $Button_Default_color;
-                background-color: $Background_Container_Title;
-                text-align: center;
-                
-            }
-            .savoir_plus{
-                width: clamp(100px, 25vw, 300px);
-                height: 40px;
-                background-color: $Button_Default_color;
-                border-style: none;
-                border-radius: 10px;
-                padding: 0px;
-                transform: translateY(-20px);
-                
-                
-                cursor: pointer;
-                p{
-                    color: white;
-                    padding: 0px;
-                    height: 0px;
-                    
-                    font-size: 1.2vw;
-                    display: flex;
-                    justify-content: center;
-                    
-                    
-                    a{
-                        text-decoration: none;
-                        color: white;
-                    }
-                }
-            }
-            
-        }
+    .body{
+        overflow-x: hidden;
+    }
         
     .title{
         width: 100vw;
@@ -173,7 +132,7 @@
     .container_carousel{
         overflow-x: hidden;
         overflow-y: hidden;
-        width: 300vw;
+        width: 200vw;
         height: 400px;
         transition: 0.5s;
         display: flex;
@@ -184,7 +143,7 @@
                 width: 25vw;
                 height: 500px;
                 overflow-y: hidden;
-    
+                border: 0px solid white;
                 img{
                     width: calc(25vw);
                     height: 400px;
@@ -193,13 +152,12 @@
     
                 p{
                     z-index: 10;
-                    transform: translateY(-110px);
+                    transform: translateY(-35px);
                     text-align: center;
                     color: white;
                     padding: 10px;
-                    border-radius: 10px;
                     background-color: rgba(0, 0, 0, 0.774);
-                    width: 50%;
+                    width: 100%;
                     margin: 0px auto;
                 }
             }
