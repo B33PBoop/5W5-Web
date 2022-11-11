@@ -5,26 +5,25 @@ function createSelection(){
     container.classList.add("selection");
     target.appendChild(container);
 
-    const coursWeb = document.querySelectorAll(".web");
-    const cours3D = document.querySelectorAll(".troisD");
-    const coursJeux = document.querySelectorAll(".jeux");
-    const coursDesign = document.querySelectorAll(".design");
+    const coursWeb = document.querySelectorAll(".Web");
+    const cours3D = document.querySelectorAll(".Modelisation");
+    const coursJeux = document.querySelectorAll(".Jeux");
+    const coursDesign = document.querySelectorAll(".Design");
 
     const tableDesCours = [coursWeb, coursJeux, coursDesign, cours3D];
 
-    const typeCours = ["3D", "Design" , "Jeux", "Web"];
+    const typeCours = ["Modelisation", "Design" , "Jeux", "Web"];
 
     typeCours.forEach(e => {
-        const test = document.createElement("div");
-        test.innerHTML = e;
-        test.classList.add("button");
+        const button = document.createElement("div");
+        button.innerHTML = e;
+        button.classList.add("button");
 
-        test.addEventListener("click", () => {
+        button.addEventListener("click", () => {
             const value = e;
-            if(e === "3D"){
                 tableDesCours.forEach(e => {
                     e.forEach(e =>{
-                        if(e.className.includes("troisD")){
+                        if(e.className.includes(`${value}`)){
                             e.style.display = "flex";
                         }
                         else{
@@ -33,48 +32,8 @@ function createSelection(){
                     })
                     
                 });
-            }
-            if(e === "Design"){
-                tableDesCours.forEach(e => {
-                    e.forEach(e =>{
-                        if(e.className.includes("design")){
-                            e.style.display = "flex";
-                        }
-                        else{
-                            e.style.display = "none";
-                        }
-                    })
-                    
-                });
-            }
-            if(e === "Jeux"){
-                tableDesCours.forEach(e => {
-                    e.forEach(e =>{
-                        if(e.className.includes("jeux")){
-                            e.style.display = "flex";
-                        }
-                        else{
-                            e.style.display = "none";
-                        }
-                    })
-                    
-                });
-            }
-            if(e === "Web"){
-                tableDesCours.forEach(e => {
-                    e.forEach(e =>{
-                        if(e.className.includes("web")){
-                            e.style.display = "flex";
-                        }
-                        else{
-                            e.style.display = "none";
-                        }
-                    })
-                    
-                });
-            }
         })
-        container.appendChild(test);
+        container.appendChild(button);
 
     });
 }
