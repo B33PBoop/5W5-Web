@@ -1104,6 +1104,12 @@ Templates
 .main-cours figure {
   width: 300px;
   height: 300px;
+  padding-bottom: 30px;
+}
+
+.main-cours figure img {
+  width: 300px;
+  height: 300px;
 }
 
 .main-cours .button {
