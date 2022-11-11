@@ -181,9 +181,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -191,9 +191,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -202,9 +202,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -248,8 +248,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -257,8 +257,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -266,7 +266,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -274,7 +274,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -329,10 +329,11 @@ body {
   position: relative;
   min-height: 100vh;
   background-image: url("images/bkg.png");
-  color: rgb(255, 255, 255);
+  color: white;
   overflow-x: hidden;
   font-family: sans-serif;
 }
+
 body main {
   padding-bottom: 200px;
 }
@@ -346,7 +347,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(206, 206, 206);
+  background-color: #cecece;
 }
 
 .header {
@@ -362,6 +363,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.5vw;
   }
 }
+
 /*Les règles de positionement sont temporaires, je jure de ne pas abuser de position:absolute dans le futur*/
 .footer {
   position: absolute;
@@ -383,6 +385,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
 }
+
 .menu-header-container #menu-header {
   list-style: none;
   width: 75%;
@@ -391,29 +394,36 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
 }
+
 .menu-header-container #menu-header .menu-item {
   width: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .menu-header-container #menu-header .menu-item a {
   /*ces couleurs seront à ajuster*/
-  color: rgb(255, 255, 255);
+  color: white;
   text-decoration: none;
 }
+
 .menu-header-container #menu-header .menu-item a:hover {
   color: #b30e60;
 }
+
 .menu-header-container #menu-header .menu-item a:active {
   color: #04467c;
 }
+
 .menu-header-container #menu-header .menu-item.sub-menu-container {
   position: relative;
 }
+
 .menu-header-container #menu-header .menu-item.sub-menu-container:hover {
   cursor: default;
 }
+
 .menu-header-container #menu-header .menu-item .sub-menu {
   position: absolute;
   top: 0px;
@@ -426,6 +436,7 @@ body::-webkit-scrollbar-thumb {
   transition: transform 0.2s;
   display: none;
 }
+
 .menu-header-container #menu-header .menu-item .sub-menu.ouvert {
   display: flex;
   flex-direction: column;
@@ -435,6 +446,7 @@ body::-webkit-scrollbar-thumb {
   transform: translateY(50px);
   transition: position 0.2s;
 }
+
 .menu-header-container #menu-header .menu-item .sub-menu .menu-item {
   width: 100%;
 }
@@ -442,37 +454,47 @@ body::-webkit-scrollbar-thumb {
 .menu-footer-container {
   width: 100%;
 }
+
 .menu-footer-container #menu-footer {
   list-style: none;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 50% 50%;
-  grid-template-areas: "accueil . about . cours" ". enseignants . projets .";
+  grid-template-areas: "accueil . about . cours" ". enseignants . projets .";
   row-gap: 25px;
 }
+
 .menu-footer-container #menu-footer .menu-item {
   display: flex;
   justify-content: center;
 }
-grid .menu-footer-container #menu-footer .menu-item:nth-child(1) {
+
+grid
+.menu-footer-container #menu-footer .menu-item:nth-child(1) {
   grid-area: accueil;
 }
+
 .menu-footer-container #menu-footer .menu-item:nth-child(2) {
   grid-area: about;
 }
+
 .menu-footer-container #menu-footer .menu-item:nth-child(3) {
   grid-area: cours;
 }
+
 .menu-footer-container #menu-footer .menu-item:nth-child(4) {
   grid-area: enseignants;
 }
+
 .menu-footer-container #menu-footer .menu-item:nth-child(5) {
   grid-area: projets;
 }
+
 .menu-footer-container #menu-footer .menu-item a {
-  color: rgb(255, 255, 255);
+  color: white;
   text-decoration: none;
 }
+
 .menu-footer-container #menu-footer .menu-item a:hover {
   color: #b30e60;
 }
@@ -485,6 +507,7 @@ Templates
   flex-direction: column;
   gap: 0px;
 }
+
 .main_about .wp-block-site-logo {
   display: flex;
   justify-content: center;
@@ -494,23 +517,27 @@ Templates
   height: 100%;
   background-color: transparent;
 }
+
 .main_about .wp-block-site-logo a .custom-logo {
   border-radius: 0;
 }
+
 .main_about h2 {
   position: relative;
   margin-bottom: 40px;
   border-top: 4px solid #BF4381;
   border-bottom: 4px solid #BF4381;
-  background-color: rgb(66, 43, 71);
+  background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
 }
+
 .main_about div {
   display: flex;
   flex-direction: column;
   height: clamp(150px, 30vw, 200px);
 }
+
 .main_about div figure {
   border: 1px solid white;
   display: flex;
@@ -518,15 +545,18 @@ Templates
   width: 100vw;
   height: 100%;
 }
+
 .main_about div figure img {
   object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(150px, 30vw, 200px);
 }
+
 .main_about div.container {
   padding-bottom: clamp(200px, 12vw, 250px);
 }
+
 .main_about .container_text {
   background-color: rgba(0, 0, 0, 0.274);
   position: absolute;
@@ -535,6 +565,7 @@ Templates
   flex-direction: column;
   text-align: center;
 }
+
 .main_about .container_text h3 {
   height: 25px;
   width: 40%;
@@ -543,9 +574,10 @@ Templates
   text-align: center;
   font-size: clamp(18px, 5vw, 60px);
 }
+
 .main_about .container_text p {
   position: relative;
-  margin-top: clamp(30px, 13.5vw, 140px);
+  margin-top: clamp(30px, 15vw, 150px);
   font-size: clamp(18px, 1.3vw, 50px);
   text-align: center;
   display: none;
@@ -554,12 +586,14 @@ Templates
   width: 90%;
   padding: 0px 5%;
 }
+
 .main_about .container_text .bouton {
   cursor: pointer;
   width: 100vw;
   position: absolute;
   bottom: clamp(-170px, -26vw, -130px);
 }
+
 .main_about .container_text:nth-of-type(even) {
   padding-right: 0px;
 }
@@ -577,7 +611,7 @@ Templates
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 30px;
-    background-color: rgb(14, 14, 14);
+    background-color: #0e0e0e;
     height: clamp(300px, 24vw, 450px);
     border-radius: 0px 20px 20px 0px;
   }
@@ -631,33 +665,39 @@ Templates
     flex-direction: row;
   }
 }
+
 .main_projects {
   display: flex;
   flex-direction: column;
   gap: 0px;
 }
+
 .main_projects .wp-block-site-logo {
   display: flex;
   justify-content: center;
 }
+
 .main_projects h2 {
   position: relative;
   margin-bottom: 40px;
   border-top: 4px solid #BF4381;
   border-bottom: 4px solid #BF4381;
-  background-color: rgb(66, 43, 71);
+  background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
 }
+
 .main_projects .group div {
   display: flex;
   flex-direction: column;
 }
+
 .main_projects .group div .container {
   margin-top: 0px;
   height: clamp(130px, 30vw, 200px);
   padding-bottom: clamp(200px, 12vw, 250px);
 }
+
 .main_projects .group div .container figure {
   display: flex;
   align-items: center;
@@ -666,18 +706,21 @@ Templates
   width: 100vw;
   height: 100%;
 }
+
 .main_projects .group div .container figure img {
   object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(130px, 30vw, 200px);
 }
+
 .main_projects .group div .container_text {
   position: absolute;
   height: clamp(130px, 30vw, 200px);
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.397);
 }
+
 .main_projects .group div .container_text h3 {
   text-align: center;
   width: 40%;
@@ -685,6 +728,7 @@ Templates
   padding-top: 80px;
   font-size: clamp(18px, 5vw, 60px);
 }
+
 .main_projects .group div .container_text p {
   display: none;
   position: relative;
@@ -695,6 +739,7 @@ Templates
   width: 90%;
   padding: 0px 5%;
 }
+
 .main_projects .group div .container_text .bouton {
   cursor: pointer;
   text-align: center;
@@ -708,7 +753,7 @@ Templates
   .main_projects .group {
     padding: 30px 0px;
     border-radius: 20px;
-    background-color: rgb(14, 14, 14);
+    background-color: #0e0e0e;
     margin: 0px auto;
     width: 90vw;
   }
@@ -762,125 +807,102 @@ Templates
     width: 25vw;
   }
 }
+
 .main-accueil {
   overflow-x: hidden;
+  width: 100vw;
 }
+
 .main-accueil .wp-block-site-logo {
   display: flex;
   justify-content: center;
 }
-.main-accueil .container {
-  display: none;
-}
-.main-accueil .container_description {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.8vw;
-}
-.main-accueil .container_description .savoir_plus {
-  width: clamp(100px, 25vw, 300px);
-  height: clamp(8px, 2.3vh, 100px);
-  background-color: #BF4381;
-  border-style: none;
-  border-radius: 10px;
+
+.main-accueil .description {
+  position: relative;
+  margin: 40px 0px;
+  border-top: 4px solid #BF4381;
+  border-bottom: 4px solid #BF4381;
+  background-color: #422b47;
   padding: 0px;
-  transform: translateY(-13px);
-  display: flex;
-  justify-content: center;
-  cursor: pointer;
+  text-align: center;
+  width: 100vw;
+  margin-bottom: 80px;
 }
-.main-accueil .container_description .savoir_plus p {
-  color: white;
-  margin: 5px 0 0 0;
-  font-size: 2.5vw;
+
+.main-accueil .description div p {
+  width: 90vw;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
-.main-accueil .container_description .savoir_plus p a {
+
+.main-accueil .description div p:first-of-type {
+  padding-top: 20px;
+}
+
+.main-accueil .description div .savoir_plus {
+  background-color: #BF4381;
+  width: clamp(150px, 13vw, 400px);
+  border-radius: 20px;
+  padding: 5px 0px;
+  transform: translateY(30px);
+}
+
+.main-accueil .description div .savoir_plus a {
   text-decoration: none;
   color: white;
 }
-.main-accueil .container_description .description {
-  width: 90vw;
-  border-top: 4px solid #BF4381;
-  border-bottom: 4px solid #BF4381;
-  background-color: rgb(66, 43, 71);
-  padding: clamp(15px, 2vh, 30px);
-  text-align: center;
+
+.main-accueil .container {
+  display: none;
 }
+
 .main-accueil .title {
   display: none;
 }
+
 .main-accueil .container_carousel {
   display: flex;
   flex-direction: column;
 }
+
 .main-accueil .container_carousel .container_img_caption {
   width: 100%;
   height: 10vh;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
+  border: 1px solid white;
 }
+
 .main-accueil .container_carousel .container_img_caption img {
   width: 100%;
   height: 10vh;
   object-fit: cover;
   border-top: 3px solid black;
 }
+
 .main-accueil .container_carousel .container_img_caption p {
   z-index: 10;
-  transform: translateY(-70px);
+  transform: translateY(-120px);
   text-align: center;
   color: white;
-  padding: 10px;
-  border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.774);
   opacity: 80%;
-  width: 40%;
+  width: 100%;
   margin: 0px auto;
+  padding: 50px 0px;
 }
+
 .main-accueil .bouton_carousel {
   display: none;
 }
+
 @media only screen and (min-width: 780px) {
-  .main-accueil .container_description {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.1vw;
-    margin-bottom: 80px;
-    margin-top: 70px;
-  }
-  .main-accueil .container_description .description {
-    width: 100%;
-    border-top: 4px solid #BF4381;
-    border-bottom: 4px solid #BF4381;
-    background-color: rgb(66, 43, 71);
-    text-align: center;
-  }
-  .main-accueil .container_description .savoir_plus {
-    width: clamp(100px, 25vw, 300px);
-    height: 40px;
-    background-color: #BF4381;
-    border-style: none;
-    border-radius: 10px;
-    padding: 0px;
-    transform: translateY(-20px);
-    cursor: pointer;
-  }
-  .main-accueil .container_description .savoir_plus p {
-    color: white;
-    padding: 0px;
-    height: 0px;
-    font-size: 1.2vw;
-    display: flex;
-    justify-content: center;
-  }
-  .main-accueil .container_description .savoir_plus p a {
-    text-decoration: none;
-    color: white;
+  .main-accueil body {
+    width: 100vw;
+    overflow-x: hidden;
   }
   .main-accueil .title {
     width: 100vw;
@@ -916,7 +938,7 @@ Templates
   .main-accueil .container_carousel {
     overflow-x: hidden;
     overflow-y: hidden;
-    width: 300vw;
+    width: 200vw;
     height: 400px;
     transition: 0.5s;
     display: flex;
@@ -928,21 +950,22 @@ Templates
     width: 25vw;
     height: 500px;
     overflow-y: hidden;
+    overflow-x: hidden;
+    border: 0px solid white;
   }
   .main-accueil .container_carousel .container_img_caption img {
-    width: 25vw;
+    width: calc(25vw);
     height: 400px;
     border-top: none;
   }
   .main-accueil .container_carousel .container_img_caption p {
     z-index: 10;
-    transform: translateY(-110px);
+    transform: translateY(-35px);
     text-align: center;
     color: white;
     padding: 10px;
-    border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.774);
-    width: 50%;
+    width: 100%;
     margin: 0px auto;
   }
 }
@@ -951,26 +974,151 @@ Templates
   display: flex;
   justify-content: center;
 }
+
 .main_enseignants .description {
   position: relative;
   margin: 40px 0px;
   border-top: 4px solid #BF4381;
   border-bottom: 4px solid #BF4381;
-  background-color: rgb(66, 43, 71);
+  background-color: #422b47;
   padding: 0px;
   text-align: center;
   width: 100vw;
+  margin-bottom: 80px;
 }
+
 .main_enseignants .description h2 {
   color: #BF4381;
 }
+
 .main_enseignants .description p {
   width: 90vw;
   margin: 0px auto;
   margin-bottom: 10px;
+  font-size: clamp(18px, 1.3vw, 50px);
+}
+
+.container_prof {
+  margin-bottom: 100px;
+  display: flex;
+  gap: 0px;
+  padding-bottom: 0px;
+  background-color: #0e0e0e;
+}
+
+.container_prof div {
+  width: 100vw;
+}
+
+.container_prof div figure {
+  margin: 0px auto;
+  width: 75vw;
+  height: 100vw;
+  transform: translateY(-20px);
+}
+
+.container_prof div figure img {
+  object-fit: cover;
+  width: 75vw;
+  height: 100vw;
+  border-radius: 40px;
+  border: 10px solid #0e0e0e;
+}
+
+.container_prof .container_text {
+  text-align: center;
+  width: 100vw;
+  background-color: #0e0e0e;
+  padding-bottom: clamp(10px, 5vw, 30px);
+}
+
+.container_prof .container_text h3 {
+  font-size: clamp(18px, 1.8vw, 60px);
+}
+
+.container_prof .container_text p {
+  width: 90%;
+  margin: 0px auto;
+  font-size: clamp(18px, 1.3vw, 50px);
+}
+
+@media only screen and (min-width: 780px) {
+  .main_enseignants .description {
+    margin-bottom: 150px;
+  }
+  .main_enseignants .container_prof {
+    margin-bottom: 150px;
+    display: flex;
+    flex-direction: row;
+    width: 94vw;
+    height: clamp(300px, 24vw, 450px);
+    border-radius: 0px 20px 20px 0px;
+  }
+  .main_enseignants .container_prof div {
+    width: 20vw;
+  }
+  .main_enseignants .container_prof div figure {
+    margin-left: 12%;
+    width: clamp(350px, 30vw, 2000px);
+    height: clamp(400px, 30vw, 550px);
+    transform: translateY(-50px);
+  }
+  .main_enseignants .container_prof div figure img {
+    width: clamp(200px, 30vw, 2000px);
+    height: clamp(400px, 30vw, 550px);
+  }
+  .main_enseignants .container_prof .container_text {
+    width: 45vw;
+    text-align: left;
+    border-radius: 20px;
+  }
+  .main_enseignants .container_prof .container_text p {
+    padding: 0px;
+    margin: 0px;
+  }
+  .main_enseignants .container_prof:nth-of-type(even) {
+    margin-left: auto;
+    flex-direction: row-reverse;
+    border-radius: 20px 0px 0px 20px;
+  }
+  .main_enseignants .container_prof:nth-of-type(even) div figure {
+    margin-left: auto;
+    margin-right: 12%;
+  }
+  .main_enseignants .container_prof:nth-of-type(even) .container_text {
+    border-radius: 20px;
+  }
+  .main_enseignants .container_prof:nth-of-type(even) .container_text h3 {
+    margin-left: 15px;
+  }
+  .main_enseignants .container_prof:nth-of-type(even) .container_text p {
+    margin-left: 15px;
+  }
 }
 
 .main-cours .wp-block-site-logo {
   display: flex;
   justify-content: center;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.main-cours figure {
+  width: 300px;
+  height: 300px;
+  padding-bottom: 30px;
+}
+
+.main-cours figure img {
+  width: 300px;
+  height: 300px;
+}
+
+.main-cours .button {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+.main-cours .button:active {
+  background-color: #303030;
+}
+/*# sourceMappingURL=style.css.map */
