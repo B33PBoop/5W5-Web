@@ -1,0 +1,62 @@
+.menu-burger-container{
+    display: block;
+    width: 100vw;
+    height: 10vh;
+    background-color: transparent;
+    // why doesn't this work?
+
+    #menu-burger{
+        position: absolute;
+        top: 0;
+
+        width: 150px;
+        height: 200px;
+
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        list-style: none;
+        background-color: #2C212E;
+        
+        
+        .menu-item{
+            width: 80%;
+
+            border: 2px solid #ff52a4;
+            border-radius: 20px;
+
+            padding: 2px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+
+            a{
+                margin-left: 5px;
+
+                color: $Font_Default_Color;
+                text-decoration: none;
+
+                font-size: 0.75rem;
+
+                &:hover{
+                    color: $Font_Hover_Color;
+                }
+                &:active{
+                    color: $Font_Active_Color;
+                }
+            }
+
+        }
+
+    }
+    @media only screen and (min-width: $media-width-tablette) {
+        display: none;
+    }
+}

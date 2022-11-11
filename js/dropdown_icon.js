@@ -8,7 +8,6 @@ function addDivs(){
     icon.innerHTML = "keyboard_arrow_down"
 
     main_menu.appendChild(icon)
-    console.log(document.querySelector("#icon"))
 }
 
 setTimeout(() => {

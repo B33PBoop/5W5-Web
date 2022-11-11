@@ -8,7 +8,6 @@ function addEvents(){
     dropdown_icon = document.querySelector("#icon")
 
     dropdown_container.addEventListener("click", toggleDropdown);
-    console.log("EventListener Activé!")
 }
 
 setTimeout(() => {
