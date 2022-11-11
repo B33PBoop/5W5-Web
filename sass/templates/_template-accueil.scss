@@ -1,4 +1,6 @@
 .main-accueil{
+    overflow-x: hidden;
+    width: 100vw;
     .wp-block-site-logo{
         display: flex;
         justify-content: center;
@@ -89,9 +91,10 @@
         display: none;
     }
 
-    @media only screen and (min-width : $media-width-tablette){
+@media only screen and (min-width : $media-width-tablette){
     
-    .body{
+    body{
+        width: 100vw;
         overflow-x: hidden;
     }
         
@@ -143,6 +146,7 @@
                 width: 25vw;
                 height: 500px;
                 overflow-y: hidden;
+                overflow-x: hidden;
                 border: 0px solid white;
                 img{
                     width: calc(25vw);

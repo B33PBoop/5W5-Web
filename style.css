@@ -808,6 +808,11 @@ Templates
   }
 }
 
+.main-accueil {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
 .main-accueil .wp-block-site-logo {
   display: flex;
   justify-content: center;
@@ -895,7 +900,8 @@ Templates
 }
 
 @media only screen and (min-width: 780px) {
-  .main-accueil .body {
+  .main-accueil body {
+    width: 100vw;
     overflow-x: hidden;
   }
   .main-accueil .title {
@@ -944,6 +950,7 @@ Templates
     width: 25vw;
     height: 500px;
     overflow-y: hidden;
+    overflow-x: hidden;
     border: 0px solid white;
   }
   .main-accueil .container_carousel .container_img_caption img {
@@ -1092,5 +1099,20 @@ Templates
 .main-cours .wp-block-site-logo {
   display: flex;
   justify-content: center;
+}
+
+.main-cours figure {
+  width: 300px;
+  height: 300px;
+}
+
+.main-cours .button {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+.main-cours .button:active {
+  background-color: #303030;
 }
 /*# sourceMappingURL=style.css.map */

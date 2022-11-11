@@ -5,4 +5,17 @@
         justify-content: center;
     }
 
+    figure{
+        width: 300px;
+        height: 300px;
+    }
+
+    .button{
+        padding: 5px;
+        background-color: black;
+        color: white;
+    }
+    .button:active{
+        background-color: rgb(48, 48, 48);
+    }
 }

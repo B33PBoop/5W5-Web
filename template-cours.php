@@ -16,8 +16,6 @@
             endwhile;
         endif;
     ?>
-
-    <p>!! Ne pas oublier de modifier <a href="404.php">la page 404</a> pour les prochaines versions !!</p>
 </main>
 
 <?php get_footer() ?>
