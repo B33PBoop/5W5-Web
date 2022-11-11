@@ -5,8 +5,10 @@ let mouvement = 0;
 
 window.addEventListener("resize", ()=>{
     const container = document.querySelector(".main-accueil .container_carousel");
-    container.style.transform = `translateX(0px)`;
-    mouvement = 0;
+    if(container){
+        container.style.transform = `translateX(0px)`;
+        mouvement = 0;
+    }
 })
 
 // function pour un carousel
