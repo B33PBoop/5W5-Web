@@ -568,7 +568,7 @@ Templates
 
 .main_about .container_text h3 {
   height: 25px;
-  width: 40%;
+  width: 100%;
   padding-top: 80px;
   margin: 0px auto;
   text-align: center;
@@ -1101,24 +1101,89 @@ Templates
   justify-content: center;
 }
 
-.main-cours figure {
-  width: 300px;
-  height: 300px;
-  padding-bottom: 30px;
-}
-
-.main-cours figure img {
-  width: 300px;
-  height: 300px;
+.main-cours h2 {
+  position: relative;
+  margin-bottom: 40px;
+  border-top: 4px solid #BF4381;
+  border-bottom: 4px solid #BF4381;
+  background-color: #422b47;
+  padding: clamp(15px, 2vh, 30px);
+  text-align: center;
 }
 
 .main-cours .button {
-  padding: 5px;
-  background-color: black;
+  cursor: pointer;
+  padding: 5px 5px 5px 10px;
   color: white;
+  margin-left: 0px;
 }
 
 .main-cours .button:active {
   background-color: #303030;
+}
+
+.main-cours .filter {
+  cursor: pointer;
+  width: 90vw;
+  margin: 0px auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2px 2px 2px 10px;
+  margin-top: 10px;
+}
+
+.main-cours .filter .selection {
+  z-index: 10;
+  position: absolute;
+  transition: 0.3s;
+  overflow-y: hidden;
+  height: 0px;
+  transform: translateX(-10px);
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 0px 0px 20px 20px;
+}
+
+.main-cours .filter p {
+  border-right: 2px solid white;
+  width: 100px;
+}
+
+.main-cours .filter span {
+  transform: translateY(6px);
+}
+
+.main-cours .session div {
+  margin: 0px auto;
+  width: 90vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px 10px 0px 10px;
+  background-color: #0e0e0e;
+  border-radius: 20px;
+}
+
+.main-cours .session div figure {
+  margin: 0px auto;
+  width: 300px;
+  height: 300px;
+  padding-bottom: 30px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+}
+
+.main-cours .session div figure img {
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.main-cours .session div figure figcaption {
+  text-align: center;
+  width: 300px;
+  height: 33px;
+  position: relative;
+  bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.493);
 }
 /*# sourceMappingURL=style.css.map */

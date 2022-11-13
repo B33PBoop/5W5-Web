@@ -13,7 +13,7 @@ function addEvents(){
 
 setTimeout(() => {
     addEvents();
-}, 10);
+}, 100);
 
 function toggleDropdown(){
     

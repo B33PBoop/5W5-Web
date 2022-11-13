@@ -13,5 +13,5 @@ function addDivs(){
 
 setTimeout(() => {
     addDivs();
-}, 10);
+}, 100);
 
