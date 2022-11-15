@@ -8,8 +8,8 @@
     .description{
         position:relative;
         margin: 40px 0px;
-        border-top: 4px solid $Button_Default_color;
-        border-bottom: 4px solid $Button_Default_color;
+        border-top: 4px solid $Button_Default_Color;
+        border-bottom: 4px solid $Button_Default_Color;
         background-color: $Background_Container_Title;
 
         padding: 0px;
@@ -30,7 +30,7 @@
             padding-top: 20px;
         }
         .savoir_plus{
-            background-color: $Button_Default_color;
+            background-color: $Button_Default_Color;
             width: clamp(150px, 13vw, 400px);
             border-radius: 20px;
             padding: 5px 0px;

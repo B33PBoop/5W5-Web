@@ -1,15 +1,15 @@
 body{
-    position: relative;
-    min-height: 100vh;
+  position: relative;
+  min-height: 100vh;
 
-    background-image: url("images/bkg.png");
-    color: $Font_Default_color;
-    overflow-x: hidden;
-    font-family: sans-serif;
+  background-image: url("images/bkg.png");
+  color: $Font_Default_Color;
+  overflow-x: hidden;
+  font-family: sans-serif;
 
-    main{
-        padding-bottom: 200px;
-    }
+  main{
+      padding-bottom: 200px;
+  }
 
 }
 

@@ -1,0 +1,102 @@
+.menu-header-container{
+    display: none;
+}
+
+
+@media only screen and (min-width: $media-width-tablette){
+    .menu-header-container{
+        /*ces valeur vont probablement changer entre les périphériques*/
+        width: 100vw;
+        height: 5vh;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        
+        #menu-header{
+            list-style: none;
+    
+            width: 75%;
+    
+            display: flex;
+            flex-direction: row;
+    
+            justify-content: center;
+            align-items: center;
+    
+            .menu-item{
+                
+                width: 20%;
+                min-width: 125px;
+                display: flex;
+    
+                justify-content: center;
+                align-items: center;
+    
+                a{
+                    color: $Font_Default_Color;
+                    text-decoration: none;
+                    text-align: center;
+
+                    font-size: clamp(18px, 1.3vw, 50px);
+
+                    &:hover{
+                        color: $Font_Hover_Color;
+                    }
+                    &:active{
+                        color: $Font_Active_Color;
+                    }
+                }
+    
+                &.sub-menu-container{
+                    position: relative;
+                    &:hover{
+                        cursor: default;
+                    }
+                }
+    
+                .sub-menu{
+                    position: absolute;
+                    top: 45px;
+                    z-index: 100;
+    
+                    height: 0px;
+                    width: clamp(250px, 15vw, 500px);
+
+                    overflow-y: hidden;
+    
+                    padding: 0;
+                    margin: 0;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    justify-content: space-around;
+                    align-items: center;
+                        
+                    transition: 0.3s;
+    
+                    &.ouvert{
+                        height: clamp(150px, 5vh, 550px);
+    
+                        background-color: purple;
+
+                        transition: 0.3s;    
+                        
+                        //reste a ajouter une animation
+                        // voir https://stackoverflow.com/questions/8449933/how-to-transition-css-display-opacity-properties
+                        
+                    }
+    
+                    .menu-item{
+                        width: 100%;
+
+                        a{
+                            font-size: clamp(18px, 1.3vw, 50px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

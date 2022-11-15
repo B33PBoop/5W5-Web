@@ -11,6 +11,13 @@
 <body>
     <header class="header">
         <?php 
+            wp_nav_menu(array(
+                "menu" => "burger",
+                "container" => "div"
+            ))
+        ?>
+
+        <?php 
             wp_nav_menu(array( 
                 "menu" => "header",
                 "container" => "nav"
