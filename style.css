@@ -370,7 +370,8 @@ body::-webkit-scrollbar-thumb {
   bottom: 0;
   width: 100vw;
   height: 200px;
-  background-color: rgba(64, 7, 102, 0.25);
+  font-size: clamp(18px, 1.3vw, 50px);
+  background-color: #0e0e0e;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -452,7 +453,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .menu-footer-container {
-  width: 100%;
+  width: 70%;
 }
 
 .menu-footer-container #menu-footer {
@@ -812,6 +813,11 @@ Templates
   width: 100vw;
 }
 
+.main-accueil .leCarousel {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
 .main-accueil .wp-block-site-logo {
   display: flex;
   justify-content: center;
@@ -872,14 +878,12 @@ Templates
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
-  border: 1px solid white;
 }
 
 .main-accueil .container_carousel .container_img_caption img {
   width: 100%;
   height: 10vh;
   object-fit: cover;
-  border-top: 3px solid black;
 }
 
 .main-accueil .container_carousel .container_img_caption p {
@@ -888,6 +892,7 @@ Templates
   text-align: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.774);
+  border-top: 2px solid white;
   opacity: 80%;
   width: 100%;
   margin: 0px auto;
@@ -942,8 +947,6 @@ Templates
     transition: 0.5s;
     display: flex;
     flex-direction: row;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
   }
   .main-accueil .container_carousel .container_img_caption {
     width: 25vw;

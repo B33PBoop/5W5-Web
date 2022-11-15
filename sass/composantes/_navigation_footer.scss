@@ -1,11 +1,11 @@
 .menu-footer-container{
-    width: 100%;
+    width: 70%;
+
     
 
     #menu-footer{
         list-style:none;
         display: grid;
-
         grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 50% 50%;
         grid-template-areas: 
@@ -17,6 +17,7 @@
 
         .menu-item{
             display: flex;
+            
             justify-content: center;
             grid
 
