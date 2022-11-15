@@ -350,16 +350,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header {
-  background-color: rgba(68, 4, 110, 0.25);
+  background-color: #2C212E;
 }
 
 .nav {
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 
-@media only screen and (max-width: 780px) {
+@media only screen and (min-width: 780px) {
+  .header {
+    background-color: rgba(68, 4, 110, 0.25);
+  }
   .nav {
-    font-size: 1.5vw;
+    font-size: 1vw;
   }
 }
 /*Les règles de positionement sont temporaires, je jure de ne pas abuser de position:absolute dans le futur*/
@@ -407,6 +410,7 @@ body::-webkit-scrollbar-thumb {
     color: rgb(255, 255, 255);
     text-decoration: none;
     text-align: center;
+    font-size: clamp(18px, 1.3vw, 50px);
   }
   .menu-header-container #menu-header .menu-item a:hover {
     color: #b30e60;
@@ -422,27 +426,29 @@ body::-webkit-scrollbar-thumb {
   }
   .menu-header-container #menu-header .menu-item .sub-menu {
     position: absolute;
-    top: 0px;
+    top: 45px;
     z-index: 100;
-    height: 100px;
-    width: 200px;
+    height: 0px;
+    width: clamp(250px, 15vw, 500px);
+    overflow-y: hidden;
     padding: 0;
     margin: 0;
-    transform: translateY(0px);
-    transition: transform 0.2s;
-    display: none;
-  }
-  .menu-header-container #menu-header .menu-item .sub-menu.ouvert {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    transition: 0.3s;
+  }
+  .menu-header-container #menu-header .menu-item .sub-menu.ouvert {
+    height: clamp(150px, 5vh, 550px);
     background-color: purple;
-    transform: translateY(50px);
-    transition: position 0.2s;
+    transition: 0.3s;
   }
   .menu-header-container #menu-header .menu-item .sub-menu .menu-item {
     width: 100%;
+  }
+  .menu-header-container #menu-header .menu-item .sub-menu .menu-item a {
+    font-size: clamp(18px, 1.3vw, 50px);
   }
 }
 .menu-footer-container {
@@ -478,6 +484,7 @@ grid .menu-footer-container #menu-footer .menu-item:nth-child(1) {
 .menu-footer-container #menu-footer .menu-item a {
   color: rgb(255, 255, 255);
   text-decoration: none;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
 .menu-footer-container #menu-footer .menu-item a:hover {
   color: #b30e60;
@@ -485,26 +492,44 @@ grid .menu-footer-container #menu-footer .menu-item:nth-child(1) {
 
 .menu-burger-container {
   display: block;
-  width: 100vw;
-  height: 10vh;
+  width: 50px;
+  height: 50px;
   background-color: transparent;
+}
+.menu-burger-container #burger_icon {
+  width: 48px;
+  height: 48px;
+  font-size: 48px;
+  transform: rotateZ(0deg);
+  transition: transform 0.2s;
+}
+.menu-burger-container #burger_icon.ouvert {
+  transform: rotateZ(90deg);
+  transition: transform 0.2s;
 }
 .menu-burger-container #menu-burger {
   position: absolute;
-  top: 0;
-  width: 150px;
-  height: 200px;
+  top: 48px;
+  width: 100vw;
+  height: 0px;
+  overflow-y: hidden;
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  z-index: 10;
   list-style: none;
   background-color: #2C212E;
+  transition: 0.2s;
+}
+.menu-burger-container #menu-burger.ouvert {
+  height: 250px;
+  transition: 0.2s;
 }
 .menu-burger-container #menu-burger .menu-item {
-  width: 80%;
+  width: 40%;
   border: 2px solid #ff52a4;
   border-radius: 20px;
   padding: 2px;
@@ -514,10 +539,10 @@ grid .menu-footer-container #menu-footer .menu-item:nth-child(1) {
   align-items: flex-start;
 }
 .menu-burger-container #menu-burger .menu-item a {
-  margin-left: 5px;
+  width: 100%;
+  text-align: center;
   color: rgb(255, 255, 255);
   text-decoration: none;
-  font-size: 0.75rem;
 }
 .menu-burger-container #menu-burger .menu-item a:hover {
   color: #b30e60;

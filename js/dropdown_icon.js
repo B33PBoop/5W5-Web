@@ -1,4 +1,4 @@
-function addDivs(){
+function addIcon(){
     const main_menu = document.querySelector(".sub-menu-container")
     
 
@@ -11,6 +11,6 @@ function addDivs(){
 }
 
 setTimeout(() => {
-    addDivs();
+    addIcon();
 }, 10);
 
