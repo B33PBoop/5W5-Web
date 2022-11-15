@@ -14,7 +14,7 @@ function createSelection(){
         
         
         if(menu.style.height == "0px"){
-            menu.style.height = "180px";
+            menu.style.height = "160px";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_up</span> </p>";
             
         }else{
@@ -25,7 +25,7 @@ function createSelection(){
 
     const selectCours = document.querySelectorAll(".cours");
 
-    const typeCours = ["Modelisation", "Design" , "Jeux", "Web", "Test", "cours"];
+    const typeCours = ["Modelisation", "Design" , "Jeux", "Web", "cours"];
 
     //pour chaque cours dans la liste typeCours créer un bouton avec un event listener personnalisé
     typeCours.forEach(e => {
