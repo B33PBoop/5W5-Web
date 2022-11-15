@@ -17,7 +17,7 @@ function addBurger(){
 
 setTimeout(() => {
     addBurger();
-}, 10);
+}, 100);
 
 function toggleBurger(){
     burger_icon = document.querySelector("#burger_icon")

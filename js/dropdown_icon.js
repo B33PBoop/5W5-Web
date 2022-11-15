@@ -1,4 +1,4 @@
-function addDivs(){
+function addIcon(){
     const main_menu = document.querySelector(".sub-menu-container")
     
 
@@ -8,10 +8,10 @@ function addDivs(){
     icon.innerHTML = "keyboard_arrow_down"
 
     main_menu.appendChild(icon)
-    console.log(document.querySelector("#icon"))
 }
 
 setTimeout(() => {
-    addDivs();
+    addIcon();
 }, 100);
+
 
