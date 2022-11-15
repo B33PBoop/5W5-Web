@@ -19,7 +19,14 @@ body{
         text-align: center;
 
     }
+    .boite_modale{
+        position:fixed;
+        left: 27%;
+        top: 200px;
+        background-color: black;
+        width: 50vw;
 
+    }
     .button{
         cursor: pointer;
         padding: 5px 5px 5px 10px;
@@ -29,6 +36,19 @@ body{
     }
     .button:active{
         background-color: rgb(48, 48, 48);
+    }
+    figure{
+        width: clamp(100px, 25vw, 6000px);
+        height: clamp(180px, 15vw, 6000px);
+        img{
+            width: clamp(100px, 25vw, 6000px);
+            height: clamp(180px, 15vw, 6000px);
+        }
+        figcaption{
+            text-align: center;
+            width: clamp(100px, 25vw, 6000px);
+            background-color: black;
+        }
     }
     .filter {
         cursor: pointer;
@@ -55,63 +75,14 @@ body{
         span{
             transform: translateY(6px);
         }
-    }   
-
-    .session div{
-        margin: 0px auto;
-        width: 90vw;
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 10px 10px 0px 10px;
-
-        background-color: $Background_Container;
-        border-radius: 20px;
-        figure{
-            margin: 0px auto;
-            width: clamp(100px, 70vw, 6000px);
-            height: clamp(180px, 15vw, 6000px);
-            padding-bottom: 30px;
-            flex-wrap: wrap;
-            display: flex;
-            flex-direction: row;
-            gap: 0px;
-
-            img{
-                object-fit: cover;
-                width: clamp(100px, 70vw, 6000px);
-                height: clamp(180px, 15vw, 6000px);
-            }
-            figcaption{
-                text-align: center;
-                width: clamp(100px, 70vw, 6000px);
-                height: 33px;
-                position:relative;
-                bottom: 40px;
-                background-color: rgba(0, 0, 0, 0.493);
-            }
-        }
-    }
+    }    
 }
 @media only screen and (min-width : $media-width-tablette){
     .main-cours{
-
-
-    .session div{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-
-        figure{
-            width: clamp(100px, 25vw, 6000px);
-            height: clamp(180px, 15vw, 6000px);
-
-            img{
-                width: clamp(100px, 25vw, 6000px);
-                height: clamp(180px, 15vw, 6000px);
-            }
-            figcaption{
-                width: clamp(100px, 25vw, 6000px);
-            }
+        .text{
+            display: none;
         }
     }
 }
-}
+//width: clamp(100px, 25vw, 6000px);
+//height: clamp(180px, 15vw, 6000px);

@@ -1115,6 +1115,14 @@ body {
   text-align: center;
 }
 
+.main-cours .boite_modale {
+  position: fixed;
+  left: 27%;
+  top: 200px;
+  background-color: black;
+  width: 50vw;
+}
+
 .main-cours .button {
   cursor: pointer;
   padding: 5px 5px 5px 10px;
@@ -1124,6 +1132,22 @@ body {
 
 .main-cours .button:active {
   background-color: #303030;
+}
+
+.main-cours figure {
+  width: clamp(100px, 25vw, 6000px);
+  height: clamp(180px, 15vw, 6000px);
+}
+
+.main-cours figure img {
+  width: clamp(100px, 25vw, 6000px);
+  height: clamp(180px, 15vw, 6000px);
+}
+
+.main-cours figure figcaption {
+  text-align: center;
+  width: clamp(100px, 25vw, 6000px);
+  background-color: black;
 }
 
 .main-cours .filter {
@@ -1156,57 +1180,9 @@ body {
   transform: translateY(6px);
 }
 
-.main-cours .session div {
-  margin: 0px auto;
-  width: 90vw;
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 10px 10px 0px 10px;
-  background-color: #0e0e0e;
-  border-radius: 20px;
-}
-
-.main-cours .session div figure {
-  margin: 0px auto;
-  width: clamp(100px, 70vw, 6000px);
-  height: clamp(180px, 15vw, 6000px);
-  padding-bottom: 30px;
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: row;
-  gap: 0px;
-}
-
-.main-cours .session div figure img {
-  object-fit: cover;
-  width: clamp(100px, 70vw, 6000px);
-  height: clamp(180px, 15vw, 6000px);
-}
-
-.main-cours .session div figure figcaption {
-  text-align: center;
-  width: clamp(100px, 70vw, 6000px);
-  height: 33px;
-  position: relative;
-  bottom: 40px;
-  background-color: rgba(0, 0, 0, 0.493);
-}
-
 @media only screen and (min-width: 780px) {
-  .main-cours .session div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .main-cours .session div figure {
-    width: clamp(100px, 25vw, 6000px);
-    height: clamp(180px, 15vw, 6000px);
-  }
-  .main-cours .session div figure img {
-    width: clamp(100px, 25vw, 6000px);
-    height: clamp(180px, 15vw, 6000px);
-  }
-  .main-cours .session div figure figcaption {
-    width: clamp(100px, 25vw, 6000px);
+  .main-cours .text {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
