@@ -573,14 +573,11 @@ Templates
   height: 100%;
   background-color: transparent;
 }
-
 .main_about .wp-block-site-logo a {
   width: 100vw;
   display: flex;
   justify-content: center;
 }
-
-
 .main_about .wp-block-site-logo a .custom-logo {
   border-radius: 0;
 }
@@ -1112,21 +1109,24 @@ Templates
     margin-left: 15px;
   }
 }
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
 
 .main-cours .wp-block-site-logo {
   display: flex;
   justify-content: center;
 }
-
-.main-cours figure {
-  width: 300px;
-  height: 300px;
-  padding-bottom: 30px;
+.main-cours h2 {
+  position: relative;
+  margin-bottom: 40px;
+  border-top: 4px solid #FF52A4;
+  border-bottom: 4px solid #FF52A4;
+  background-color: rgb(66, 43, 71);
+  padding: clamp(15px, 2vh, 30px);
+  text-align: center;
 }
-.main-cours figure img {
-  width: 300px;
-  height: 300px;
-
 .main-cours .boite_modale {
   z-index: 20;
   cursor: pointer;
@@ -1138,7 +1138,6 @@ Templates
   height: 50vh;
   overflow-y: hidden;
 }
-
 .main-cours .button {
   cursor: pointer;
   padding: 5px 5px 5px 10px;
@@ -1146,11 +1145,8 @@ Templates
   margin-left: 0px;
 }
 .main-cours .button:active {
-
-
   background-color: rgb(48, 48, 48);
-}/*# sourceMappingURL=style.css.map */
-
+}
 .main-cours .session div {
   display: grid;
   grid-template-columns: 1fr;
@@ -1158,40 +1154,34 @@ Templates
   width: 90vw;
   margin: 0px auto;
 }
-
 .main-cours .session div figure {
   cursor: pointer;
   margin: 0px auto;
   width: clamp(200px, 50vw, 6000px);
   height: clamp(180px, 15vw, 6000px);
 }
-
 .main-cours .session div figure img {
   width: clamp(200px, 50vw, 6000px);
   height: clamp(180px, 15vw, 6000px);
 }
-
 .main-cours .session div figure figcaption {
   text-align: center;
   width: clamp(200px, 50vw, 6000px);
   background-color: rgba(0, 0, 0, 0.9);
   transform: translateY(-30px);
 }
-
 .main-cours .session div .text {
   display: none;
 }
-
 .main-cours .filter {
   cursor: pointer;
   width: 90vw;
   margin: 0px auto;
-  background-color: #0e0e0e;
+  background-color: rgb(14, 14, 14);
   padding: 2px 2px 2px 10px;
   border-radius: 10px;
   margin-top: 40px;
 }
-
 .main-cours .filter .selection {
   z-index: 10;
   position: absolute;
@@ -1199,15 +1189,13 @@ Templates
   overflow-y: hidden;
   height: 0px;
   transform: translateX(-10px);
-  background-color: #0e0e0e;
+  background-color: rgb(14, 14, 14);
   border-radius: 0px 0px 20px 20px;
 }
-
 .main-cours .filter p {
   border-right: 2px solid white;
   width: 100px;
 }
-
 .main-cours .filter span {
   transform: translateY(6px);
 }
@@ -1246,6 +1234,4 @@ Templates
   .main-cours .text {
     display: none;
   }
-}
-/*# sourceMappingURL=style.css.map */
-
+}/*# sourceMappingURL=style.css.map */
