@@ -27,7 +27,8 @@ body{
         top: 200px;
         background-color: black;
         width: 50vw;
-
+        height: 50vh;
+        overflow-y: hidden;
     }
     .button{
         cursor: pointer;
@@ -49,15 +50,15 @@ body{
         figure{
             cursor: pointer;
             margin: 0px auto;
-            width: clamp(200px, 25vw, 6000px);
+            width: clamp(200px, 50vw, 6000px);
             height: clamp(180px, 15vw, 6000px);
             img{
-                width: clamp(200px, 25vw, 6000px);
+                width: clamp(200px, 50vw, 6000px);
                 height: clamp(180px, 15vw, 6000px);
             }
             figcaption{
                 text-align: center;
-                width: clamp(200px, 25vw, 6000px);
+                width: clamp(200px, 50vw, 6000px);
                 background-color: rgba(0, 0, 0, 0.9);
                 transform: translateY(-30px);
             }
@@ -107,8 +108,9 @@ body{
                 height: clamp(180px, 15vw, 6000px);
                 div{
                     width: clamp(200px, 25vw, 6000px);
+                    overflow-y: hidden;
                     figure{
-                        overflow-y: hidden;
+                        
                         cursor: pointer;
                         margin: 0px auto;
                         width: clamp(200px, 25vw, 6000px);
