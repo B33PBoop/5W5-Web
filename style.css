@@ -616,7 +616,7 @@ Templates
 }
 .main_about .container_text h3 {
   height: 25px;
-  width: 40%;
+  width: 100%;
   padding-top: 80px;
   margin: 0px auto;
   text-align: center;
@@ -740,7 +740,6 @@ Templates
 .main_projects .group div .container figure {
   display: flex;
   align-items: center;
-  height: clamp(130px, 30vw, 200px);
   border: 1px solid white;
   width: 100vw;
   height: 100%;
@@ -1105,10 +1104,12 @@ Templates
     margin-left: 15px;
   }
 }
+
 .main-cours .wp-block-site-logo {
   display: flex;
   justify-content: center;
 }
+
 .main-cours figure {
   width: 300px;
   height: 300px;
@@ -1117,12 +1118,16 @@ Templates
 .main-cours figure img {
   width: 300px;
   height: 300px;
+
 }
 .main-cours .button {
-  padding: 5px;
-  background-color: black;
+  cursor: pointer;
+  padding: 5px 5px 5px 10px;
   color: white;
+  margin-left: 0px;
 }
 .main-cours .button:active {
+
   background-color: rgb(48, 48, 48);
 }/*# sourceMappingURL=style.css.map */
+
