@@ -42,8 +42,10 @@
             }
             
             a{
-                color: $Font_Default_color;
+                color: $Font_Default_Color;
                 text-decoration: none;
+
+                font-size: clamp(18px, 1.3vw, 50px);
 
                 &:hover{
                     color: $Font_Hover_Color;

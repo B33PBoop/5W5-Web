@@ -1,6 +1,3 @@
-
-
-
 let mouvement = 0;
 
 window.addEventListener("resize", ()=>{
@@ -18,8 +15,7 @@ function carousel(side){
     const contenueCarousel = document.querySelectorAll(".container_carousel img");
     let deplacement = img.offsetWidth;
     //si on clique à gauche ou à droite déplace le carousel dans une direction différente
-    let maxGauche = screen.width - (contenueCarousel.length*deplacement);
-
+    let maxGauche = window.innerWidth - (contenueCarousel.length*deplacement);
     if(side == "droite"){
             if(mouvement < 0){
                 mouvement += deplacement;

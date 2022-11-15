@@ -8,8 +8,8 @@
     .description{
         position:relative;
         margin: 40px 0px;
-        border-top: 4px solid $Button_Default_color;
-        border-bottom: 4px solid $Button_Default_color;
+        border-top: 4px solid $Button_Default_Color;
+        border-bottom: 4px solid $Button_Default_Color;
         background-color: $Background_Container_Title;
 
         padding: 0px;
@@ -18,7 +18,7 @@
 
         margin-bottom: 80px;
         h2{
-            color: $Button_Default_color;
+            color: $Button_Default_Color;
         }
         p{
             width: 90vw;
@@ -132,3 +132,4 @@
         }
     }
 }}
+

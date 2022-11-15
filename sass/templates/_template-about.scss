@@ -18,7 +18,9 @@
         background-color: transparent;
 
         a{
-
+            width: 100vw;
+            display: flex;
+            justify-content: center;
             .custom-logo{
                 border-radius: 0;
             }
@@ -28,8 +30,8 @@
     h2{
         position:relative;
         margin-bottom: 40px;
-        border-top: 4px solid $Button_Default_color;
-        border-bottom: 4px solid $Button_Default_color;
+        border-top: 4px solid $Button_Default_Color;
+        border-bottom: 4px solid $Button_Default_Color;
         background-color: $Background_Container_Title;
 
         padding: clamp(15px, 2vh, 30px);
@@ -160,7 +162,7 @@
                 position:static;
                 height: 50px;
                 padding: 10px 0px 30px 5.8%;
-                color:$Button_Default_color;
+                color:$Button_Default_Color;
                 background-color: rgba(0, 0, 0, 0);
                 text-align: left;
                 font-size: clamp(18px, 2vw, 60px);

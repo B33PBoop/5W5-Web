@@ -1,14 +1,20 @@
 .header{
-    background-color: rgba(68, 4, 110, 0.25);
+    background-color: #2C212E;
     
 }
 
 .nav{
-    font-size: 1vw;
+    font-size: 1.5vw;
     
 }
-@media only screen and (max-width : $media-width-tablette){
+
+@media only screen and (min-width : $media-width-tablette){
+    .header{
+        background-color: rgba(68, 4, 110, 0.25);
+        
+    }
+
     .nav{
-      font-size: 1.5vw;
+      font-size: 1vw;
     }
 }
