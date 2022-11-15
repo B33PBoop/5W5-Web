@@ -518,6 +518,12 @@ Templates
   background-color: transparent;
 }
 
+.main_about .wp-block-site-logo a {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .main_about .wp-block-site-logo a .custom-logo {
   border-radius: 0;
 }
@@ -1116,6 +1122,8 @@ body {
 }
 
 .main-cours .boite_modale {
+  z-index: 20;
+  cursor: pointer;
   position: fixed;
   left: 27%;
   top: 200px;
@@ -1134,20 +1142,35 @@ body {
   background-color: #303030;
 }
 
-.main-cours figure {
-  width: clamp(100px, 25vw, 6000px);
-  height: clamp(180px, 15vw, 6000px);
-}
-
-.main-cours figure img {
-  width: clamp(100px, 25vw, 6000px);
-  height: clamp(180px, 15vw, 6000px);
-}
-
-.main-cours figure figcaption {
-  text-align: center;
-  width: clamp(100px, 25vw, 6000px);
+.main-cours .session div {
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: black;
+  width: 90vw;
+  margin: 0px auto;
+}
+
+.main-cours .session div figure {
+  cursor: pointer;
+  margin: 0px auto;
+  width: clamp(200px, 25vw, 6000px);
+  height: clamp(180px, 15vw, 6000px);
+}
+
+.main-cours .session div figure img {
+  width: clamp(200px, 25vw, 6000px);
+  height: clamp(180px, 15vw, 6000px);
+}
+
+.main-cours .session div figure figcaption {
+  text-align: center;
+  width: clamp(200px, 25vw, 6000px);
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-30px);
+}
+
+.main-cours .session div .text {
+  display: none;
 }
 
 .main-cours .filter {
@@ -1181,6 +1204,36 @@ body {
 }
 
 @media only screen and (min-width: 780px) {
+  .main-cours .session div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow-x: hidden;
+    padding: 10px 0px;
+  }
+  .main-cours .session div .cours {
+    width: clamp(200px, 25vw, 6000px);
+    height: clamp(180px, 15vw, 6000px);
+  }
+  .main-cours .session div .cours div {
+    width: clamp(200px, 25vw, 6000px);
+  }
+  .main-cours .session div .cours div figure {
+    overflow-y: hidden;
+    cursor: pointer;
+    margin: 0px auto;
+    width: clamp(200px, 25vw, 6000px);
+    height: clamp(180px, 15vw, 6000px);
+  }
+  .main-cours .session div .cours div figure img {
+    width: clamp(200px, 25vw, 6000px);
+    height: clamp(180px, 15vw, 6000px);
+  }
+  .main-cours .session div .cours div figure figcaption {
+    text-align: center;
+    width: clamp(200px, 25vw, 6000px);
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-55px);
+  }
   .main-cours .text {
     display: none;
   }

@@ -18,7 +18,9 @@
         background-color: transparent;
 
         a{
-
+            width: 100vw;
+            display: flex;
+            justify-content: center;
             .custom-logo{
                 border-radius: 0;
             }

@@ -20,6 +20,8 @@ body{
 
     }
     .boite_modale{
+        z-index: 20;
+        cursor: pointer;
         position:fixed;
         left: 27%;
         top: 200px;
@@ -37,19 +39,34 @@ body{
     .button:active{
         background-color: rgb(48, 48, 48);
     }
-    figure{
-        width: clamp(100px, 25vw, 6000px);
-        height: clamp(180px, 15vw, 6000px);
-        img{
-            width: clamp(100px, 25vw, 6000px);
+    .session div{
+        display: grid;
+        grid-template-columns: 1fr;
+
+        background-color: black;
+        width: 90vw;
+        margin: 0px auto;
+        figure{
+            cursor: pointer;
+            margin: 0px auto;
+            width: clamp(200px, 25vw, 6000px);
             height: clamp(180px, 15vw, 6000px);
+            img{
+                width: clamp(200px, 25vw, 6000px);
+                height: clamp(180px, 15vw, 6000px);
+            }
+            figcaption{
+                text-align: center;
+                width: clamp(200px, 25vw, 6000px);
+                background-color: rgba(0, 0, 0, 0.9);
+                transform: translateY(-30px);
+            }
         }
-        figcaption{
-            text-align: center;
-            width: clamp(100px, 25vw, 6000px);
-            background-color: black;
+        .text{
+            display: none;
         }
     }
+
     .filter {
         cursor: pointer;
         width: 90vw;
@@ -79,6 +96,38 @@ body{
 }
 @media only screen and (min-width : $media-width-tablette){
     .main-cours{
+        .session div{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            overflow-x: hidden;
+            padding: 10px 0px;
+            .cours{
+                
+                width: clamp(200px, 25vw, 6000px);
+                height: clamp(180px, 15vw, 6000px);
+                div{
+                    width: clamp(200px, 25vw, 6000px);
+                    figure{
+                        overflow-y: hidden;
+                        cursor: pointer;
+                        margin: 0px auto;
+                        width: clamp(200px, 25vw, 6000px);
+                        height: clamp(180px, 15vw, 6000px);
+                        img{
+                            width: clamp(200px, 25vw, 6000px);
+                            height: clamp(180px, 15vw, 6000px);
+                        }
+                        figcaption{
+                            text-align: center;
+                            width: clamp(200px, 25vw, 6000px);
+                            background-color: rgba(0, 0, 0, 0.8);
+                            transform: translateY(-55px);
+                        }
+                    }
+                }
+               
+            }
+        }
         .text{
             display: none;
         }
