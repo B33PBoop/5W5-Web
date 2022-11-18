@@ -77,7 +77,7 @@
 
             p{
                 z-index: 10;
-                transform: translateY(-120px);
+                transform: translateY(-90px);
                 text-align: center;
 
                 color: white;  
@@ -137,11 +137,10 @@
         }
 
     .container_carousel{
-        overflow-x: hidden;
         overflow-y: hidden;
         width: 200vw;
-        height: 400px;
-        transition: 0.5s;
+        height: clamp(350px, 25vw, 1000px);
+        transition: 1s;
         display: flex;
         flex-direction: row;
             .container_img_caption{

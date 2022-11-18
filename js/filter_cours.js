@@ -1,7 +1,8 @@
 function createSelection(){
     const target = document.querySelector(".main-cours .filter");
+    if(target){
     const targetFilter = document.querySelector(".main-cours .filter p");
-    targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_down</span> </p>";
+    targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";
     if(target){
     //création du container pour les buttons
     const container = document.createElement("div");
@@ -13,13 +14,13 @@ function createSelection(){
     targetFilter.addEventListener("click", ()=>{
         
         
-        if(menu.style.height == "0px"){
-            menu.style.height = "160px";
-            targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_up</span> </p>";
+        if(menu.style.width == "0px"){
+            menu.style.width = "60%";
+            targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_left</span> </p>";
             
         }else{
-            menu.style.height = "0px";
-            targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_down</span> </p>";
+            menu.style.width = "0px";
+            targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";
         }
     })
 
@@ -35,8 +36,8 @@ function createSelection(){
 
         button.addEventListener("click", () => {
             const value = e;
-            menu.style.height = "0px";
-            targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_down</span> </p>";
+            menu.style.width = "0px";
+            targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";
                 selectCours.forEach(e => {
                         if(e.className.includes(`${value}`)){
                             e.style.display = "flex";
@@ -48,7 +49,7 @@ function createSelection(){
         })
         container.appendChild(button);
     });
-}
+}}
 }
 
 //delay la function pour que la page est le temps de charger
