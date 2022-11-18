@@ -17,6 +17,17 @@ function web_5w5_enqueue(){
 
 add_action("wp_enqueue_scripts", "web_5w5_enqueue");
 
+add_action('widgets_init', 'web_5w5_register_sidebars');
+function web_5w5_register_sidebars(){
+    register_sidebar(
+        array(
+            'id' => 'header_links',
+            'name' => __('Liens Sociaux'),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget' => '</div>'
+        )
+    );
+}
 
 function web_5w5_register_nav_menus(){
     register_nav_menus( array(
