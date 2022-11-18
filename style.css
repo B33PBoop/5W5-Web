@@ -611,6 +611,7 @@ Templates
   background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
 
 .main_about div {
@@ -766,6 +767,7 @@ Templates
   background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
 
 .main_projects .group div {
@@ -1070,6 +1072,7 @@ Templates
 
 .main_enseignants .description h2 {
   color: #FF52A4;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
 
 .main_enseignants .description p {
