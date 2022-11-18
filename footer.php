@@ -6,9 +6,12 @@
             "container" => "nav"
         ))
     ?>
+
+    <?php 
+        get_sidebar('header_links');
+    ?>
 </footer>
 
-<!-- Intégrer un widget d'icônes de réseau sociaux? -->
 </body>
 
 <?php wp_footer() ?>
