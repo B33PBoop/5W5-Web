@@ -1198,6 +1198,7 @@ body {
   background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
 
 .main-cours .boite_modale {
