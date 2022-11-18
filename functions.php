@@ -12,10 +12,6 @@ function web_5w5_enqueue(){
     wp_enqueue_script( "web_5w5-js-display_text" , get_template_directory_uri() . "/js/text_display.js", array(), true);
     wp_enqueue_script( "web_5w5-js-filter_cours" , get_template_directory_uri() . "/js/filter_cours.js", array(), true);
     wp_enqueue_script( "web_5w5-js-boite_modale" , get_template_directory_uri() . "/js/boite_modale.js", array(), true);
-
-
-
-
 }
 
 

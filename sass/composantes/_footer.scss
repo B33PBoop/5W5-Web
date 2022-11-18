@@ -1,13 +1,12 @@
 /*Les règles de positionement sont temporaires, je jure de ne pas abuser de position:absolute dans le futur*/
 
 .footer{
-    position: absolute;
-    bottom: 0;
+    margin-top: 0px;
+
     width: 100vw;
     height: 200px;
-
-    background-color: rgba(64, 7, 102, 0.25);
-
+    font-size: clamp(18px, 1.3vw, 50px);
+    background-color: $Background_Container;
     display: flex;
     flex-direction: column;
     justify-content: center;

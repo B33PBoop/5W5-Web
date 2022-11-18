@@ -1,6 +1,3 @@
-
-
-
 let mouvement = 0;
 
 window.addEventListener("resize", ()=>{

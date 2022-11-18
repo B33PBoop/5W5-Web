@@ -19,6 +19,7 @@
         margin-bottom: 80px;
         h2{
             color: $Button_Default_Color;
+            font-size: clamp(18px, 1.3vw, 50px);
         }
         p{
             width: 90vw;

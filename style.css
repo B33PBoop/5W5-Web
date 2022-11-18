@@ -181,9 +181,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -191,9 +191,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -202,9 +202,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -248,8 +248,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -257,8 +257,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -266,7 +266,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -274,7 +274,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -329,12 +329,9 @@ body {
   position: relative;
   min-height: 100vh;
   background-image: url("images/bkg.png");
-  color: rgb(255, 255, 255);
+  color: white;
   overflow-x: hidden;
   font-family: sans-serif;
-}
-body main {
-  padding-bottom: 200px;
 }
 
 body::-webkit-scrollbar {
@@ -346,7 +343,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgb(206, 206, 206);
+  background-color: #cecece;
 }
 
 .header {
@@ -365,13 +362,14 @@ body::-webkit-scrollbar-thumb {
     font-size: 1vw;
   }
 }
+
 /*Les règles de positionement sont temporaires, je jure de ne pas abuser de position:absolute dans le futur*/
 .footer {
-  position: absolute;
-  bottom: 0;
+  margin-top: 0px;
   width: 100vw;
   height: 200px;
-  background-color: rgba(64, 7, 102, 0.25);
+  font-size: clamp(18px, 1.3vw, 50px);
+  background-color: #0e0e0e;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -407,7 +405,7 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
   }
   .menu-header-container #menu-header .menu-item a {
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
     text-align: center;
     font-size: clamp(18px, 1.3vw, 50px);
@@ -451,41 +449,52 @@ body::-webkit-scrollbar-thumb {
     font-size: clamp(18px, 1.3vw, 50px);
   }
 }
+
 .menu-footer-container {
-  width: 100%;
+  width: 70%;
 }
+
 .menu-footer-container #menu-footer {
   list-style: none;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 50% 50%;
-  grid-template-areas: "accueil . about . cours" ". enseignants . projets .";
+  grid-template-areas: "accueil . about . cours" ". enseignants . projets .";
   row-gap: 25px;
 }
+
 .menu-footer-container #menu-footer .menu-item {
   display: flex;
   justify-content: center;
 }
-grid .menu-footer-container #menu-footer .menu-item:nth-child(1) {
+
+grid
+.menu-footer-container #menu-footer .menu-item:nth-child(1) {
   grid-area: accueil;
 }
+
 .menu-footer-container #menu-footer .menu-item:nth-child(2) {
   grid-area: about;
 }
+
 .menu-footer-container #menu-footer .menu-item:nth-child(3) {
   grid-area: cours;
 }
+
 .menu-footer-container #menu-footer .menu-item:nth-child(4) {
   grid-area: enseignants;
 }
+
 .menu-footer-container #menu-footer .menu-item:nth-child(5) {
   grid-area: projets;
 }
+
 .menu-footer-container #menu-footer .menu-item a {
-  color: rgb(255, 255, 255);
+  color: white;
   text-decoration: none;
   font-size: clamp(18px, 1.3vw, 50px);
 }
+
 .menu-footer-container #menu-footer .menu-item a:hover {
   color: #b30e60;
 }
@@ -496,6 +505,7 @@ grid .menu-footer-container #menu-footer .menu-item:nth-child(1) {
   height: 50px;
   background-color: transparent;
 }
+
 .menu-burger-container #burger_icon {
   width: 48px;
   height: 48px;
@@ -503,10 +513,12 @@ grid .menu-footer-container #menu-footer .menu-item:nth-child(1) {
   transform: rotateZ(0deg);
   transition: transform 0.2s;
 }
+
 .menu-burger-container #burger_icon.ouvert {
   transform: rotateZ(90deg);
   transition: transform 0.2s;
 }
+
 .menu-burger-container #menu-burger {
   position: absolute;
   top: 48px;
@@ -524,10 +536,12 @@ grid .menu-footer-container #menu-footer .menu-item:nth-child(1) {
   background-color: #2C212E;
   transition: 0.2s;
 }
+
 .menu-burger-container #menu-burger.ouvert {
   height: 250px;
   transition: 0.2s;
 }
+
 .menu-burger-container #menu-burger .menu-item {
   width: 40%;
   border: 2px solid #ff52a4;
@@ -538,18 +552,22 @@ grid .menu-footer-container #menu-footer .menu-item:nth-child(1) {
   justify-content: center;
   align-items: flex-start;
 }
+
 .menu-burger-container #menu-burger .menu-item a {
   width: 100%;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: white;
   text-decoration: none;
 }
+
 .menu-burger-container #menu-burger .menu-item a:hover {
   color: #b30e60;
 }
+
 .menu-burger-container #menu-burger .menu-item a:active {
   color: #04467c;
 }
+
 @media only screen and (min-width: 780px) {
   .menu-burger-container {
     display: none;
@@ -564,6 +582,7 @@ Templates
   flex-direction: column;
   gap: 0px;
 }
+
 .main_about .wp-block-site-logo {
   display: flex;
   justify-content: center;
@@ -580,24 +599,27 @@ Templates
   justify-content: center;
 }
 
-
 .main_about .wp-block-site-logo a .custom-logo {
   border-radius: 0;
 }
+
 .main_about h2 {
   position: relative;
   margin-bottom: 40px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: rgb(66, 43, 71);
+  background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
+
 .main_about div {
   display: flex;
   flex-direction: column;
   height: clamp(150px, 30vw, 200px);
 }
+
 .main_about div figure {
   border: 1px solid white;
   display: flex;
@@ -605,15 +627,18 @@ Templates
   width: 100vw;
   height: 100%;
 }
+
 .main_about div figure img {
   object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(150px, 30vw, 200px);
 }
+
 .main_about div.container {
   padding-bottom: clamp(200px, 12vw, 250px);
 }
+
 .main_about .container_text {
   background-color: rgba(0, 0, 0, 0.274);
   position: absolute;
@@ -622,6 +647,7 @@ Templates
   flex-direction: column;
   text-align: center;
 }
+
 .main_about .container_text h3 {
   height: 25px;
   width: 100%;
@@ -630,6 +656,7 @@ Templates
   text-align: center;
   font-size: clamp(18px, 5vw, 60px);
 }
+
 .main_about .container_text p {
   position: relative;
   margin-top: clamp(30px, 15vw, 150px);
@@ -641,12 +668,14 @@ Templates
   width: 90%;
   padding: 0px 5%;
 }
+
 .main_about .container_text .bouton {
   cursor: pointer;
   width: 100vw;
   position: absolute;
   bottom: clamp(-170px, -26vw, -130px);
 }
+
 .main_about .container_text:nth-of-type(even) {
   padding-right: 0px;
 }
@@ -664,7 +693,7 @@ Templates
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 30px;
-    background-color: rgb(14, 14, 14);
+    background-color: #0e0e0e;
     height: clamp(300px, 24vw, 450px);
     border-radius: 0px 20px 20px 0px;
   }
@@ -718,33 +747,40 @@ Templates
     flex-direction: row;
   }
 }
+
 .main_projects {
   display: flex;
   flex-direction: column;
   gap: 0px;
 }
+
 .main_projects .wp-block-site-logo {
   display: flex;
   justify-content: center;
 }
+
 .main_projects h2 {
   position: relative;
   margin-bottom: 40px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: rgb(66, 43, 71);
+  background-color: #422b47;
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
+
 .main_projects .group div {
   display: flex;
   flex-direction: column;
 }
+
 .main_projects .group div .container {
   margin-top: 0px;
   height: clamp(130px, 30vw, 200px);
   padding-bottom: clamp(200px, 12vw, 250px);
 }
+
 .main_projects .group div .container figure {
   display: flex;
   align-items: center;
@@ -752,18 +788,21 @@ Templates
   width: 100vw;
   height: 100%;
 }
+
 .main_projects .group div .container figure img {
   object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(130px, 30vw, 200px);
 }
+
 .main_projects .group div .container_text {
   position: absolute;
   height: clamp(130px, 30vw, 200px);
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.397);
 }
+
 .main_projects .group div .container_text h3 {
   text-align: center;
   width: 40%;
@@ -771,6 +810,7 @@ Templates
   padding-top: 80px;
   font-size: clamp(18px, 5vw, 60px);
 }
+
 .main_projects .group div .container_text p {
   display: none;
   position: relative;
@@ -781,6 +821,7 @@ Templates
   width: 90%;
   padding: 0px 5%;
 }
+
 .main_projects .group div .container_text .bouton {
   cursor: pointer;
   text-align: center;
@@ -794,7 +835,7 @@ Templates
   .main_projects .group {
     padding: 30px 0px;
     border-radius: 20px;
-    background-color: rgb(14, 14, 14);
+    background-color: #0e0e0e;
     margin: 0px auto;
     width: 90vw;
   }
@@ -848,34 +889,45 @@ Templates
     width: 25vw;
   }
 }
+
 .main-accueil {
   overflow-x: hidden;
   width: 100vw;
 }
+
+.main-accueil .leCarousel {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
 .main-accueil .wp-block-site-logo {
   display: flex;
   justify-content: center;
 }
+
 .main-accueil .description {
   position: relative;
   margin: 40px 0px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: rgb(66, 43, 71);
+  background-color: #422b47;
   padding: 0px;
   text-align: center;
   width: 100vw;
   margin-bottom: 80px;
 }
+
 .main-accueil .description div p {
   width: 90vw;
   margin: 0px auto;
   margin-bottom: 10px;
   font-size: clamp(18px, 1.3vw, 50px);
 }
+
 .main-accueil .description div p:first-of-type {
   padding-top: 20px;
 }
+
 .main-accueil .description div .savoir_plus {
   background-color: #FF52A4;
   width: clamp(150px, 13vw, 400px);
@@ -883,48 +935,56 @@ Templates
   padding: 5px 0px;
   transform: translateY(30px);
 }
+
 .main-accueil .description div .savoir_plus a {
   text-decoration: none;
   color: white;
 }
+
 .main-accueil .container {
   display: none;
 }
+
 .main-accueil .title {
   display: none;
 }
+
 .main-accueil .container_carousel {
   display: flex;
   flex-direction: column;
 }
+
 .main-accueil .container_carousel .container_img_caption {
   width: 100%;
   height: 10vh;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
-  border: 1px solid white;
 }
+
 .main-accueil .container_carousel .container_img_caption img {
   width: 100%;
   height: 10vh;
   object-fit: cover;
-  border-top: 3px solid black;
 }
+
 .main-accueil .container_carousel .container_img_caption p {
   z-index: 10;
-  transform: translateY(-120px);
+  transform: translateY(-90px);
   text-align: center;
   color: white;
   background-color: rgba(0, 0, 0, 0.774);
+  border-top: 2px solid white;
   opacity: 80%;
   width: 100%;
   margin: 0px auto;
   padding: 50px 0px;
 }
+
 .main-accueil .bouton_carousel {
   display: none;
 }
+
 @media only screen and (min-width: 780px) {
   .main-accueil body {
     width: 100vw;
@@ -939,7 +999,7 @@ Templates
   .main-accueil .bouton_carousel {
     position: absolute;
     z-index: 2;
-    height: 400px;
+    height: clamp(350px, 25vw, 1000px);
     background-color: black;
     color: white;
     opacity: 0;
@@ -962,26 +1022,23 @@ Templates
     left: 0%;
   }
   .main-accueil .container_carousel {
-    overflow-x: hidden;
     overflow-y: hidden;
     width: 200vw;
-    height: 400px;
-    transition: 0.5s;
+    height: clamp(350px, 25vw, 1000px);
+    transition: 1s;
     display: flex;
     flex-direction: row;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
   }
   .main-accueil .container_carousel .container_img_caption {
     width: 25vw;
-    height: 500px;
+    height: clamp(350px, 25vw, 1000px);
     overflow-y: hidden;
     overflow-x: hidden;
     border: 0px solid white;
   }
   .main-accueil .container_carousel .container_img_caption img {
-    width: 25vw;
-    height: 400px;
+    width: calc(25vw);
+    height: clamp(350px, 25vw, 1000px);
     border-top: none;
   }
   .main-accueil .container_carousel .container_img_caption p {
@@ -1000,20 +1057,24 @@ Templates
   display: flex;
   justify-content: center;
 }
+
 .main_enseignants .description {
   position: relative;
   margin: 40px 0px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: rgb(66, 43, 71);
+  background-color: #422b47;
   padding: 0px;
   text-align: center;
   width: 100vw;
   margin-bottom: 80px;
 }
+
 .main_enseignants .description h2 {
   color: #FF52A4;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
+
 .main_enseignants .description p {
   width: 90vw;
   margin: 0px auto;
@@ -1026,33 +1087,39 @@ Templates
   display: flex;
   gap: 0px;
   padding-bottom: 0px;
-  background-color: rgb(14, 14, 14);
+  background-color: #0e0e0e;
 }
+
 .container_prof div {
   width: 100vw;
 }
+
 .container_prof div figure {
   margin: 0px auto;
   width: 75vw;
   height: 100vw;
   transform: translateY(-20px);
 }
+
 .container_prof div figure img {
   object-fit: cover;
   width: 75vw;
   height: 100vw;
   border-radius: 40px;
-  border: 10px solid rgb(14, 14, 14);
+  border: 10px solid #0e0e0e;
 }
+
 .container_prof .container_text {
   text-align: center;
   width: 100vw;
-  background-color: rgb(14, 14, 14);
+  background-color: #0e0e0e;
   padding-bottom: clamp(10px, 5vw, 30px);
 }
+
 .container_prof .container_text h3 {
   font-size: clamp(18px, 1.8vw, 60px);
 }
+
 .container_prof .container_text p {
   width: 90%;
   margin: 0px auto;
@@ -1113,30 +1180,78 @@ Templates
   }
 }
 
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 .main-cours .wp-block-site-logo {
   display: flex;
   justify-content: center;
 }
 
-.main-cours figure {
-  width: 300px;
-  height: 300px;
-  padding-bottom: 30px;
+.main-cours h2 {
+  position: relative;
+  margin-bottom: 40px;
+  border-top: 4px solid #FF52A4;
+  border-bottom: 4px solid #FF52A4;
+  background-color: #422b47;
+  padding: clamp(15px, 2vh, 30px);
+  text-align: center;
+  font-size: clamp(18px, 1.3vw, 50px);
 }
-.main-cours figure img {
-  width: 300px;
-  height: 300px;
 
 .main-cours .boite_modale {
   z-index: 20;
   cursor: pointer;
   position: fixed;
-  left: 27%;
-  top: 200px;
-  background-color: black;
-  width: 50vw;
-  height: 50vh;
+  left: 15%;
+  top: 150px;
+  background-color: #422b47;
+  width: 70vw;
+  height: 60vh;
   overflow-y: hidden;
+  border-radius: 20px;
+  border: 2px solid #FF52A4;
+}
+
+.main-cours .boite_modale div {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-cours .boite_modale div div {
+  width: 100%;
+  height: 60%;
+  margin: 0px auto;
+}
+
+.main-cours .boite_modale div div h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.main-cours .boite_modale div div figure {
+  margin: 0px auto;
+  width: 90%;
+  height: 25vh;
+}
+
+.main-cours .boite_modale div div figure img {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.main-cours .boite_modale div p {
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 0px auto 5px auto;
+  width: 90%;
+  background-color: #0e0e0e;
+  height: 40%;
 }
 
 .main-cours .button {
@@ -1145,18 +1260,22 @@ Templates
   color: white;
   margin-left: 0px;
 }
+
 .main-cours .button:active {
+  background-color: #303030;
+}
 
-
-  background-color: rgb(48, 48, 48);
-}/*# sourceMappingURL=style.css.map */
+.main-cours .session {
+  margin-bottom: 20px;
+}
 
 .main-cours .session div {
   display: grid;
   grid-template-columns: 1fr;
-  background-color: black;
+  background-color: #0e0e0e;
   width: 90vw;
-  margin: 0px auto;
+  margin: 10px auto;
+  border-radius: 20px;
 }
 
 .main-cours .session div figure {
@@ -1175,7 +1294,7 @@ Templates
   text-align: center;
   width: clamp(200px, 50vw, 6000px);
   background-color: rgba(0, 0, 0, 0.9);
-  transform: translateY(-30px);
+  transform: translateY(-25px);
 }
 
 .main-cours .session div .text {
@@ -1187,20 +1306,21 @@ Templates
   width: 90vw;
   margin: 0px auto;
   background-color: #0e0e0e;
-  padding: 2px 2px 2px 10px;
+  padding: 10px 2px 18px 10px;
   border-radius: 10px;
   margin-top: 40px;
 }
 
 .main-cours .filter .selection {
+  display: flex;
+  flex-wrap: wrap;
   z-index: 10;
   position: absolute;
   transition: 0.3s;
   overflow-y: hidden;
-  height: 0px;
-  transform: translateX(-10px);
-  background-color: #0e0e0e;
-  border-radius: 0px 0px 20px 20px;
+  width: 0px;
+  height: 55px;
+  transform: translate(110px, -40px);
 }
 
 .main-cours .filter p {
@@ -1212,7 +1332,59 @@ Templates
   transform: translateY(6px);
 }
 
+@media only screen and (min-width: 200px) {
+  .main-cours .filter .selection {
+    transform: translate(110px, -50px);
+  }
+}
+
 @media only screen and (min-width: 780px) {
+  .main-cours .filter {
+    padding: 2px 2px 2px 10px;
+  }
+  .main-cours .filter .selection {
+    display: flex;
+    justify-content: space-around;
+    z-index: 10;
+    position: absolute;
+    transition: 0.3s;
+    overflow-x: hidden;
+    height: 30px;
+    width: 0px;
+    transform: translate(110px, -40px);
+  }
+  .main-cours .boite_modale .text {
+    flex-direction: row;
+    margin: 0px;
+  }
+  .main-cours .boite_modale .text div {
+    width: 50%;
+    height: 100%;
+    margin: 0px;
+  }
+  .main-cours .boite_modale .text div div {
+    margin-top: 10px;
+    width: 100%;
+    height: 92%;
+  }
+  .main-cours .boite_modale .text div div figure {
+    margin-left: 2px;
+    width: 30vw;
+    height: 90%;
+    margin: 0px auto;
+    overflow-y: hidden;
+  }
+  .main-cours .boite_modale .text div div figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .main-cours .boite_modale .text p {
+    width: 45%;
+    height: 88%;
+    margin: 20px auto 0px auto;
+    text-align: left;
+  }
   .main-cours .session div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1221,7 +1393,7 @@ Templates
   }
   .main-cours .session div .cours {
     width: clamp(200px, 25vw, 6000px);
-    height: clamp(180px, 15vw, 6000px);
+    height: clamp(180px, 20vw, 6000px);
   }
   .main-cours .session div .cours div {
     width: clamp(200px, 25vw, 6000px);
@@ -1231,21 +1403,20 @@ Templates
     cursor: pointer;
     margin: 0px auto;
     width: clamp(200px, 25vw, 6000px);
-    height: clamp(180px, 15vw, 6000px);
+    height: clamp(180px, 20vw, 6000px);
   }
   .main-cours .session div .cours div figure img {
     width: clamp(200px, 25vw, 6000px);
-    height: clamp(180px, 15vw, 6000px);
+    height: clamp(180px, 20vw, 6000px);
   }
   .main-cours .session div .cours div figure figcaption {
     text-align: center;
     width: clamp(200px, 25vw, 6000px);
     background-color: rgba(0, 0, 0, 0.8);
-    transform: translateY(-55px);
+    transform: translateY(-75px);
   }
   .main-cours .text {
     display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
-

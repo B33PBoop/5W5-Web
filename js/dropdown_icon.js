@@ -12,6 +12,6 @@ function addIcon(){
 
 setTimeout(() => {
     addIcon();
-}, 10);
+}, 100);
 
 
