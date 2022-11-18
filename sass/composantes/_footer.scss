@@ -1,16 +1,13 @@
-/*Les règles de positionement sont temporaires, je jure de ne pas abuser de position:absolute dans le futur*/
-
 .footer{
-    margin-top: 0px;
+    position:relative;
+    top: 250px;
 
     width: 100vw;
-    height: 200px;
+    height: 250px;
     font-size: clamp(18px, 1.3vw, 50px);
     background-color: $Background_Container;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    
 }
