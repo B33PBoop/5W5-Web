@@ -334,10 +334,6 @@ body {
   font-family: sans-serif;
 }
 
-body main {
-  padding-bottom: 200px;
-}
-
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -369,8 +365,7 @@ body::-webkit-scrollbar-thumb {
 
 /*Les règles de positionement sont temporaires, je jure de ne pas abuser de position:absolute dans le futur*/
 .footer {
-  position: absolute;
-  bottom: 0;
+  margin-top: 0px;
   width: 100vw;
   height: 200px;
   font-size: clamp(18px, 1.3vw, 50px);
