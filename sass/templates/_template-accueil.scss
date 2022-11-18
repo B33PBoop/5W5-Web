@@ -111,7 +111,7 @@
     .bouton_carousel{
         position: absolute;
         z-index: 2;
-        height: 400px;
+        height: clamp(350px, 25vw, 1000px);
         background-color: black;
         color: white;
         opacity: 0;
@@ -145,13 +145,13 @@
         flex-direction: row;
             .container_img_caption{
                 width: 25vw;
-                height: 500px;
+                height: clamp(350px, 25vw, 1000px);
                 overflow-y: hidden;
                 overflow-x: hidden;
                 border: 0px solid white;
                 img{
                     width: calc(25vw);
-                    height: 400px;
+                    height: clamp(350px, 25vw, 1000px);
                     border-top: none;
                 }
     
