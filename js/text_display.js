@@ -44,7 +44,7 @@ function displayText(nb){
     }
     else{
         containerText[nb].style.display = "flex";
-        containerDessous[nb].style.paddingBottom = "300px";
+        containerDessous[nb].style.paddingBottom = "400px";
         containerDessous[nb].style.backgroundColor = "rgba(0, 0, 0, 0.6)";
         arrow[nb].innerHTML = "keyboard_arrow_up";
     }

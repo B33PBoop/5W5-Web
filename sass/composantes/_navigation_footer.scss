@@ -1,7 +1,11 @@
-.menu-footer-container{
-    width: 70%;
+@media screen and (min-width: $media-width-tablette){
+    .menu-footer-container{
+        width: 70%;
+    }
+}
 
-    
+.menu-footer-container{
+    width: 100%;
 
     #menu-footer{
         list-style:none;
@@ -45,7 +49,7 @@
                 color: $Font_Default_Color;
                 text-decoration: none;
 
-                font-size: clamp(18px, 1.3vw, 50px);
+                font-size: clamp(16px, 1.3vw, 50px);
 
                 &:hover{
                     color: $Font_Hover_Color;

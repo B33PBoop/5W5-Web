@@ -5,11 +5,7 @@ body{
   background-image: url("images/bkg.png");
   color: $Font_Default_Color;
   overflow-x: hidden;
-  font-family: sans-serif;
-
-  main{
-      padding-bottom: 200px;
-  }
+  font-family: $font-main-site, sans-serif;
 
 }
 
