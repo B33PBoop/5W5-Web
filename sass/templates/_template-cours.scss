@@ -65,6 +65,7 @@ body{
                 width: 90%;
                 background-color: $Background_Container;
                 height: 40%;
+                font-size: clamp(8px, 1.1vw, 20px);
             }
         }
     }
