@@ -3,6 +3,23 @@
     display: flex;
     flex-direction: column;
     gap: 0px;
+    .cover{ 
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        div{
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            div{
+                height: 25%;
+            }
+            img{
+                max-width:100%;
+                height:auto;
+            }
+        }
+    }
     
     .wp-block-site-logo{
         display: flex;
