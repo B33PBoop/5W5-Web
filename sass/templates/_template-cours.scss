@@ -20,6 +20,14 @@ body{
 
         font-size: clamp(18px, 1.3vw, 50px);
     }
+    .background_boite{
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.13);
+        backdrop-filter: blur(4px);
+    }
     .boite_modale{
         z-index: 20;
         cursor: pointer;
@@ -58,6 +66,7 @@ body{
                 }
             }
             p{
+                overflow-y: auto;
                 text-align: center;
                 padding: 5px;
                 border-radius: 10px;
@@ -65,7 +74,7 @@ body{
                 width: 90%;
                 background-color: $Background_Container;
                 height: 40%;
-                font-size: clamp(8px, 1.1vw, 20px);
+                font-size: clamp(14px, 1.1vw, 27px);
             }
         }
     }
@@ -208,7 +217,6 @@ body{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             overflow-x: hidden;
-            padding: 10px 0px;
     
             .cours{   
                 width: clamp(200px, 25vw, 6000px);
@@ -230,7 +238,7 @@ body{
                             text-align: center;
                             width: clamp(200px, 25vw, 6000px);
                             background-color: rgba(0, 0, 0, 0.8);
-                            transform: translateY(-75px);
+                            transform: translateY(-48px);
                         }
                     }
                 }

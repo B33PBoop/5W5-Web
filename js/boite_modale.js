@@ -11,10 +11,18 @@ function boiteModale(){
     const cible = document.querySelector(".main-cours");
 
     const container = document.createElement("div");
+    const background = document.createElement("div");
+    background.classList.add("background_boite");
+    background.style.display = "none";
+    cible.appendChild(background);
+
+
+
     container.classList.add("boite_modale");
     container.style.display = "none";
-    container.addEventListener("click", ()=>{
+    background.addEventListener("click",()=>{
         container.style.display = "none";
+        background.style.display = "none";
     });
     
     cible.appendChild(container);
@@ -28,12 +36,9 @@ function boiteModale(){
             const text = listeText[target];
             const clone = text.cloneNode(true);
             clone.style.display = "flex";
+            background.style.display = "flex";
             boite.replaceChildren(clone);
-            if(text.style.display == "flex"){
 
-            }else{
-            }
-            
         })
     }
 }
@@ -41,4 +46,4 @@ function boiteModale(){
 
 setTimeout(()=>{
     boiteModale();
-}, 100)
+}, 500)
