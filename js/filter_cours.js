@@ -13,7 +13,6 @@ function createSelection(){
 
     targetFilter.addEventListener("click", ()=>{
         
-        
         if(menu.style.width == "0px"){
             menu.style.width = "60%";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_left</span> </p>";
