@@ -160,25 +160,7 @@
                 margin-right: 10px;
             }
         }
-        .container{
-            background-color: $Background_Container ;
-            
-            &:nth-of-type(odd){
-                transition: 0.5s;
-                &:hover{
-                    width: 100vw;
-                    padding-left: 2%;
-                }
-            }
-            &:nth-of-type(even){
-                transition: 0.5s;
-                &:hover{
-                    width: 100vw;
-                    padding-right: 2%;
-                }
-
-            }
-        }
+       
         //class ajouter dans la data base
         .container_text{
             background-color: rgba(0, 0, 0, 0);

@@ -751,23 +751,6 @@ Templates
   .main_about div figure:nth-of-type(odd) {
     margin-right: 10px;
   }
-  .main_about .container {
-    background-color: #0e0e0e;
-  }
-  .main_about .container:nth-of-type(odd) {
-    transition: 0.5s;
-  }
-  .main_about .container:nth-of-type(odd):hover {
-    width: 100vw;
-    padding-left: 2%;
-  }
-  .main_about .container:nth-of-type(even) {
-    transition: 0.5s;
-  }
-  .main_about .container:nth-of-type(even):hover {
-    width: 100vw;
-    padding-right: 2%;
-  }
   .main_about .container_text {
     background-color: rgba(0, 0, 0, 0);
     position: relative;
