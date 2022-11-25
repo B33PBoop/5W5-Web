@@ -725,6 +725,7 @@ Templates
     display: none;
   }
   .main_about div {
+    transition: 0.5s;
     width: 97%;
     display: flex;
     flex-direction: row-reverse;
@@ -749,6 +750,23 @@ Templates
   }
   .main_about div figure:nth-of-type(odd) {
     margin-right: 10px;
+  }
+  .main_about .container {
+    background-color: #0e0e0e;
+  }
+  .main_about .container:nth-of-type(odd) {
+    transition: 0.5s;
+  }
+  .main_about .container:nth-of-type(odd):hover {
+    width: 100vw;
+    padding-left: 2%;
+  }
+  .main_about .container:nth-of-type(even) {
+    transition: 0.5s;
+  }
+  .main_about .container:nth-of-type(even):hover {
+    width: 100vw;
+    padding-right: 2%;
   }
   .main_about .container_text {
     background-color: rgba(0, 0, 0, 0);
@@ -858,6 +876,11 @@ Templates
   padding: 0px 5%;
 }
 
+.main_projects .group div .container_text p a {
+  text-decoration: none;
+  color: white;
+}
+
 .main_projects .group div .container_text .bouton {
   cursor: pointer;
   text-align: center;
@@ -965,6 +988,7 @@ Templates
 }
 
 .main-accueil .description div .savoir_plus {
+  transition: 0.3s;
   background-color: #FF52A4;
   width: clamp(150px, 13vw, 400px);
   border-radius: 20px;
@@ -975,6 +999,10 @@ Templates
 .main-accueil .description div .savoir_plus a {
   text-decoration: none;
   color: white;
+}
+
+.main-accueil .description div .savoir_plus:hover {
+  transform: scale(1.05) translateY(30px);
 }
 
 .main-accueil .container {
@@ -1437,25 +1465,25 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     overflow-x: hidden;
   }
-  .main-cours .session div .cours {
+  .main-cours .session div .Cours {
     width: clamp(200px, 25vw, 6000px);
     height: clamp(180px, 20vw, 6000px);
   }
-  .main-cours .session div .cours div {
+  .main-cours .session div .Cours div {
     width: clamp(200px, 25vw, 6000px);
     overflow-y: hidden;
   }
-  .main-cours .session div .cours div figure {
+  .main-cours .session div .Cours div figure {
     cursor: pointer;
     margin: 0px auto;
     width: clamp(200px, 25vw, 6000px);
     height: clamp(180px, 20vw, 6000px);
   }
-  .main-cours .session div .cours div figure img {
+  .main-cours .session div .Cours div figure img {
     width: clamp(200px, 25vw, 6000px);
     height: clamp(180px, 20vw, 6000px);
   }
-  .main-cours .session div .cours div figure figcaption {
+  .main-cours .session div .Cours div figure figcaption {
     text-align: center;
     width: clamp(200px, 25vw, 6000px);
     background-color: rgba(0, 0, 0, 0.8);

@@ -35,6 +35,7 @@
             padding-top: 20px;
         }
         .savoir_plus{
+            transition: 0.3s;
             background-color: $Button_Default_Color;
             width: clamp(150px, 13vw, 400px);
             border-radius: 20px;
@@ -45,6 +46,9 @@
                 text-decoration: none;
                 color: white;
             }
+        }
+        .savoir_plus:hover{
+            transform: scale(1.05) translateY(30px);
         }
         }
  

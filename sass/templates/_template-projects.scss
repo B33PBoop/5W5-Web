@@ -66,6 +66,10 @@
                     margin: clamp(30px, 13.5vw, 140px) auto 0px auto;
                     width: 90%;
                     padding: 0px 5%;
+                    a{
+                        text-decoration: none;
+                        color: white;
+                    }
                 }
                 .bouton{
                     cursor: pointer;

@@ -23,9 +23,9 @@ function createSelection(){
         }
     })
 
-    const selectCours = document.querySelectorAll(".cours");
+    const selectCours = document.querySelectorAll(".Cours");
 
-    const typeCours = ["Modelisation", "Design" , "Jeux", "Web", "cours", "Video", "Autres"];
+    const typeCours = ["Modelisation", "Design" , "Jeux", "Web", "Cours", "Video", "Autres"];
 
     //pour chaque cours dans la liste typeCours créer un bouton avec un event listener personnalisé
     typeCours.forEach(e => {

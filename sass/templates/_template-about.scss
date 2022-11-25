@@ -132,7 +132,7 @@
             display: none;
         }
         div{
-            
+            transition: 0.5s;
             width: 97%;
             display: flex;
             flex-direction: row-reverse;
@@ -143,6 +143,7 @@
 
             &:nth-of-type(odd){
                 border-radius: 20px 0px 0px 20px;
+
             }
             .wp-block-image img{
                 object-fit: cover;
@@ -157,6 +158,25 @@
             }
             figure:nth-of-type(odd){
                 margin-right: 10px;
+            }
+        }
+        .container{
+            background-color: $Background_Container ;
+            
+            &:nth-of-type(odd){
+                transition: 0.5s;
+                &:hover{
+                    width: 100vw;
+                    padding-left: 2%;
+                }
+            }
+            &:nth-of-type(even){
+                transition: 0.5s;
+                &:hover{
+                    width: 100vw;
+                    padding-right: 2%;
+                }
+
             }
         }
         //class ajouter dans la data base

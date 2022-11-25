@@ -6,7 +6,7 @@ console.log(listeText);
 
 function boiteModale(){
     const listeText = document.querySelectorAll(".text");
-    const listeCours = document.querySelectorAll(".cours");
+    const listeCours = document.querySelectorAll(".Cours");
 
     const cible = document.querySelector(".main-cours");
 
