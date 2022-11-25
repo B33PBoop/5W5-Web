@@ -426,7 +426,6 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     top: 45px;
     z-index: 100;
-    opacity: 0.6;
     height: 0px;
     width: clamp(250px, 15vw, 500px);
     overflow-y: hidden;
@@ -440,7 +439,7 @@ body::-webkit-scrollbar-thumb {
   }
   .menu-header-container #menu-header .menu-item .sub-menu.ouvert {
     height: clamp(150px, 5vh, 550px);
-    background-color: rgba(128, 0, 128, 0.644);
+    background-color: rgba(128, 0, 128, 0.6);
     transition: 0.3s;
   }
   .menu-header-container #menu-header .menu-item .sub-menu .menu-item {
@@ -939,7 +938,6 @@ Templates
 
 .main-accueil .leCarousel {
   margin-top: 10%;
-  margin-bottom: 10%;
 }
 
 .main-accueil .wp-block-site-logo {
@@ -1333,19 +1331,20 @@ body {
   background-color: #0e0e0e;
   width: 90vw;
   margin: 10px auto;
-  border-radius: 20px;
 }
 
 .main-cours .session div figure {
   cursor: pointer;
   margin: 0px auto;
   width: clamp(200px, 50vw, 6000px);
-  height: clamp(180px, 15vw, 6000px);
+  width: clamp(200px, 50vw, 6000px);
 }
 
 .main-cours .session div figure img {
   width: clamp(200px, 50vw, 6000px);
-  height: clamp(180px, 15vw, 6000px);
+  width: clamp(200px, 50vw, 6000px);
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 .main-cours .session div figure figcaption {
@@ -1449,28 +1448,30 @@ body {
     overflow-x: hidden;
   }
   .main-cours .session div .Cours {
-    width: clamp(200px, 25vw, 6000px);
-    height: clamp(180px, 20vw, 6000px);
+    width: clamp(200px, 20vw, 6000px);
+    height: clamp(200px, 20vw, 6000px);
   }
   .main-cours .session div .Cours div {
-    width: clamp(200px, 25vw, 6000px);
+    width: clamp(200px, 20vw, 6000px);
     overflow-y: hidden;
   }
   .main-cours .session div .Cours div figure {
     cursor: pointer;
     margin: 0px auto;
-    width: clamp(200px, 25vw, 6000px);
-    height: clamp(180px, 20vw, 6000px);
+    width: clamp(200px, 20vw, 6000px);
+    height: clamp(200px, 20vw, 6000px);
   }
   .main-cours .session div .Cours div figure img {
-    width: clamp(200px, 25vw, 6000px);
-    height: clamp(180px, 20vw, 6000px);
+    width: clamp(200px, 20vw, 6000px);
+    height: clamp(200px, 20vw, 6000px);
+    object-fit: cover;
   }
   .main-cours .session div .Cours div figure figcaption {
     text-align: center;
-    width: clamp(200px, 25vw, 6000px);
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    transform: translateY(-48px);
+    transform: translateY(calc(clamp(50px, 3.4vw, 75px) * -1));
+    font-size: clamp(20px, 1.4vw, 30px);
   }
   .main-cours .text {
     display: none;

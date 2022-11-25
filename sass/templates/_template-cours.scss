@@ -94,25 +94,29 @@ body{
      div{
         display: grid;
         grid-template-columns: 1fr;
-
         background-color: $Background_Container;
+        
         width: 90vw;
         margin: 10px auto;
-        border-radius: 20px;
+
         figure{
             cursor: pointer;
             margin: 0px auto;
             width: clamp(200px, 50vw, 6000px);
-            height: clamp(180px, 15vw, 6000px);
+            width: clamp(200px, 50vw, 6000px);
             img{
                 width: clamp(200px, 50vw, 6000px);
-                height: clamp(180px, 15vw, 6000px);
+                width: clamp(200px, 50vw, 6000px);
+                object-fit: cover;
+                border-radius: 20px;
             }
             figcaption{
+                
                 text-align: center;
                 width: clamp(200px, 50vw, 6000px);
                 background-color: rgba(0, 0, 0, 0.9);
                 transform: translateY(-25px);
+                
             }
         }
         .text{
@@ -219,26 +223,29 @@ body{
             overflow-x: hidden;
     
             .Cours{   
-                width: clamp(200px, 25vw, 6000px);
-                height: clamp(180px, 20vw, 6000px);
+                width: clamp(200px, 20vw, 6000px);
+                height: clamp(200px, 20vw, 6000px);
                 div{
-                    width: clamp(200px, 25vw, 6000px);
+                    width: clamp(200px, 20vw, 6000px);
                     overflow-y: hidden;
                     figure{
                         
                         cursor: pointer;
                         margin: 0px auto;
-                        width: clamp(200px, 25vw, 6000px);
-                        height: clamp(180px, 20vw, 6000px);
+                        width: clamp(200px, 20vw, 6000px);
+                        height: clamp(200px, 20vw, 6000px);
                         img{
-                            width: clamp(200px, 25vw, 6000px);
-                            height: clamp(180px, 20vw, 6000px);
+                            width: clamp(200px, 20vw, 6000px);
+                            height: clamp(200px, 20vw, 6000px);
+                            object-fit: cover;
                         }
                         figcaption{
                             text-align: center;
-                            width: clamp(200px, 25vw, 6000px);
+                            width: 100%;
                             background-color: rgba(0, 0, 0, 0.8);
-                            transform: translateY(-48px);
+                            transform: translateY(calc(clamp(50px, 3.4vw, 75px) * -1));
+                            font-size: clamp(20px, 1.4vw, 30px);
+                            
                         }
                     }
                 }
