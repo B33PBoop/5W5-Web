@@ -141,17 +141,13 @@ body{
             top: -35px;
             left: 180px;
             font-size: clamp(20px, 1.4vw, 30px);
-            background-color: rgb(39, 39, 39);
-            border: 2px solid $Button_Default_Color ;
-            padding: 5px;
+            background-color: rgb(36, 36, 36);
             border-radius: 10px;
-            width: 120px;
-        }
+            border: 2px solid $Button_Default_Color;
+            width: 125px;
+            padding: 3px;
 
-            background-color: grey;
-            width: 200px;
         }
-
         .selection{
             display: flex;
             flex-wrap: wrap;
@@ -161,29 +157,12 @@ body{
             overflow-y: hidden;
             width: 0px;
 
-            height: 55px;
-            transform: translate(110px, -40px);
-        }
-        p{
-            border-right: 2px solid white;
-            width: 100px;
             height: 55px;   
             font-size: clamp(14px, 1.4vw, 30px);
-            transform: translate(clamp(110px, 10vw, 400px), -73px);
+            transform: translate(clamp(110px, 10vw, 400px), -70px);
             background-color: $Background_Container;
-            
         }
         p{
-            width: clamp(100px, 10vw, 300px);
-            font-size: clamp(20px, 1.4vw, 30px);
-            transform: translateY(5px);
-
-            height: 55px;   
-            font-size: clamp(14px, 1.4vw, 30px);
-            transform: translate(clamp(110px, 10vw, 400px), -65px);
-        }
-        p{
-            border-right: 2px solid white;
             width: clamp(100px, 10vw, 300px);
             font-size: clamp(20px, 1.4vw, 30px);
             transform: translateY(5px);

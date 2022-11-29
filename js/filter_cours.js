@@ -6,9 +6,6 @@ function createSelection(){
     if(target){
     //création du container pour les buttons
     const container = document.createElement("div");
-
-    container.classList.add("selection");
-
     const refresh = document.createElement("div");
     refresh.style.opacity = "0";
     let refreshUsed = false;
@@ -18,20 +15,7 @@ function createSelection(){
     refresh.classList.add("refresh");
     container.classList.add("selection");
 
-
-
-    target.appendChild(refresh)
-
-    const refresh = document.createElement("div");
-    refresh.style.display = "none";
-    let refreshUsed = false;
-    
-    refresh.innerHTML = "refresh";
-    
-    refresh.classList.add("refresh");
-    container.classList.add("selection");
-
-    target.appendChild(refresh)
+    target.appendChild(refresh);
 
     target.appendChild(container);
 
@@ -42,7 +26,7 @@ function createSelection(){
         
         if(menu.style.width == "0px"){
             menu.style.width = "58%";
-            menu.style.padding = "5px";
+            menu.style.padding = "7px";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_left</span> </p>";
             
         }else{
@@ -59,10 +43,10 @@ function createSelection(){
     refresh.addEventListener("click", ()=>{
         if (refreshUsed == true){
             refreshUsed = false;
-            refresh.style.display = "flex";
+            refresh.style.opacity = "100";
         }else{
             refreshUsed = true;
-            refresh.style.display = "none";
+            refresh.style.opacity = "0";
         }
         selectCours.forEach(e => {
             if(e.className.includes("Cours")){
@@ -81,7 +65,7 @@ function createSelection(){
         button.classList.add("button");
 
         button.addEventListener("click", () => {
-            refresh.style.display = "flex";
+            refresh.style.opacity = "100";
             refreshUsed = false;
             const value = e;
             refresh.innerHTML = e;
