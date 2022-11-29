@@ -8,6 +8,7 @@ function createSelection(){
     const container = document.createElement("div");
     const refresh = document.createElement("div");
     refresh.style.opacity = "0";
+    //refresh.style.pointerEvents = "none";
     let refreshUsed = false;
     
     refresh.innerHTML = "refresh x";
@@ -38,7 +39,7 @@ function createSelection(){
 
     const selectCours = document.querySelectorAll(".Cours");
 
-    const typeCours = ["Modelisation", "Design" , "Jeux", "Web", "Cours", "Video", "Autres"];
+    const typeCours = ["Modelisation", "Design" , "Jeux", "Web", "Video", "Autres"];
 
     refresh.addEventListener("click", ()=>{
         if (refreshUsed == true){
