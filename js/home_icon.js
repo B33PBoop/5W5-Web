@@ -1,7 +1,12 @@
 function setupHomeIcon(){
-    const iconItem = document.querySelector(".house_icon a")
-    iconItem.classList.add("material-icons-outlined")
-    iconItem.innerHTML = "home"
+    const iconContainer = document.querySelector(".house_icon_container")
+    const iconLink = document.querySelector(".house_icon_container a")
+    iconLink.innerHTML = ""
+    const icon = document.createElement("img")
+    icon.setAttribute("id", "houseIcon")
+    icon.setAttribute("src", "./images/home.png")
+
+    iconContainer.appendChild(icon)
 }
 
 setTimeout(() => {
