@@ -80,14 +80,15 @@
                     &.ouvert{
                         height: clamp(150px, 5vh, 550px);
     
-                        background-color: rgba(128, 0, 128, 0.6);
+                        background-color: rgba(0, 0, 0, 0.6);
+                        border: 2px solid rgba(128, 0, 128, 0.6);;
 
-                        transition: 0.3s;    
-                        
-                        //reste a ajouter une animation
-                        // voir https://stackoverflow.com/questions/8449933/how-to-transition-css-display-opacity-properties
-                        
+                        transition: 0.3s;                            
                     }
+
+                    // .material-symbols-outlined:hover{
+                    //     cursor: pointer;
+                    // }
     
                     .menu-item{
                         width: 100%;

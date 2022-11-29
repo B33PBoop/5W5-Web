@@ -10,7 +10,7 @@
         margin: 40px 0px;
         border-top: 4px solid $Button_Default_Color;
         border-bottom: 4px solid $Button_Default_Color;
-        background-color: $Background_Container_Title;
+        background-image: $Background_Container_Title;
 
         padding: 0px;
         text-align: center;
@@ -18,8 +18,7 @@
 
         margin-bottom: 80px;
         h2{
-            color: $Button_Default_Color;
-            font-size: clamp(18px, 1.3vw, 50px);
+            font-size: clamp(25px, 2vw, 50px);
         }
         p{
             width: 90vw;
@@ -27,6 +26,14 @@
             margin-bottom: 10px;
             font-size: clamp(18px, 1.3vw, 50px);
         }
+    }
+
+   
+
+    h3{
+        font-family: $font-main-titre;
+        color: $Button_Default_Color;
+         
     }
 
 }

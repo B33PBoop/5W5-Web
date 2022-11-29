@@ -1,0 +1,27 @@
+.menu-accueil-container{
+    display: none;
+}
+
+@media only screen and (min-width: $media-width-tablette){
+    .menu-accueil-container{
+        display: block;
+        position: absolute;
+        top: 5px;
+
+        padding-left: 10px;
+
+        #menu-accueil{
+            margin: 0;
+            padding: 0;
+
+            .menu-item{
+                list-style: none;
+                text-decoration: none;
+            }
+
+            .material-symbols-outlined{
+                font-size: 48px;
+            }
+        }
+    }
+}
