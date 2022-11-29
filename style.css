@@ -587,6 +587,10 @@ body::-webkit-scrollbar-thumb {
     margin: 0;
     padding: 0;
   }
+  .menu-accueil-container #menu-accueil .menu-item {
+    list-style: none;
+    text-decoration: none;
+  }
   .menu-accueil-container #menu-accueil .material-symbols-outlined {
     font-size: 48px;
   }

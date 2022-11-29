@@ -14,6 +14,11 @@
             margin: 0;
             padding: 0;
 
+            .menu-item{
+                list-style: none;
+                text-decoration: none;
+            }
+
             .material-symbols-outlined{
                 font-size: 48px;
             }
