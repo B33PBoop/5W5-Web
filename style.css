@@ -619,6 +619,27 @@ Templates
   height: auto;
 }
 
+.main_about .titreType2 {
+  transform: translateY(3.1vw);
+  margin: auto;
+  text-align: center;
+  color: #FF52A4;
+  font-size: clamp(16px, 3vw, 25px);
+  background-color: #0e0e0e;
+  width: clamp(200px, 13vw, 400px);
+  border-radius: 20px;
+  padding: 5px 0px;
+}
+
+.main_about .sommaire {
+  background-color: #0e0e0e;
+  width: 70%;
+  padding: 2%;
+  border-radius: 20px;
+  margin: auto;
+  font-size: clamp(18px, 1.3vw, 50px);
+}
+
 .main_about .wp-block-site-logo {
   display: flex;
   justify-content: center;
@@ -651,6 +672,7 @@ Templates
 }
 
 .main_about div {
+  background-color: #0e0e0e;
   display: flex;
   flex-direction: column;
   height: clamp(150px, 30vw, 200px);

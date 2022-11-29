@@ -20,6 +20,27 @@
             }
         }
     }
+
+    .titreType2{
+        transform: translateY(3.1vw);
+        margin: auto;
+        text-align: center;
+        color: $Button_Default_Color;
+        font-size: clamp(16px, 3vw, 25px);
+        background-color: $Background_Container;
+        width: clamp(200px, 13vw, 400px);
+        border-radius: 20px;
+        padding: 5px 0px;
+    }
+
+    .sommaire{
+        background-color: $Background_Container;
+        width: 70%;
+        padding: 2%;
+        border-radius: 20px;
+        margin: auto;
+        font-size: clamp(18px, 1.3vw, 50px);
+    }
     
     .wp-block-site-logo{
         display: flex;
@@ -58,7 +79,7 @@
     
     div{
         // padding: 0px 20px;
-        
+        background-color: $Background_Container;
         display: flex;
         flex-direction: column;
         height: clamp(150px, 30vw, 200px);
