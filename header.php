@@ -19,6 +19,13 @@
                 "container" => "div"
             ))
         ?>
+        
+        <?php 
+            wp_nav_menu(array( 
+                "menu" => "accueil",
+                "container" => "nav"
+            ))
+        ?>
 
         <?php 
             wp_nav_menu(array( 
