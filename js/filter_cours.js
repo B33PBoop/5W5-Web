@@ -6,7 +6,22 @@ function createSelection(){
     if(target){
     //création du container pour les buttons
     const container = document.createElement("div");
+<<<<<<< Updated upstream
     container.classList.add("selection");
+=======
+    const refresh = document.createElement("div");
+    refresh.style.opacity = "0";
+    let refreshUsed = false;
+    
+    refresh.innerHTML = "refresh x";
+    
+    refresh.classList.add("refresh");
+    container.classList.add("selection");
+
+
+
+    target.appendChild(refresh)
+>>>>>>> Stashed changes
     target.appendChild(container);
 
     const menu = document.querySelector(".main-cours .filter div");
@@ -14,11 +29,13 @@ function createSelection(){
     targetFilter.addEventListener("click", ()=>{
         
         if(menu.style.width == "0px"){
-            menu.style.width = "60%";
+            menu.style.width = "58%";
+            menu.style.padding = "5px";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_left</span> </p>";
             
         }else{
             menu.style.width = "0px";
+            menu.style.padding = "0px";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";
         }
     })
@@ -35,7 +52,9 @@ function createSelection(){
 
         button.addEventListener("click", () => {
             const value = e;
+            refresh.innerHTML = e;
             menu.style.width = "0px";
+            menu.style.padding = "0px";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";
                 selectCours.forEach(e => {
                         if(e.className.includes(`${value}`)){

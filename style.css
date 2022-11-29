@@ -1345,6 +1345,22 @@ body {
   padding: 10px 2px 18px 10px;
   border-radius: 10px;
   margin-top: 40px;
+<<<<<<< Updated upstream
+=======
+  height: 100px;
+}
+
+.main-cours .filter .refresh {
+  position: relative;
+  top: -35px;
+  left: 180px;
+  font-size: clamp(20px, 1.4vw, 30px);
+  background-color: #272727;
+  border: 2px solid #FF52A4;
+  padding: 5px;
+  border-radius: 10px;
+  width: 120px;
+>>>>>>> Stashed changes
 }
 
 .main-cours .filter .selection {
@@ -1356,12 +1372,24 @@ body {
   overflow-y: hidden;
   width: 0px;
   height: 55px;
+<<<<<<< Updated upstream
   transform: translate(110px, -40px);
 }
 
 .main-cours .filter p {
   border-right: 2px solid white;
   width: 100px;
+=======
+  font-size: clamp(14px, 1.4vw, 30px);
+  transform: translate(clamp(110px, 10vw, 400px), -73px);
+  background-color: #0e0e0e;
+}
+
+.main-cours .filter p {
+  width: clamp(100px, 10vw, 300px);
+  font-size: clamp(20px, 1.4vw, 30px);
+  transform: translateY(5px);
+>>>>>>> Stashed changes
 }
 
 .main-cours .filter span {
