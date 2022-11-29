@@ -5,31 +5,15 @@
     
         #menu-footer{
             list-style:none;
-            //display: grid;
-            // grid-template-columns: 20% 20% 20% 20% 20%;
-            // display: grid;
             display: flex;
             flex-direction: row;
-            justify-content: center;
-    
-           /* grid-template-columns: 20% 20% 20% 20% 20%;
-            grid-template-rows: 50% 50%;
-            grid-template-areas: 
-                "accueil . about . cours"
-    @ -39,18 +48,24 @@
-    
-                &:nth-child(5){
-                    grid-area: projets;
-                }
-                }*/
-    
+            justify-content: center;    
                 a{
                     color: $Font_Default_Color;
                     text-decoration: none;
                     margin: 20px;
-                    font-size: 1.5rem;
     
-                    //font-size: clamp(16px, 1.3vw, 50px);
+                    font-size: clamp(16px, 1.3vw, 50px);
     
                     &:hover{
                         color: $Font_Hover_Color;
