@@ -622,13 +622,14 @@ Templates
   text-align: center;
   color: #FF52A4;
   font-size: clamp(16px, 3vw, 25px);
-  background-color: rgb(14, 14, 14);
+  background-color: #0e0e0e;
   width: clamp(200px, 13vw, 400px);
   border-radius: 20px;
   padding: 5px 0px;
 }
+
 .main_about .sommaire {
-  background-color: rgb(14, 14, 14);
+  background-color: #0e0e0e;
   width: 70%;
   padding: 2%;
   border-radius: 20px;
@@ -1312,8 +1313,19 @@ body {
   margin: 0px auto;
   background-color: rgb(14, 14, 14);
   padding: 10px 2px 18px 10px;
+  font-size: clamp(16px, 1.1vw, 25px);
   border-radius: 10px;
   margin-top: 40px;
+  height: 100px;
+}
+
+.main-cours .filter .refresh {
+  position: relative;
+  top: -35px;
+  left: 180px;
+  font-size: clamp(20px, 1.4vw, 30px);
+  background-color: grey;
+  width: 200px;
 }
 .main-cours .filter .selection {
   display: flex;
@@ -1324,21 +1336,19 @@ body {
   overflow-y: hidden;
   width: 0px;
   height: 55px;
-  transform: translate(110px, -40px);
+  font-size: clamp(14px, 1.4vw, 30px);
+  transform: translate(clamp(110px, 10vw, 400px), -65px);
 }
 .main-cours .filter p {
   border-right: 2px solid white;
-  width: 100px;
+  width: clamp(100px, 10vw, 300px);
+  font-size: clamp(20px, 1.4vw, 30px);
+  transform: translateY(5px);
 }
 .main-cours .filter span {
   transform: translateY(6px);
 }
 
-@media only screen and (min-width: 200px) {
-  .main-cours .filter .selection {
-    transform: translate(110px, -50px);
-  }
-}
 @media only screen and (min-width: 780px) {
   .main-cours .filter {
     padding: 2px 2px 2px 10px;
@@ -1352,7 +1362,6 @@ body {
     overflow-x: hidden;
     height: 30px;
     width: 0px;
-    transform: translate(110px, -40px);
   }
   .main-cours .boite_modale .text {
     flex-direction: row;
