@@ -597,6 +597,31 @@ Templates
   height: auto;
 }
 
+.main_about h3 {
+  font-family: "Bebas Neue";
+}
+
+.main_about .titreType2 {
+  transform: translateY(clamp(10px, 1.5vw, 15px));
+  margin: auto;
+  text-align: center;
+  color: #FF52A4;
+  font-size: clamp(16px, 3.5vw, 30px);
+  background-color: #0e0e0e;
+  width: clamp(200px, 13vw, 400px);
+  border-radius: 20px;
+  padding: 5px 8px;
+}
+
+.main_about .sommaire {
+  background-color: #0e0e0e;
+  width: 70%;
+  padding: 2%;
+  border-radius: 20px;
+  margin: auto;
+  font-size: clamp(18px, 1.3vw, 50px);
+}
+
 .main_about .wp-block-site-logo {
   display: flex;
   justify-content: center;
@@ -622,10 +647,10 @@ Templates
   margin-bottom: 40px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: #422b47;
+  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
-  font-size: clamp(18px, 1.3vw, 50px);
+  font-size: clamp(18px, 2vw, 50px);
 }
 
 .main_about div {
@@ -701,6 +726,17 @@ Templates
   }
   .main_about .bouton {
     display: none;
+  }
+  .main_about .titreType2 {
+    transform: translateY(clamp(38px, 3vw, 45px));
+    margin: auto;
+    text-align: center;
+    color: #FF52A4;
+    font-size: clamp(16px, 5vw, 30px);
+    background-color: #0e0e0e;
+    width: clamp(200px, 13vw, 400px);
+    border-radius: 20px;
+    padding: 5px 8px;
   }
   .main_about div {
     transition: 0.5s;
@@ -779,7 +815,7 @@ Templates
   margin-bottom: 40px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: #422b47;
+  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
   font-size: clamp(18px, 1.3vw, 50px);
@@ -929,7 +965,7 @@ Templates
   margin: 40px 0px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: #422b47;
+  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   padding: 0px;
   text-align: center;
   width: 100vw;
@@ -1087,7 +1123,7 @@ Templates
   margin: 40px 0px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: #422b47;
+  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   padding: 0px;
   text-align: center;
   width: 100vw;
@@ -1095,8 +1131,7 @@ Templates
 }
 
 .main_enseignants .description h2 {
-  color: #FF52A4;
-  font-size: clamp(18px, 1.3vw, 50px);
+  font-size: clamp(25px, 2vw, 50px);
 }
 
 .main_enseignants .description p {
@@ -1104,6 +1139,11 @@ Templates
   margin: 0px auto;
   margin-bottom: 10px;
   font-size: clamp(18px, 1.3vw, 50px);
+}
+
+.main_enseignants h3 {
+  font-family: "Bebas Neue";
+  color: #FF52A4;
 }
 
 .container_prof {
@@ -1219,7 +1259,7 @@ body {
   margin-bottom: 40px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: #422b47;
+  background-color: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
   font-size: clamp(18px, 1.3vw, 50px);
@@ -1240,7 +1280,7 @@ body {
   position: fixed;
   left: 15%;
   top: 150px;
-  background-color: #422b47;
+  background-color: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   width: 70vw;
   height: 60vh;
   overflow-y: hidden;
