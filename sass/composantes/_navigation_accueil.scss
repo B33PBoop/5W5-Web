@@ -80,7 +80,8 @@
                     &.ouvert{
                         height: clamp(150px, 5vh, 550px);
     
-                        background-color: rgba(128, 0, 128, 0.6);
+                        background-color: rgba(0, 0, 0, 0.6);
+                        border: 2px solid rgba(128, 0, 128, 0.6);;
 
                         transition: 0.3s;    
                         

@@ -356,7 +356,7 @@ body::-webkit-scrollbar-thumb {
 
 @media only screen and (min-width: 780px) {
   .header {
-    background-color: rgba(68, 4, 110, 0.25);
+    background-color: rgba(0, 0, 0, 0.5);
   }
   .nav {
     font-size: 1vw;
@@ -438,7 +438,8 @@ body::-webkit-scrollbar-thumb {
   }
   .menu-header-container #menu-header .menu-item .sub-menu.ouvert {
     height: clamp(150px, 5vh, 550px);
-    background-color: rgba(128, 0, 128, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(128, 0, 128, 0.6);
     transition: 0.3s;
   }
   .menu-header-container #menu-header .menu-item .sub-menu .menu-item {
