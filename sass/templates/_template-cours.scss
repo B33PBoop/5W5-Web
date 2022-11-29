@@ -1,3 +1,4 @@
+
 body{
     width: 100vw;
     overflow-x: hidden;
@@ -130,10 +131,9 @@ body{
         margin: 0px auto;
         background-color: $Background_Container;
         padding: 10px 2px 18px 10px;
+        font-size: clamp(16px, 1.1vw, 25px);
         border-radius: 10px;
         margin-top: 40px;
-<<<<<<< Updated upstream
-=======
         height: 100px;
 
         .refresh{
@@ -147,7 +147,11 @@ body{
             border-radius: 10px;
             width: 120px;
         }
->>>>>>> Stashed changes
+
+            background-color: grey;
+            width: 200px;
+        }
+
         .selection{
             display: flex;
             flex-wrap: wrap;
@@ -157,14 +161,12 @@ body{
             overflow-y: hidden;
             width: 0px;
 
-<<<<<<< Updated upstream
             height: 55px;
             transform: translate(110px, -40px);
         }
         p{
             border-right: 2px solid white;
             width: 100px;
-=======
             height: 55px;   
             font-size: clamp(14px, 1.4vw, 30px);
             transform: translate(clamp(110px, 10vw, 400px), -73px);
@@ -175,21 +177,22 @@ body{
             width: clamp(100px, 10vw, 300px);
             font-size: clamp(20px, 1.4vw, 30px);
             transform: translateY(5px);
->>>>>>> Stashed changes
+
+            height: 55px;   
+            font-size: clamp(14px, 1.4vw, 30px);
+            transform: translate(clamp(110px, 10vw, 400px), -65px);
+        }
+        p{
+            border-right: 2px solid white;
+            width: clamp(100px, 10vw, 300px);
+            font-size: clamp(20px, 1.4vw, 30px);
+            transform: translateY(5px);
         }
         span{
             transform: translateY(6px);
+        
         }
     }    
-}
-@media only screen and (min-width : 200px){
-    .main-cours{
-        .filter{
-            .selection{
-                transform: translate(110px, -50px);
-            }
-        }
-    }
 }
 
 @media only screen and (min-width : $media-width-tablette){
@@ -206,7 +209,6 @@ body{
             height: 30px;
             width: 0px;
 
-            transform: translate(110px, -40px);
         }
     }
     .boite_modale{
