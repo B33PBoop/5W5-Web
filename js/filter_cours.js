@@ -6,10 +6,20 @@ function createSelection(){
     if(target){
     //création du container pour les buttons
     const container = document.createElement("div");
+    const refresh = document.createElement("div");
+    refresh.style.display = "none";
+    let refreshUsed = false;
+    
+    refresh.innerHTML = "refresh";
+    
+    refresh.classList.add("refresh");
     container.classList.add("selection");
+
+    target.appendChild(refresh)
     target.appendChild(container);
 
-    const menu = document.querySelector(".main-cours .filter div");
+    const menu = document.querySelector(".main-cours .filter .selection");
+
 
     targetFilter.addEventListener("click", ()=>{
         
@@ -27,6 +37,24 @@ function createSelection(){
 
     const typeCours = ["Modelisation", "Design" , "Jeux", "Web", "Cours", "Video", "Autres"];
 
+    refresh.addEventListener("click", ()=>{
+        if (refreshUsed == true){
+            refreshUsed = false;
+            refresh.style.display = "flex";
+        }else{
+            refreshUsed = true;
+            refresh.style.display = "none";
+        }
+        selectCours.forEach(e => {
+            if(e.className.includes("Cours")){
+                e.style.display = "flex";
+            }
+            else{
+                e.style.display = "none";
+
+            }
+    });
+    })
     //pour chaque cours dans la liste typeCours créer un bouton avec un event listener personnalisé
     typeCours.forEach(e => {
         const button = document.createElement("div");
@@ -34,6 +62,8 @@ function createSelection(){
         button.classList.add("button");
 
         button.addEventListener("click", () => {
+            refresh.style.display = "flex";
+            refreshUsed = false;
             const value = e;
             menu.style.width = "0px";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";

@@ -24,9 +24,7 @@ while ( have_posts() ) : the_post();
         </span></button>";
        
         echo "<div class='container_carousel'>";
-
-        
-        
+  
         $galleryIds = explode( ",", $gallery['ids'] );
 
         foreach ( $galleryIds as $id) {
@@ -41,8 +39,6 @@ while ( have_posts() ) : the_post();
             <?php
             
         }
-
-        
 
         echo "</div>";
         echo "<button class='bouton_droite bouton_carousel' onclick='carousel(`gauche`)'><span class='material-symbols-outlined'>
