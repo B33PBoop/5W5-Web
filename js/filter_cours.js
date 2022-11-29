@@ -13,7 +13,6 @@ function createSelection(){
 
     targetFilter.addEventListener("click", ()=>{
         
-        
         if(menu.style.width == "0px"){
             menu.style.width = "60%";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_left</span> </p>";
@@ -24,9 +23,9 @@ function createSelection(){
         }
     })
 
-    const selectCours = document.querySelectorAll(".cours");
+    const selectCours = document.querySelectorAll(".Cours");
 
-    const typeCours = ["Modelisation", "Design" , "Jeux", "Web", "cours"];
+    const typeCours = ["Modelisation", "Design" , "Jeux", "Web", "Cours", "Video", "Autres"];
 
     //pour chaque cours dans la liste typeCours créer un bouton avec un event listener personnalisé
     typeCours.forEach(e => {
