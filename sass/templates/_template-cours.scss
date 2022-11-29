@@ -14,7 +14,7 @@ body{
         margin-bottom: 40px;
         border-top: 4px solid $Button_Default_Color;
         border-bottom: 4px solid $Button_Default_Color;
-        background-color: $Background_Container_Title;
+        background-image: $Background_Container_Title;
 
         padding: clamp(15px, 2vh, 30px);
         text-align: center;
@@ -35,7 +35,7 @@ body{
         position:fixed;
         left: 15%;
         top: 150px;
-        background-color: $Background_Container_Title;
+        background-image: $Background_Container_Title;
         width: 70vw;
         height: 60vh;
         overflow-y: hidden;

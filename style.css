@@ -356,7 +356,7 @@ body::-webkit-scrollbar-thumb {
 
 @media only screen and (min-width: 780px) {
   .header {
-    background-color: rgba(68, 4, 110, 0.25);
+    background-color: rgba(0, 0, 0, 0.5);
   }
   .nav {
     font-size: 1vw;
@@ -439,7 +439,8 @@ body::-webkit-scrollbar-thumb {
   }
   .menu-header-container #menu-header .menu-item .sub-menu.ouvert {
     height: clamp(150px, 5vh, 550px);
-    background-color: rgba(128, 0, 128, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(128, 0, 128, 0.6);
     transition: 0.3s;
   }
   .menu-header-container #menu-header .menu-item .sub-menu .menu-item {
@@ -458,30 +459,48 @@ body::-webkit-scrollbar-thumb {
 .menu-footer-container #menu-footer {
   list-style: none;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-footer-container #menu-footer .menu-item {
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  /* grid-template-columns: 20% 20% 20% 20% 20%;
-            grid-template-rows: 50% 50%;
-            grid-template-areas: 
-                "accueil . about . cours"
-    @ -39,18 +48,24 @@
-    
-                &:nth-child(5){
-                    grid-area: projets;
-                }
-                }*/
+  align-items: center;
 }
 
-.menu-footer-container #menu-footer a {
+.menu-footer-container #menu-footer .menu-item a {
   color: white;
   text-decoration: none;
-  margin: 20px;
-  font-size: 1.5rem;
+  padding: 5px;
+  font-size: clamp(16px, 1.5vw, 50px);
 }
 
-.menu-footer-container #menu-footer a:hover {
+.menu-footer-container #menu-footer .menu-item a:hover {
   color: #b30e60;
   transition-duration: 0.4s;
+}
+
+@media screen and (min-width: 780px) {
+  .menu-footer-container #menu-footer {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .menu-footer-container #menu-footer a {
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-size: clamp(16px, 1.5vw, 50px);
+  }
+  .menu-footer-container #menu-footer a:hover {
+    color: #b30e60;
+    transition-duration: 0.4s;
+  }
 }
 
 .menu-burger-container {
@@ -559,12 +578,40 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
+.footer .sidebar {
+  margin-top: 40px;
+}
+
 .footer .sidebar .widget .wp-block-social-links {
-  margin-top: 0;
+  margin: 0;
 }
 
 .footer .sidebar .widget .wp-block-social-links .wp-social-link a {
   font-size: clamp(18px, 1.5vw, 50px);
+}
+
+.menu-accueil-container {
+  display: none;
+}
+
+@media only screen and (min-width: 780px) {
+  .menu-accueil-container {
+    display: block;
+    position: absolute;
+    top: 5px;
+    padding-left: 10px;
+  }
+  .menu-accueil-container #menu-accueil {
+    margin: 0;
+    padding: 0;
+  }
+  .menu-accueil-container #menu-accueil .menu-item {
+    list-style: none;
+    text-decoration: none;
+  }
+  .menu-accueil-container #menu-accueil .material-symbols-outlined {
+    font-size: 48px;
+  }
 }
 
 /*---------
@@ -597,16 +644,20 @@ Templates
   height: auto;
 }
 
+.main_about h3 {
+  font-family: "Bebas Neue";
+}
+
 .main_about .titreType2 {
-  transform: translateY(3.1vw);
+  transform: translateY(clamp(10px, 1.5vw, 15px));
   margin: auto;
   text-align: center;
   color: #FF52A4;
-  font-size: clamp(16px, 3vw, 25px);
+  font-size: clamp(16px, 3.5vw, 30px);
   background-color: #0e0e0e;
   width: clamp(200px, 13vw, 400px);
   border-radius: 20px;
-  padding: 5px 0px;
+  padding: 5px 8px;
 }
 
 .main_about .sommaire {
@@ -643,10 +694,10 @@ Templates
   margin-bottom: 40px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: #422b47;
+  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
-  font-size: clamp(18px, 1.3vw, 50px);
+  font-size: clamp(18px, 2vw, 50px);
 }
 
 .main_about div {
@@ -722,6 +773,17 @@ Templates
   }
   .main_about .bouton {
     display: none;
+  }
+  .main_about .titreType2 {
+    transform: translateY(clamp(38px, 3vw, 45px));
+    margin: auto;
+    text-align: center;
+    color: #FF52A4;
+    font-size: clamp(16px, 5vw, 30px);
+    background-color: #0e0e0e;
+    width: clamp(200px, 13vw, 400px);
+    border-radius: 20px;
+    padding: 5px 8px;
   }
   .main_about div {
     transition: 0.5s;
@@ -800,7 +862,7 @@ Templates
   margin-bottom: 40px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: #422b47;
+  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
   font-size: clamp(18px, 1.3vw, 50px);
@@ -950,7 +1012,7 @@ Templates
   margin: 40px 0px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: #422b47;
+  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   padding: 0px;
   text-align: center;
   width: 100vw;
@@ -1108,7 +1170,7 @@ Templates
   margin: 40px 0px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: #422b47;
+  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   padding: 0px;
   text-align: center;
   width: 100vw;
@@ -1116,8 +1178,7 @@ Templates
 }
 
 .main_enseignants .description h2 {
-  color: #FF52A4;
-  font-size: clamp(18px, 1.3vw, 50px);
+  font-size: clamp(25px, 2vw, 50px);
 }
 
 .main_enseignants .description p {
@@ -1125,6 +1186,11 @@ Templates
   margin: 0px auto;
   margin-bottom: 10px;
   font-size: clamp(18px, 1.3vw, 50px);
+}
+
+.main_enseignants h3 {
+  font-family: "Bebas Neue";
+  color: #FF52A4;
 }
 
 .container_prof {
@@ -1240,7 +1306,7 @@ body {
   margin-bottom: 40px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-color: #422b47;
+  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
   font-size: clamp(18px, 1.3vw, 50px);
@@ -1261,7 +1327,7 @@ body {
   position: fixed;
   left: 15%;
   top: 150px;
-  background-color: #422b47;
+  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
   width: 70vw;
   height: 60vh;
   overflow-y: hidden;
@@ -1486,5 +1552,19 @@ body {
   .main-cours .text {
     display: none;
   }
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#conteneur {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
