@@ -21,16 +21,20 @@
         }
     }
 
+    h3{
+        font-family: $font-main-titre;
+    }
+
     .titreType2{
-        transform: translateY(3.1vw);
+        transform: translateY(clamp(10px, 1.5vw, 15px));
         margin: auto;
         text-align: center;
         color: $Button_Default_Color;
-        font-size: clamp(16px, 3vw, 25px);
+        font-size: clamp(16px, 3.5vw, 30px);
         background-color: $Background_Container;
         width: clamp(200px, 13vw, 400px);
         border-radius: 20px;
-        padding: 5px 0px;
+        padding: 5px 8px;
     }
 
     .sommaire{
@@ -70,11 +74,10 @@
         margin-bottom: 40px;
         border-top: 4px solid $Button_Default_Color;
         border-bottom: 4px solid $Button_Default_Color;
-        background-color: $Background_Container_Title;
-
+        background-image: $Background_Container_Title;
         padding: clamp(15px, 2vh, 30px);
         text-align: center;
-        font-size: clamp(18px, 1.3vw, 50px);
+        font-size: clamp(18px, 2vw, 50px);
     }
     
     div{
@@ -152,6 +155,17 @@
         .bouton{
             display: none;
         }
+        .titreType2{
+            transform: translateY(clamp(38px, 3vw, 45px));
+            margin: auto;
+            text-align: center;
+            color: $Button_Default_Color;
+            font-size: clamp(16px, 5vw, 30px);
+            background-color: $Background_Container;
+            width: clamp(200px, 13vw, 400px);
+            border-radius: 20px;
+            padding: 5px 8px;
+        }
         div{
             transition: 0.5s;
             width: 97%;
@@ -219,3 +233,4 @@
 
     }
 }
+

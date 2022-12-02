@@ -1,6 +1,5 @@
 .header{
     background-color: #2C212E;
-    
 }
 
 .nav{
@@ -10,8 +9,9 @@
 
 @media only screen and (min-width : $media-width-tablette){
     .header{
-        background-color: rgba(0,0,0,.5);
-        
+        z-index: 20;
+        background-color: rgba(0, 0, 0, 0.664);
+        position: fixed;
     }
 
     .nav{
