@@ -20,12 +20,7 @@
             ))
         ?>
         
-        <?php 
-            wp_nav_menu(array( 
-                "menu" => "accueil",
-                "container" => "nav"
-            ))
-        ?>
+        <!-- <img src="/images/home.png" alt="god help us"> -->
 
         <?php 
             wp_nav_menu(array( 
