@@ -1440,8 +1440,8 @@ body {
   pointer-events: none;
   cursor: default;
   position: relative;
-  top: calc(clamp(35px, 2.6vw, 110px) * -1);
-  left: 180px;
+  top: calc(clamp(35px, 2.3vw, 110px) * -1);
+  left: clamp(180px, 11vw, 300px);
   font-size: clamp(20px, 1.4vw, 30px);
   background-color: #242424;
   border-radius: 10px;
@@ -1458,9 +1458,9 @@ body {
   transition: 0.3s;
   overflow-y: hidden;
   width: 0px;
-  height: 55px;
+  height: clamp(55px, 5.5vw, 100px);
   font-size: clamp(14px, 1.4vw, 30px);
-  transform: translate(clamp(110px, 10vw, 400px), calc(clamp(70px, 4vw, 110px) * -1));
+  transform: translate(clamp(110px, 10vw, 400px), calc(clamp(70px, 4.05vw, 110px) * -1));
   background-color: #0e0e0e;
 }
 
