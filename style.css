@@ -1015,13 +1015,14 @@ Templates
   align-items: center;
 }
 
-.main-accueil .wp-block-video {
+.main-accueil .wp-block-image {
   position: absolute;
 }
 
-.main-accueil .wp-block-video > video {
-  width: 100%;
+.main-accueil .wp-block-image img {
   height: 100%;
+  width: 100%;
+  max-width: 776px;
 }
 
 @media only screen and (min-width: 780px) {

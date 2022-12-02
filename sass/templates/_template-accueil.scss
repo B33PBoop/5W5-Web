@@ -104,12 +104,13 @@
     align-items: center; 
 }
 
-.wp-block-video {
+.wp-block-image {
     position: absolute;
 }
-.wp-block-video > video {
-    width: 100%;
+.wp-block-image img {
     height: 100%;
+    width: 100%;
+    max-width: 776px;
 }
 
 @media only screen and (min-width : $media-width-tablette){
