@@ -572,27 +572,19 @@ body::-webkit-scrollbar-thumb {
   font-size: clamp(18px, 1.5vw, 50px);
 }
 
-.menu-accueil-container {
+#home_icon {
   display: none;
 }
 
 @media only screen and (min-width: 780px) {
-  .menu-accueil-container {
+  #home_icon {
     display: block;
     position: absolute;
     top: 5px;
-    padding-left: 10px;
-  }
-  .menu-accueil-container #menu-accueil {
-    margin: 0;
-    padding: 0;
-  }
-  .menu-accueil-container #menu-accueil .menu-item {
-    list-style: none;
-    text-decoration: none;
-  }
-  .menu-accueil-container #menu-accueil .material-symbols-outlined {
-    font-size: 48px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    background-image: url(images/home.png);
   }
 }
 /*---------
