@@ -351,6 +351,9 @@ body::-webkit-scrollbar-thumb {
   min-height: 50px;
   display: flex;
   align-items: center;
+  position: fixed;
+  z-index: 20;
+  width: 100vw;
 }
 
 .nav {
@@ -359,9 +362,7 @@ body::-webkit-scrollbar-thumb {
 
 @media only screen and (min-width: 780px) {
   .header {
-    z-index: 20;
     background-color: rgba(0, 0, 0, 0.664);
-    position: fixed;
   }
   .nav {
     font-size: 1vw;
@@ -1087,6 +1088,22 @@ Templates
 
 .main-accueil .bouton_carousel {
   display: none;
+}
+
+.main-accueil .wp-block-cover__inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-accueil .wp-block-cover__inner-container .wp-block-image {
+  position: absolute;
+}
+
+.main-accueil .wp-block-cover__inner-container .wp-block-image img {
+  height: 100%;
+  width: 100%;
+  max-width: 776px;
 }
 
 @media only screen and (min-width: 780px) {

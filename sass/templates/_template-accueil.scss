@@ -98,6 +98,23 @@
         display: none;
     }
 
+.wp-block-cover__inner-container {   
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+
+    .wp-block-image {
+    position: absolute;
+    
+        img {
+        height: 100%;
+        width: 100%;
+        max-width: 776px;
+        }
+    }
+}
+
 @media only screen and (min-width : $media-width-tablette){
     
     body{
