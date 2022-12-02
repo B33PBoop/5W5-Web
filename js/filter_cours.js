@@ -1,26 +1,30 @@
 function createSelection(){
-    const target = document.querySelector(".main-cours .filter");
+
+        const target = document.querySelector(".main-cours .filter");
+        const targetFilter = document.querySelector(".main-cours .filter p");
+        targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";
+
     if(target){
-    const targetFilter = document.querySelector(".main-cours .filter p");
-    targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";
-    if(target){
-    //création du container pour les buttons
-    const container = document.createElement("div");
-    const refresh = document.createElement("div");
-    refresh.style.opacity = "0";
-    //refresh.style.pointerEvents = "none";
-    let refreshUsed = false;
-    
-    refresh.innerHTML = "refresh x";
-    
-    refresh.classList.add("refresh");
-    container.classList.add("selection");
 
-    target.appendChild(refresh);
+        //création du container pour les buttons
+        const container = document.createElement("div");
+        const refresh = document.createElement("div");
+        refresh.style.opacity = "0";
+        refresh.style.pointerEvents = "none";
+        refresh.style.cursor = "default";
 
-    target.appendChild(container);
+        let refreshUsed = false;
+        
+        refresh.innerHTML = "refresh x";
+        
+        refresh.classList.add("refresh");
+        container.classList.add("selection");
 
-    const menu = document.querySelector(".main-cours .filter .selection");
+        target.appendChild(refresh);
+
+        target.appendChild(container);
+
+        const menu = document.querySelector(".main-cours .filter .selection");
 
 
     targetFilter.addEventListener("click", ()=>{
@@ -45,9 +49,13 @@ function createSelection(){
         if (refreshUsed == true){
             refreshUsed = false;
             refresh.style.opacity = "100";
+            refresh.style.pointerEvents = "fill";
+            refresh.style.cursor = "pointer";
         }else{
             refreshUsed = true;
             refresh.style.opacity = "0";
+            refresh.style.pointerEvents = "none";
+            refresh.style.cursor = "default";
         }
         selectCours.forEach(e => {
             if(e.className.includes("Cours")){
@@ -67,6 +75,8 @@ function createSelection(){
 
         button.addEventListener("click", () => {
             refresh.style.opacity = "100";
+            refresh.style.pointerEvents = "fill";
+            refresh.style.cursor = "pointer";
             refreshUsed = false;
             const value = e;
             refresh.innerHTML = e;
@@ -85,7 +95,7 @@ function createSelection(){
         container.appendChild(button);
     });
 }}
-}
+
 
 //delay la function pour que la page est le temps de charger
 setTimeout(()=>{
