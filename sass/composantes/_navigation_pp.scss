@@ -1,27 +1,18 @@
-.menu-accueil-container{
+#home_icon{
     display: none;
 }
 
 @media only screen and (min-width: $media-width-tablette){
-    .menu-accueil-container{
+    #home_icon{
         display: block;
         position: absolute;
+        
         top: 5px;
+        left: 10px;
 
-        padding-left: 10px;
+        width: 50px;
+        height: 50px;
 
-        #menu-accueil{
-            margin: 0;
-            padding: 0;
-
-            .menu-item{
-                list-style: none;
-                text-decoration: none;
-            }
-
-            .material-symbols-outlined{
-                font-size: 48px;
-            }
-        }
+        background-image: url(images/home.png);
     }
 }
