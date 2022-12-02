@@ -102,15 +102,17 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-}
 
-.wp-block-image {
+
+    .wp-block-image {
     position: absolute;
-}
-.wp-block-image img {
-    height: 100%;
-    width: 100%;
-    max-width: 776px;
+    
+        img {
+        height: 100%;
+        width: 100%;
+        max-width: 776px;
+        }
+    }
 }
 
 @media only screen and (min-width : $media-width-tablette){
