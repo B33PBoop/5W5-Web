@@ -5,6 +5,7 @@ body{
 }
 .main-cours{
 
+
     .wp-block-site-logo{
         display: flex;
         justify-content: center;
@@ -31,7 +32,6 @@ body{
     }
     .boite_modale{
         z-index: 20;
-        cursor: pointer;
         position:fixed;
         left: 15%;
         top: 150px;
@@ -126,7 +126,6 @@ body{
     }}
 
     .filter {
-        cursor: pointer;
         width: 90vw;
         margin: 0px auto;
         background-color: $Background_Container;
@@ -136,15 +135,22 @@ body{
         margin-top: 40px;
         height: 100px;
 
+        .target_filter{
+            cursor: pointer;
+        }
         .refresh{
+            opacity: 0 ;
+            pointer-events: none ;
+            cursor: default ;
+
             position: relative;
-            top: -35px;
+            top: calc(clamp(35px, 2.6vw, 110px) * -1);
             left: 180px;
             font-size: clamp(20px, 1.4vw, 30px);
             background-color: rgb(36, 36, 36);
             border-radius: 10px;
             border: 2px solid $Button_Default_Color;
-            width: 125px;
+            width: clamp(125px, 10vw, 200px);
             padding: 3px;
 
         }
@@ -159,7 +165,7 @@ body{
 
             height: 55px;   
             font-size: clamp(14px, 1.4vw, 30px);
-            transform: translate(clamp(110px, 10vw, 400px), -70px);
+            transform: translate(clamp(110px, 10vw, 400px), calc(clamp(70px, 4vw, 110px) * -1));
             background-color: $Background_Container;
         }
         p{

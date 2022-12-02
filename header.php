@@ -20,7 +20,7 @@
             ))
         ?>
         
-        <a href="http://localhost:81/PW5W5/" id="home_icon"></a> <!--Remplacer le href du lien par le lien de la page principale si le site est téléversé ailleurs -->
+        <a href="http://localhost/PW5W5/" id="home_icon"></a> <!--Remplacer le href du lien par le lien de la page principale si le site est téléversé ailleurs -->
 
         <?php 
             wp_nav_menu(array( 

@@ -127,7 +127,7 @@
         p{
             position:relative;
             margin-top: clamp(30px, 15vw, 150px);
-            font-size: clamp(18px, 1.3vw, 50px);
+            font-size: clamp(18px, 1.1vw, 35px);
             text-align: center;
             display: none;
             margin-left: auto;
@@ -173,7 +173,7 @@
             flex-direction: row-reverse;
             margin-bottom: 30px;
             background-color: $Background_Container;
-            height: clamp(300px, 24vw, 450px);
+            height: clamp(300px, 24vw, 500px);
             border-radius: 0px 20px 20px 0px;
 
             &:nth-of-type(odd){

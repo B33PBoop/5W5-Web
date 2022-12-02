@@ -2,6 +2,7 @@ function createSelection(){
 
         const target = document.querySelector(".main-cours .filter");
         const targetFilter = document.querySelector(".main-cours .filter p");
+        targetFilter.classList.add("target_filter");
         targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";
 
     if(target){
@@ -9,9 +10,7 @@ function createSelection(){
         //création du container pour les buttons
         const container = document.createElement("div");
         const refresh = document.createElement("div");
-        refresh.style.opacity = "0";
-        refresh.style.pointerEvents = "none";
-        refresh.style.cursor = "default";
+
 
         let refreshUsed = false;
         
