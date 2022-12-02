@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Ubuntu&display=swap" rel="stylesheet">
     <title>Document</title>
     <?php wp_head() ?>
 </head>
@@ -19,6 +19,8 @@
                 "container" => "div"
             ))
         ?>
+        
+        <a href="http://localhost:81/PW5W5/" id="home_icon"></a> <!--Remplacer le href du lien par le lien de la page principale si le site est téléversé ailleurs -->
 
         <?php 
             wp_nav_menu(array( 
