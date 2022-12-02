@@ -1009,6 +1009,21 @@ Templates
   display: none;
 }
 
+.main-accueil .wp-block-cover__inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-accueil .wp-block-video {
+  position: absolute;
+}
+
+.main-accueil .wp-block-video > video {
+  width: 100%;
+  height: 100%;
+}
+
 @media only screen and (min-width: 780px) {
   .main-accueil body {
     width: 100vw;
