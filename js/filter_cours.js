@@ -30,7 +30,7 @@ function createSelection(){
         
         if(menu.style.width == "0px"){
             menu.style.width = "58%";
-            menu.style.padding = "7px";
+            menu.style.padding = "10px";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_left</span> </p>";
             
         }else{

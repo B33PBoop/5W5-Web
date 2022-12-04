@@ -144,7 +144,7 @@ body{
             cursor: default ;
 
             position: relative;
-            top: calc(clamp(35px, 2.3vw, 110px) * -1);
+            top: calc(clamp(35px, 2.2vw, 110px) * -1);
             left: clamp(180px, 11vw, 300px);
             font-size: clamp(20px, 1.4vw, 30px);
             background-color: rgb(36, 36, 36);
@@ -165,7 +165,7 @@ body{
 
             height: clamp(55px, 5.5vw, 100px);   
             font-size: clamp(14px, 1.4vw, 30px);
-            transform: translate(clamp(110px, 10vw, 400px), calc(clamp(70px, 4.05vw, 110px) * -1));
+            transform: translate(clamp(110px, 10vw, 400px), calc(clamp(70px, 4.5vw, 100px) * -1));
             background-color: $Background_Container;
         }
         p{
@@ -188,11 +188,9 @@ body{
             display: flex;
             justify-content: space-around;
             z-index: 10;
-            position: absolute;
             transition: 0.3s;
             overflow-x: hidden;
             height: 30px;
-            width: 0px;
 
         }
     }
