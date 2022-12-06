@@ -36,6 +36,7 @@
                 align-items: center;
     
                 a{
+                    transition: 0.4s;
                     color: $Font_Default_Color;
                     text-decoration: none;
                     text-align: center;
@@ -59,7 +60,7 @@
     
                 .sub-menu{
                     position: absolute;
-                    top: 45px;
+                    top: 3.5vw;
                     z-index: 100;
                     height: 0px;
                     width: clamp(250px, 15vw, 500px);
@@ -78,7 +79,7 @@
                     transition: 0.3s;
     
                     &.ouvert{
-                        height: clamp(150px, 5vh, 550px);
+                        height: clamp(150px, 15vh, 550px);
     
                         background-color: rgba(0, 0, 0, 0.6);
                         border: 2px solid rgba(128, 0, 128, 0.6);;

@@ -4,6 +4,8 @@
 
 @media only screen and (min-width: $media-width-tablette){
     #home_icon{
+        transition: 0.2s;
+
         display: block;
         position: absolute;
         
@@ -14,5 +16,8 @@
         height: 50px;
 
         background-image: url(images/home.png);
+    }
+    #home_icon:hover{
+        transform: scale(1.1);
     }
 }
