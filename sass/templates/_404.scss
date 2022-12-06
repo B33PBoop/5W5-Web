@@ -1,9 +1,4 @@
-body{
-    width: 100%;
-    height: 100%;
-}
-
-#conteneur{
+.main_404{
     width: 100vw;
     height: 100vh;
 
@@ -12,4 +7,13 @@ body{
 
     align-items: center;
     justify-content: center;
+
+    .home_link{
+        background-color: darken($color: darkslategray, $amount: 10);
+        border-radius: 15px;
+        padding: 20px;
+
+        text-decoration: none;
+        color: $Font_Default_Color;
+    }
 }

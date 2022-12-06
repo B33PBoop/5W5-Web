@@ -105,6 +105,9 @@
             height: clamp(50px, 3vw, 300px);
             font-size: clamp(20px, 1.5vw, 40px);
             background-color: rgba(0, 0, 0, 0.582);
+            a{
+                text-decoration: none;
+            }
         }
     }
 }
