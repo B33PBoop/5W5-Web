@@ -1500,6 +1500,10 @@ body {
   background-color: rgba(0, 0, 0, 0.582);
 }
 
+.main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container figcaption a {
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 780px) {
   .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container {
     display: flex;
