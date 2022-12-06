@@ -347,7 +347,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .header {
-  background-color: #2C212E;
+  background-color: rgba(44, 33, 46, 0);
+  min-height: 50px;
+  display: flex;
+  align-items: center;
   position: fixed;
   z-index: 20;
   width: 100vw;
@@ -426,7 +429,7 @@ body::-webkit-scrollbar-thumb {
   }
   .menu-header-container #menu-header .menu-item .sub-menu {
     position: absolute;
-    top: 45px;
+    top: 3.5vw;
     z-index: 100;
     height: 0px;
     width: clamp(250px, 15vw, 500px);
@@ -440,7 +443,7 @@ body::-webkit-scrollbar-thumb {
     transition: 0.3s;
   }
   .menu-header-container #menu-header .menu-item .sub-menu.ouvert {
-    height: clamp(150px, 5vh, 550px);
+    height: clamp(150px, 15vh, 550px);
     background-color: rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(128, 0, 128, 0.6);
     transition: 0.3s;
@@ -704,7 +707,7 @@ Templates
 .main_about .container_text p {
   position: relative;
   margin-top: clamp(30px, 15vw, 150px);
-  font-size: clamp(18px, 1.3vw, 50px);
+  font-size: clamp(18px, 1.1vw, 35px);
   text-align: center;
   display: none;
   margin-left: auto;
@@ -748,7 +751,7 @@ Templates
     flex-direction: row-reverse;
     margin-bottom: 30px;
     background-color: rgb(14, 14, 14);
-    height: clamp(300px, 24vw, 450px);
+    height: clamp(300px, 24vw, 500px);
     border-radius: 0px 20px 20px 0px;
   }
   .main_about div:nth-of-type(odd) {
@@ -859,7 +862,7 @@ Templates
   display: none;
   position: relative;
   margin-top: clamp(30px, 15vw, 170px);
-  font-size: clamp(18px, 1.3vw, 50px);
+  font-size: clamp(18px, 1.5vw, 50px);
   text-align: center;
   margin: clamp(30px, 13.5vw, 140px) auto 0px auto;
   width: 90%;
@@ -903,7 +906,7 @@ Templates
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: rgba(0, 0, 0, 0.637);
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0%;
     transition: 0.5s;
   }
@@ -912,14 +915,14 @@ Templates
     text-align: left;
     margin-top: 0px;
     padding-bottom: 10px;
-    font-size: clamp(18px, 1.3vw, 20px);
+    font-size: clamp(18px, 1.2vw, 30px);
   }
   .main_projects .group div .container .container_text .bouton {
     display: none;
   }
   .main_projects .group div .container .container_text h3 {
     width: 100%;
-    font-size: clamp(18px, 3vw, 23px);
+    font-size: clamp(18px, 1.4vw, 35px);
     text-align: left;
     padding: 10px 5%;
   }
@@ -936,157 +939,6 @@ Templates
     width: 25vw;
   }
 }
-.main-accueil {
-  overflow-x: hidden;
-  width: 100vw;
-}
-.main-accueil .leCarousel {
-  margin-top: 10%;
-}
-.main-accueil .wp-block-site-logo {
-  display: flex;
-  justify-content: center;
-}
-.main-accueil .description {
-  position: relative;
-  margin: 40px 0px;
-  border-top: 4px solid #FF52A4;
-  border-bottom: 4px solid #FF52A4;
-  background-image: linear-gradient(45deg, rgb(111, 55, 146) 5%, rgb(53, 39, 62) 50%, rgb(32, 17, 41) 100%);
-  padding: 0px;
-  text-align: center;
-  width: 100vw;
-  margin-bottom: 80px;
-}
-.main-accueil .description div p {
-  width: 90vw;
-  margin: 0px auto;
-  margin-bottom: 10px;
-  font-size: clamp(18px, 1.3vw, 50px);
-}
-.main-accueil .description div p:first-of-type {
-  padding-top: 20px;
-}
-.main-accueil .description div .savoir_plus {
-  transition: 0.3s;
-  background-color: #FF52A4;
-  width: clamp(150px, 13vw, 400px);
-  border-radius: 20px;
-  padding: 5px 0px;
-  transform: translateY(30px);
-}
-.main-accueil .description div .savoir_plus a {
-  text-decoration: none;
-  color: white;
-}
-.main-accueil .description div .savoir_plus:hover {
-  transform: scale(1.05) translateY(30px);
-}
-.main-accueil .container {
-  display: none;
-}
-.main-accueil .title {
-  display: none;
-}
-.main-accueil .container_carousel {
-  display: flex;
-  flex-direction: column;
-}
-.main-accueil .container_carousel .container_img_caption {
-  width: 100%;
-  height: 10vh;
-  overflow-y: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.main-accueil .container_carousel .container_img_caption img {
-  width: 100%;
-  height: 10vh;
-  object-fit: cover;
-}
-.main-accueil .container_carousel .container_img_caption p {
-  z-index: 10;
-  transform: translateY(-90px);
-  text-align: center;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.774);
-  border-top: 2px solid white;
-  opacity: 80%;
-  width: 100%;
-  margin: 0px auto;
-  padding: 50px 0px;
-}
-.main-accueil .bouton_carousel {
-  display: none;
-}
-@media only screen and (min-width: 780px) {
-  .main-accueil body {
-    width: 100vw;
-    overflow-x: hidden;
-  }
-  .main-accueil .title {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-  }
-  .main-accueil .bouton_carousel {
-    position: absolute;
-    z-index: 2;
-    height: clamp(350px, 25vw, 1000px);
-    background-color: black;
-    color: white;
-    opacity: 0;
-    border: none;
-    opacity: 30%;
-    display: contents;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .main-accueil .bouton_carousel:hover {
-    cursor: pointer;
-    opacity: 80%;
-  }
-  .main-accueil .bouton_droite {
-    right: 0%;
-    transform: translateY(-100%);
-  }
-  .main-accueil .bouton_gauche {
-    left: 0%;
-  }
-  .main-accueil .container_carousel {
-    overflow-y: hidden;
-    width: 200vw;
-    height: clamp(350px, 25vw, 1000px);
-    transition: 1s;
-    display: flex;
-    flex-direction: row;
-  }
-  .main-accueil .container_carousel .container_img_caption {
-    width: 25vw;
-    height: clamp(350px, 25vw, 1000px);
-    overflow-y: hidden;
-    overflow-x: hidden;
-    border: 0px solid white;
-  }
-  .main-accueil .container_carousel .container_img_caption img {
-    width: 25vw;
-    height: clamp(350px, 25vw, 1000px);
-    border-top: none;
-  }
-  .main-accueil .container_carousel .container_img_caption p {
-    z-index: 10;
-    transform: translateY(-35px);
-    text-align: center;
-    color: white;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.774);
-    width: 100%;
-    margin: 0px auto;
-  }
-}
-
 .main_enseignants .wp-block-site-logo {
   display: flex;
   justify-content: center;
@@ -1236,7 +1088,6 @@ body {
 }
 .main-cours .boite_modale {
   z-index: 20;
-  cursor: pointer;
   position: fixed;
   left: 15%;
   top: 150px;
@@ -1323,7 +1174,6 @@ body {
   display: none;
 }
 .main-cours .filter {
-  cursor: pointer;
   width: 90vw;
   margin: 0px auto;
   background-color: rgb(14, 14, 14);
@@ -1333,15 +1183,21 @@ body {
   margin-top: 40px;
   height: 100px;
 }
+.main-cours .filter .target_filter {
+  cursor: pointer;
+}
 .main-cours .filter .refresh {
+  opacity: 100;
+  pointer-events: fill;
+  cursor: pointer;
   position: relative;
-  top: -35px;
-  left: 180px;
+  top: calc(clamp(35px, 2.2vw, 110px) * -1);
+  left: clamp(180px, 11vw, 300px);
   font-size: clamp(20px, 1.4vw, 30px);
   background-color: rgb(36, 36, 36);
   border-radius: 10px;
   border: 2px solid #FF52A4;
-  width: 125px;
+  width: clamp(100px, 5vw, 150px);
   padding: 3px;
 }
 .main-cours .filter .selection {
@@ -1352,10 +1208,9 @@ body {
   transition: 0.3s;
   overflow-y: hidden;
   width: 0px;
-  height: 55px;
+  height: clamp(55px, 5.5vw, 100px);
   font-size: clamp(14px, 1.4vw, 30px);
-  transform: translate(clamp(110px, 10vw, 400px), -70px);
-  background-color: rgb(14, 14, 14);
+  transform: translate(clamp(110px, 10vw, 400px), calc(clamp(70px, 5vw, 110px) * -1));
 }
 .main-cours .filter p {
   width: clamp(100px, 10vw, 300px);
@@ -1374,11 +1229,9 @@ body {
     display: flex;
     justify-content: space-around;
     z-index: 10;
-    position: absolute;
     transition: 0.3s;
     overflow-x: hidden;
     height: 30px;
-    width: 0px;
   }
   .main-cours .boite_modale .text {
     flex-direction: row;
@@ -1411,6 +1264,9 @@ body {
     height: 88%;
     margin: 20px auto 0px auto;
     text-align: left;
+  }
+  .main-cours .wp-block-group__inner-container {
+    border-radius: 10px;
   }
   .main-cours .session div {
     display: grid;
@@ -1447,16 +1303,145 @@ body {
     display: none;
   }
 }
-body {
-  width: 100%;
-  height: 100%;
-}
-
-#conteneur {
+.main_404 {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.main_404 .home_link {
+  background-color: #1c2f2f;
+  border-radius: 15px;
+  padding: 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.main-accueil {
+  overflow-x: hidden;
+  width: 100vw;
+}
+.main-accueil .leCarousel {
+  margin-top: 10%;
+}
+.main-accueil .wp-block-site-logo {
+  display: flex;
+  justify-content: center;
+}
+.main-accueil .description {
+  position: relative;
+  margin: 40px 0px;
+  border-top: 4px solid #FF52A4;
+  border-bottom: 4px solid #FF52A4;
+  background-image: linear-gradient(45deg, rgb(111, 55, 146) 5%, rgb(53, 39, 62) 50%, rgb(32, 17, 41) 100%);
+  padding: 0px;
+  text-align: center;
+  width: 100vw;
+  margin-bottom: 80px;
+}
+.main-accueil .description div p {
+  width: 90vw;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  font-size: clamp(18px, 1.3vw, 50px);
+}
+.main-accueil .description div p:first-of-type {
+  padding-top: 20px;
+}
+.main-accueil .description div .savoir_plus {
+  transition: 0.3s;
+  background-color: #FF52A4;
+  width: clamp(150px, 13vw, 400px);
+  border-radius: 20px;
+  padding: 5px 0px;
+  transform: translateY(30px);
+}
+.main-accueil .description div .savoir_plus a {
+  text-decoration: none;
+  color: white;
+}
+.main-accueil .description div .savoir_plus:hover {
+  transform: scale(1.05) translateY(30px);
+}
+.main-accueil .title {
+  display: none;
+}
+.main-accueil .wp-block-cover__inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-accueil .wp-block-cover__inner-container .wp-block-image {
+  position: absolute;
+}
+.main-accueil .wp-block-cover__inner-container .wp-block-image img {
+  height: 100%;
+  width: 100%;
+  max-width: 776px;
+}
+.main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0);
+}
+.main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container figure.wp-block-image:not(#individual-image) {
+  width: 100vw;
+  height: clamp(300px, 80vw, 300px);
+}
+.main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container .bouton_carousel {
+  display: none;
+}
+.main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container figcaption {
+  height: clamp(50px, 3vw, 300px);
+  font-size: clamp(20px, 1.5vw, 40px);
+  background-color: rgba(0, 0, 0, 0.582);
+}
+
+.main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container figcaption a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 780px) {
+  .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container {
+    display: flex;
+    flex-direction: column;
+    width: 150vw;
+    height: clamp(250px, 25vw, 3000px);
+    overflow-y: hidden;
+    gap: 0px;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    padding-bottom: 0px;
+  }
+  .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container figure.wp-block-image:not(#individual-image) {
+    transition: 0.5s;
+    width: 25vw;
+    height: clamp(250px, 25vw, 3000px);
+  }
+  .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container .bouton_carousel {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 4vw;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container .bouton_carousel .material-symbols-outlined {
+    font-size: 2.5vw;
+  }
+  .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container .bouton_carousel:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container .gauche {
+    height: clamp(250px, 25vw, 3000px);
+    left: 0px;
+  }
+  .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container .droit {
+    height: clamp(250px, 25vw, 3000px);
+    right: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */

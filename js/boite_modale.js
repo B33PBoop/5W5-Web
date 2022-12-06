@@ -10,6 +10,8 @@ function boiteModale(){
 
     const cible = document.querySelector(".main-cours");
 
+    if(cible){
+        
     const container = document.createElement("div");
     const background = document.createElement("div");
     background.classList.add("background_boite");
@@ -41,6 +43,8 @@ function boiteModale(){
 
         })
     }
+    }
+
 }
 
 
