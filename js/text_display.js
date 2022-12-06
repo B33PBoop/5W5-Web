@@ -59,7 +59,9 @@ function createButton(){
         element.innerHTML = "<span class='material-symbols-outlined'>keyboard_arrow_down</span>";
         const nb = i + 1;  
         target[nb-1].addEventListener("click", ()=>{
-            displayText(nb - 1);
+            if(window.innerWidth < 780){
+                displayText(nb - 1);
+            }
         })
         target[i].appendChild(element);;
     }
