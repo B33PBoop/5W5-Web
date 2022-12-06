@@ -5,6 +5,7 @@ body{
 }
 .main-cours{
 
+
     .wp-block-site-logo{
         display: flex;
         justify-content: center;
@@ -31,7 +32,6 @@ body{
     }
     .boite_modale{
         z-index: 20;
-        cursor: pointer;
         position:fixed;
         left: 15%;
         top: 150px;
@@ -126,7 +126,6 @@ body{
     }}
 
     .filter {
-        cursor: pointer;
         width: 90vw;
         margin: 0px auto;
         background-color: $Background_Container;
@@ -136,15 +135,22 @@ body{
         margin-top: 40px;
         height: 100px;
 
+        .target_filter{
+            cursor: pointer;
+        }
         .refresh{
+            opacity: 100 ;
+            pointer-events: fill ;
+            cursor: pointer ;
+
             position: relative;
-            top: -35px;
-            left: 180px;
+            top: calc(clamp(35px, 2.2vw, 110px) * -1);
+            left: clamp(180px, 11vw, 300px);
             font-size: clamp(20px, 1.4vw, 30px);
             background-color: rgb(36, 36, 36);
             border-radius: 10px;
             border: 2px solid $Button_Default_Color;
-            width: 125px;
+            width: clamp(125px, 10vw, 200px);
             padding: 3px;
 
         }
@@ -157,10 +163,9 @@ body{
             overflow-y: hidden;
             width: 0px;
 
-            height: 55px;   
+            height: clamp(55px, 5.5vw, 100px);   
             font-size: clamp(14px, 1.4vw, 30px);
-            transform: translate(clamp(110px, 10vw, 400px), -70px);
-            background-color: $Background_Container;
+            transform: translate(clamp(110px, 10vw, 400px), calc(clamp(70px, 5vw, 110px) * -1));
         }
         p{
             width: clamp(100px, 10vw, 300px);
@@ -182,11 +187,9 @@ body{
             display: flex;
             justify-content: space-around;
             z-index: 10;
-            position: absolute;
             transition: 0.3s;
             overflow-x: hidden;
             height: 30px;
-            width: 0px;
 
         }
     }
@@ -225,8 +228,10 @@ body{
             }
         }
     }
+        .wp-block-group__inner-container{
+            border-radius: 10px;
+        }
         .session{
-           
          div{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;

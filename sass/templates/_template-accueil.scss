@@ -52,138 +52,90 @@
         }
  
     }
-    .container{
-        display: none;
-    }
-    
+
     .title{
         display: none;
     }
-    .container_carousel{
-        display: flex;
-        flex-direction: column;
-        
-        
-        .container_img_caption{
-            width: 100%;
-            height: 10vh;
-            overflow-y: hidden;
-            display: flex;
-            flex-direction: column;
-            img{
-                width: 100%;
-                height: 10vh;
-                object-fit: cover;
-                
-                
-            }
-
-            p{
-                z-index: 10;
-                transform: translateY(-90px);
-                text-align: center;
-
-                color: white;  
-                background-color: rgba(0, 0, 0, 0.774);
-                border-top: 2px solid white;
-                opacity: 80%;
-                width: 100%;
-                margin: 0px auto;
-                padding: 50px 0px;
-
-            }
-        }
-    }
-    .bouton_carousel{
-        display: none;
-    }
+    
 
 .wp-block-cover__inner-container {   
     display: flex;
     justify-content: center;
     align-items: center; 
-}
 
-.wp-block-video {
+
+    .wp-block-image {
     position: absolute;
-}
-.wp-block-video > video {
-    width: 100%;
-    height: 100%;
-}
-
-@media only screen and (min-width : $media-width-tablette){
     
-    body{
-        width: 100vw;
-        overflow-x: hidden;
+        img {
+        height: 100%;
+        width: 100%;
+        max-width: 776px;
+        }
     }
-        
-    .title{
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        margin-top: 100px;
-    }
-    .bouton_carousel{
-        position: absolute;
-        z-index: 2;
-        height: clamp(350px, 25vw, 1000px);
-        background-color: black;
-        color: white;
-        opacity: 0;
-        border: none;
-        opacity: 30%;
-        display: contents;
+}
+    .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-    }
-    .bouton_carousel:hover{
-        cursor: pointer;
-        opacity: 80%;
-            
+        background-color: rgba(0, 0, 0, 0);
+        figure.wp-block-image:not(#individual-image){
+            width: 100vw;
+            height: clamp(300px, 80vw, 300px);
         }
-    .bouton_droite{
-        right: 0%;
-        transform: translateY(-100%);
-    }
-    .bouton_gauche{      
-        left: 0%;
-
+        .bouton_carousel{
+            display: none;
         }
-
-    .container_carousel{
-        overflow-y: hidden;
-        width: 200vw;
-        height: clamp(350px, 25vw, 1000px);
-        transition: 1s;
-        display: flex;
-        flex-direction: row;
-            .container_img_caption{
+        figcaption{
+            height: clamp(50px, 3vw, 300px);
+            font-size: clamp(20px, 1.5vw, 40px);
+            background-color: rgba(0, 0, 0, 0.582);
+        }
+    }
+}
+@media only screen and (min-width : $media-width-tablette){
+    .main-accueil{
+        .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container{
+            display: flex;
+            flex-direction: column;
+            width: 150vw;
+            height: clamp(250px, 25vw, 3000px);
+            overflow-y: hidden;
+            gap: 0px;
+            margin: 0px;
+            background-color: rgba(0, 0, 0, 0);
+            padding-bottom: 0px;
+            figure.wp-block-image:not(#individual-image){
+                transition: 0.5s;
                 width: 25vw;
-                height: clamp(350px, 25vw, 1000px);
-                overflow-y: hidden;
-                overflow-x: hidden;
-                border: 0px solid white;
-                img{
-                    width: calc(25vw);
-                    height: clamp(350px, 25vw, 1000px);
-                    border-top: none;
-                }
-    
-                p{
-                    z-index: 10;
-                    transform: translateY(-35px);
-                    text-align: center;
-                    color: white;
-                    padding: 10px;
-                    background-color: rgba(0, 0, 0, 0.774);
-                    width: 100%;
-                    margin: 0px auto;
+                height: clamp(250px, 25vw, 3000px);
+            }
+            .bouton_carousel{
+                background-color: rgba(0, 0, 0, 0.3);
+                display: flex;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+
+                width: 4vw;
+
+                cursor: pointer;
+                transition: 0.2s;
+
+                .material-symbols-outlined{
+                    font-size: 2.5vw;
                 }
             }
-    
-        }    
+            .bouton_carousel:hover{
+                background-color: rgba(0, 0, 0, 0.6);
+            }
+            .gauche{
+                height: clamp(250px, 25vw, 3000px);
+                left: 0px;
+            }
+            .droit{
+                height: clamp(250px, 25vw, 3000px);
+                right: 0px;
+            }
+        }
     }
 }
