@@ -1,11 +1,13 @@
 function createSelection(){
 
         const target = document.querySelector(".main-cours .filter");
+
+
+    if(target){
+
         const targetFilter = document.querySelector(".main-cours .filter p");
         targetFilter.classList.add("target_filter");
         targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";
-
-    if(target){
 
         //création du container pour les buttons
         const container = document.createElement("div");
@@ -14,7 +16,7 @@ function createSelection(){
 
         let refreshUsed = false;
         
-        refresh.innerHTML = "refresh x";
+        refresh.innerHTML = "Retour";
         
         refresh.classList.add("refresh");
         container.classList.add("selection");
@@ -32,11 +34,21 @@ function createSelection(){
             menu.style.width = "58%";
             menu.style.padding = "10px";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_left</span> </p>";
+
+            refreshUsed = true;
+            refresh.style.opacity = "0";
+            refresh.style.pointerEvents = "none";
+            refresh.style.cursor = "default";
             
         }else{
             menu.style.width = "0px";
             menu.style.padding = "0px";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";
+
+            refreshUsed = false;
+            refresh.style.opacity = "100";
+            refresh.style.pointerEvents = "fill";
+            refresh.style.cursor = "pointer";
         }
     })
 
