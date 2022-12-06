@@ -7,6 +7,16 @@
     .wp-block-site-logo{
         display: flex;
         justify-content: center;
+        transform: translateX(-5px) translateY(-7px);
+        a {
+            img {
+                opacity: 0%;
+                animation-name: aniStatic;
+                animation-duration: 0.5s;
+                animation-delay: 2.5s;
+                animation-fill-mode: forwards;
+            }
+        }
     }
 
     .description{
@@ -66,6 +76,11 @@
 
     .wp-block-image {
     position: absolute;
+    animation-name: aniLogo;
+    animation-duration: 0.5s;
+    animation-delay: 2.5s;
+    animation-fill-mode: forwards;
+
     
         img {
         height: 100%;
@@ -74,6 +89,7 @@
         }
     }
 }
+
     .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container{
         display: flex;
         flex-direction: column;
@@ -140,5 +156,26 @@
                 right: 0px;
             }
         }
+    }
+}
+
+/* Animation pour les logos */ 
+
+@keyframes aniLogo {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+        display: none;
+    }
+}
+
+@keyframes aniStatic {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
     }
 }
