@@ -430,7 +430,7 @@ body::-webkit-scrollbar-thumb {
   }
   .menu-header-container #menu-header .menu-item .sub-menu {
     position: absolute;
-    top: 45px;
+    top: 3.5vw;
     z-index: 100;
     height: 0px;
     width: clamp(250px, 15vw, 500px);
@@ -444,7 +444,7 @@ body::-webkit-scrollbar-thumb {
     transition: 0.3s;
   }
   .menu-header-container #menu-header .menu-item .sub-menu.ouvert {
-    height: clamp(150px, 5vh, 550px);
+    height: clamp(150px, 15vh, 550px);
     background-color: rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(128, 0, 128, 0.6);
     transition: 0.3s;
@@ -911,7 +911,7 @@ Templates
   display: none;
   position: relative;
   margin-top: clamp(30px, 15vw, 170px);
-  font-size: clamp(18px, 1.3vw, 50px);
+  font-size: clamp(18px, 1.5vw, 50px);
   text-align: center;
   margin: clamp(30px, 13.5vw, 140px) auto 0px auto;
   width: 90%;
@@ -957,7 +957,7 @@ Templates
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-color: rgba(0, 0, 0, 0.637);
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0%;
     transition: 0.5s;
   }
@@ -966,14 +966,14 @@ Templates
     text-align: left;
     margin-top: 0px;
     padding-bottom: 10px;
-    font-size: clamp(18px, 1.3vw, 20px);
+    font-size: clamp(18px, 1.2vw, 30px);
   }
   .main_projects .group div .container .container_text .bouton {
     display: none;
   }
   .main_projects .group div .container .container_text h3 {
     width: 100%;
-    font-size: clamp(18px, 3vw, 23px);
+    font-size: clamp(18px, 1.4vw, 35px);
     text-align: left;
     padding: 10px 5%;
   }
@@ -1280,7 +1280,7 @@ body {
   background-color: #242424;
   border-radius: 10px;
   border: 2px solid #FF52A4;
-  width: clamp(125px, 10vw, 200px);
+  width: clamp(100px, 5vw, 150px);
   padding: 3px;
 }
 

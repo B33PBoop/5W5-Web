@@ -16,7 +16,7 @@ function createSelection(){
 
         let refreshUsed = false;
         
-        refresh.innerHTML = "Retour";
+        refresh.innerHTML = "Rafraichir";
         
         refresh.classList.add("refresh");
         container.classList.add("selection");
@@ -90,7 +90,6 @@ function createSelection(){
             refresh.style.cursor = "pointer";
             refreshUsed = false;
             const value = e;
-            refresh.innerHTML = e;
             menu.style.width = "0px";
             menu.style.padding = "0px";
             targetFilter.innerHTML = "<p> Matière <span class='material-symbols-outlined'>keyboard_arrow_right</span> </p>";
