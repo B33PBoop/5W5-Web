@@ -1157,6 +1157,19 @@ body {
   backdrop-filter: blur(4px);
 }
 
+.main-cours .boite_modale p::-webkit-scrollbar {
+  width: 5px;
+}
+
+.main-cours .boite_modale p::-webkit-scrollbar-track {
+  background: #0e0e0e;
+}
+
+.main-cours .boite_modale p::-webkit-scrollbar-thumb {
+  background-color: #FF52A4;
+  border-radius: 10px;
+}
+
 .main-cours .boite_modale {
   z-index: 20;
   position: fixed;
@@ -1202,12 +1215,12 @@ body {
 .main-cours .boite_modale div p {
   overflow-y: auto;
   text-align: center;
-  padding: 5px;
+  padding: 20px;
   border-radius: 10px;
   margin: 0px auto 5px auto;
-  width: 90%;
+  width: 80%;
   background-color: #0e0e0e;
-  height: 40%;
+  height: 35%;
   font-size: clamp(14px, 1.1vw, 27px);
 }
 
@@ -1352,10 +1365,11 @@ body {
     object-fit: cover;
   }
   .main-cours .boite_modale .text p {
-    width: 45%;
-    height: 88%;
+    width: 43%;
+    height: 80%;
     margin: 20px auto 0px auto;
     text-align: left;
+    line-height: clamp(16px, 3.5vh, 50px);
   }
   .main-cours .wp-block-group__inner-container {
     border-radius: 10px;

@@ -30,6 +30,19 @@ body{
         background-color: rgba(0, 0, 0, 0.13);
         backdrop-filter: blur(4px);
     }
+    .boite_modale p::-webkit-scrollbar {
+        width: 5px;               
+        
+      }
+      
+    .boite_modale p::-webkit-scrollbar-track {
+        background: $Background_Container;        
+      }
+      
+    .boite_modale p::-webkit-scrollbar-thumb {
+        background-color: $Button_Default_Color;   
+        border-radius: 10px; 
+      }
     .boite_modale{
         z-index: 20;
         position:fixed;
@@ -69,14 +82,15 @@ body{
             p{
                 overflow-y: auto;
                 text-align: center;
-                padding: 5px;
+                padding: 20px;
                 border-radius: 10px;
                 margin: 0px auto 5px auto;
-                width: 90%;
+                width: 80%;
                 background-color: $Background_Container;
-                height: 40%;
+                height: 35%;
                 font-size: clamp(14px, 1.1vw, 27px);
             }
+
         }
     }
 
@@ -172,6 +186,7 @@ body{
             width: clamp(100px, 10vw, 300px);
             font-size: clamp(20px, 1.4vw, 30px);
             transform: translateY(5px);
+
         }
         span{
             transform: translateY(6px);
@@ -222,10 +237,12 @@ body{
 
             }
             p{
-                width: 45%;
-                height: 88%;
+                width: 43%;
+                height: 80%;
                 margin: 20px auto 0px auto;
                 text-align: left;
+
+                line-height: clamp(16px, 3.5vh, 50px);
             }
         }
     }
