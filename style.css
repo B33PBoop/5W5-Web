@@ -749,7 +749,7 @@ Templates
 .main_about .container_text p {
   position: relative;
   margin-top: clamp(30px, 15vw, 150px);
-  font-size: clamp(18px, 1.1vw, 35px);
+  font-size: clamp(15px, 0.9vw, 35px);
   text-align: center;
   display: none;
   margin-left: auto;
@@ -829,6 +829,7 @@ Templates
     text-align: left;
     padding-left: 6%;
     display: flex;
+    line-height: 1.4rem;
   }
   .main_about .container_text h3 {
     margin: 0px 0px;
@@ -1299,7 +1300,7 @@ body {
   background-color: #242424;
   border-radius: 10px;
   border: 2px solid #FF52A4;
-  width: clamp(100px, 5vw, 150px);
+  width: clamp(90px, 6vw, 130px);
   padding: 3px;
 }
 
