@@ -127,7 +127,7 @@
         p{
             position:relative;
             margin-top: clamp(30px, 15vw, 150px);
-            font-size: clamp(15px, 0.9vw, 35px);
+            font-size: clamp(16px, 1.2vw, 35px);
             text-align: center;
             display: none;
             margin-left: auto;
@@ -210,6 +210,7 @@
                 text-align: left;
                 padding-left: 6%;
                 display: flex;
+
                 line-height: 1.4rem;
 
             }
