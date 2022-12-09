@@ -165,7 +165,7 @@ body{
             background-color: rgb(36, 36, 36);
             border-radius: 10px;
             border: 2px solid $Button_Default_Color;
-            width: clamp(100px, 5vw, 150px);
+            width: clamp(90px, 6vw, 130px);
             padding: 3px;
 
         }
@@ -238,11 +238,11 @@ body{
             }
             p{
                 width: 43%;
-                height: 80%;
+                height: 85%;
                 margin: 20px auto 0px auto;
                 text-align: left;
 
-                line-height: clamp(16px, 3.5vh, 50px);
+                line-height: clamp(16px, 3.5vh, 35px);
             }
         }
     }
