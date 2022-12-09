@@ -514,6 +514,8 @@ body::-webkit-scrollbar-thumb {
   width: 48px;
   height: 48px;
   font-size: 48px;
+  position: absolute;
+  z-index: 15;
   transform: rotateZ(0deg);
   transition: transform 0.2s;
 }
@@ -523,7 +525,7 @@ body::-webkit-scrollbar-thumb {
 }
 .menu-burger-container #menu-burger {
   position: absolute;
-  top: 48px;
+  top: 0px;
   width: 100vw;
   height: 0px;
   overflow-y: hidden;
@@ -533,7 +535,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  z-index: 10;
+  z-index: 5;
   list-style: none;
   background-color: #2C212E;
   transition: 0.2s;
