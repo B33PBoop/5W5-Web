@@ -829,6 +829,7 @@ Templates
     text-align: left;
     padding-left: 6%;
     display: flex;
+    line-height: 1.5rem;
   }
   .main_about .container_text h3 {
     margin: 0px 0px;
