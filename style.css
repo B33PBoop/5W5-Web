@@ -84,8 +84,7 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -411,7 +410,6 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
   }
   .menu-header-container #menu-header .menu-item a {
-    transition: 0.4s;
     color: rgb(255, 255, 255);
     text-decoration: none;
     text-align: center;
@@ -588,7 +586,6 @@ body::-webkit-scrollbar-thumb {
 
 @media only screen and (min-width: 780px) {
   #home_icon {
-    transition: 0.2s;
     display: block;
     position: absolute;
     top: 5px;
@@ -596,9 +593,6 @@ body::-webkit-scrollbar-thumb {
     width: 50px;
     height: 50px;
     background-image: url(images/home.png);
-  }
-  #home_icon:hover {
-    transform: scale(1.1);
   }
 }
 /*---------
@@ -634,7 +628,7 @@ Templates
   margin: auto;
   text-align: center;
   color: #FF52A4;
-  font-size: clamp(18px, 4vw, 50px);
+  font-size: clamp(16px, 3.5vw, 30px);
   background-color: rgb(14, 14, 14);
   width: clamp(200px, 13vw, 400px);
   border-radius: 20px;
@@ -688,8 +682,7 @@ Templates
   height: 100%;
 }
 .main_about div figure img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(150px, 30vw, 200px);
@@ -716,7 +709,7 @@ Templates
 .main_about .container_text p {
   position: relative;
   margin-top: clamp(30px, 15vw, 150px);
-  font-size: clamp(16px, 1.2vw, 35px);
+  font-size: clamp(18px, 1.1vw, 35px);
   text-align: center;
   display: none;
   margin-left: auto;
@@ -743,11 +736,11 @@ Templates
     display: none;
   }
   .main_about .titreType2 {
-    transform: translateY(clamp(38px, 3vw, 55px));
+    transform: translateY(clamp(38px, 3vw, 45px));
     margin: auto;
     text-align: center;
     color: #FF52A4;
-    font-size: clamp(18px, 3vw, 38px);
+    font-size: clamp(16px, 5vw, 30px);
     background-color: rgb(14, 14, 14);
     width: clamp(200px, 13vw, 400px);
     border-radius: 20px;
@@ -767,8 +760,7 @@ Templates
     border-radius: 20px 0px 0px 20px;
   }
   .main_about div .wp-block-image img {
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     border-radius: 20px;
     margin: 0px;
     width: 50vw;
@@ -795,7 +787,6 @@ Templates
     text-align: left;
     padding-left: 6%;
     display: flex;
-    line-height: clamp(16px, 1.5vw, 40px);
   }
   .main_about .container_text h3 {
     margin: 0px 0px;
@@ -851,8 +842,7 @@ Templates
   height: 100%;
 }
 .main_projects .group div .container figure img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(130px, 30vw, 200px);
@@ -997,8 +987,7 @@ Templates
   transform: translateY(-20px);
 }
 .container_prof div figure img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 75vw;
   height: 100vw;
   border-radius: 40px;
@@ -1009,7 +998,6 @@ Templates
   width: 100vw;
   background-color: rgb(14, 14, 14);
   padding-bottom: clamp(10px, 5vw, 30px);
-  overflow-y: auto;
 }
 .container_prof .container_text h3 {
   font-size: clamp(18px, 1.8vw, 60px);
@@ -1098,18 +1086,7 @@ body {
   position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.13);
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-}
-.main-cours .boite_modale p::-webkit-scrollbar {
-  width: 5px;
-}
-.main-cours .boite_modale p::-webkit-scrollbar-track {
-  background: rgb(14, 14, 14);
-}
-.main-cours .boite_modale p::-webkit-scrollbar-thumb {
-  background-color: #FF52A4;
-  border-radius: 10px;
+  backdrop-filter: blur(4px);
 }
 .main-cours .boite_modale {
   z-index: 20;
@@ -1144,19 +1121,18 @@ body {
 .main-cours .boite_modale div div figure img {
   width: 100%;
   height: 25vh;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px;
 }
 .main-cours .boite_modale div p {
   overflow-y: auto;
   text-align: center;
-  padding: 20px;
+  padding: 5px;
   border-radius: 10px;
   margin: 0px auto 5px auto;
-  width: 80%;
+  width: 90%;
   background-color: rgb(14, 14, 14);
-  height: 35%;
+  height: 40%;
   font-size: clamp(14px, 1.1vw, 27px);
 }
 .main-cours .button {
@@ -1187,15 +1163,13 @@ body {
 .main-cours .session div figure img {
   width: clamp(200px, 50vw, 6000px);
   width: clamp(200px, 50vw, 6000px);
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 20px;
 }
 .main-cours .session div figure figcaption {
   text-align: center;
   width: clamp(200px, 50vw, 6000px);
   background-color: rgba(0, 0, 0, 0.9);
-  padding-bottom: 10px;
   transform: translateY(-25px);
 }
 .main-cours .session div .text {
@@ -1225,7 +1199,7 @@ body {
   background-color: rgb(36, 36, 36);
   border-radius: 10px;
   border: 2px solid #FF52A4;
-  width: clamp(90px, 6vw, 130px);
+  width: clamp(100px, 5vw, 150px);
   padding: 3px;
 }
 .main-cours .filter .selection {
@@ -1285,15 +1259,13 @@ body {
   .main-cours .boite_modale .text div div figure img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .main-cours .boite_modale .text p {
-    width: 43%;
-    height: 85%;
+    width: 45%;
+    height: 88%;
     margin: 20px auto 0px auto;
     text-align: left;
-    line-height: clamp(16px, 3.5vh, 35px);
   }
   .main-cours .wp-block-group__inner-container {
     border-radius: 10px;
@@ -1320,13 +1292,13 @@ body {
   .main-cours .session div .Cours div figure img {
     width: clamp(200px, 20vw, 6000px);
     height: clamp(200px, 20vw, 6000px);
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .main-cours .session div .Cours div figure figcaption {
     text-align: center;
     width: 100%;
-    transform: translateY(calc(clamp(55px, 3.5vw, 80px) * -1));
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(calc(clamp(50px, 3.4vw, 75px) * -1));
     font-size: clamp(20px, 1.4vw, 30px);
   }
   .main-cours .text {
@@ -1363,14 +1335,10 @@ body {
 }
 .main-accueil .wp-block-site-logo a img {
   opacity: 0%;
-  -webkit-animation-name: aniStatic;
-          animation-name: aniStatic;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: aniStatic;
+  animation-duration: 0.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
 }
 .main-accueil .description {
   position: relative;
@@ -1417,14 +1385,10 @@ body {
 }
 .main-accueil .wp-block-cover__inner-container .wp-block-image {
   position: absolute;
-  -webkit-animation-name: aniLogo;
-          animation-name: aniLogo;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: aniLogo;
+  animation-duration: 0.5s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
 }
 .main-accueil .wp-block-cover__inner-container .wp-block-image img {
   height: 100%;
@@ -1495,15 +1459,6 @@ body {
   }
 }
 /* Animation pour les logos */
-@-webkit-keyframes aniLogo {
-  from {
-    opacity: 100%;
-  }
-  to {
-    opacity: 0%;
-    display: none;
-  }
-}
 @keyframes aniLogo {
   from {
     opacity: 100%;
@@ -1511,14 +1466,6 @@ body {
   to {
     opacity: 0%;
     display: none;
-  }
-}
-@-webkit-keyframes aniStatic {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
   }
 }
 @keyframes aniStatic {
