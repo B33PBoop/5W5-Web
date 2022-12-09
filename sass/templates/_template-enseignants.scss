@@ -61,11 +61,14 @@
                 }
             }
         }
+        
         .container_text{
             text-align: center;
             width: 100vw;
             background-color: $Background_Container;
             padding-bottom: clamp(10px, 5vw, 30px);
+
+            overflow-y: auto;
 
             h3{
                 font-size: clamp(18px, 1.8vw, 60px);

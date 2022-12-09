@@ -84,7 +84,8 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 /**
@@ -181,9 +182,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -191,9 +192,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -202,9 +203,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -248,8 +249,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   padding: 0;
 }
@@ -257,8 +258,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -266,7 +267,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
 }
@@ -274,7 +275,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -329,7 +330,7 @@ body {
   position: relative;
   min-height: 100vh;
   background-image: url("images/bkg.png");
-  color: white;
+  color: rgb(255, 255, 255);
   overflow-x: hidden;
   font-family: "Ubuntu", sans-serif;
 }
@@ -343,11 +344,11 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #cecece;
+  background-color: rgb(206, 206, 206);
 }
 
 .header {
-  background-color: #2c212e00;
+  background-color: rgba(44, 33, 46, 0);
   min-height: 50px;
   display: flex;
   align-items: center;
@@ -368,14 +369,13 @@ body::-webkit-scrollbar-thumb {
     font-size: 1vw;
   }
 }
-
 .footer {
   position: relative;
   top: 250px;
   width: 100vw;
   height: 250px;
   font-size: clamp(18px, 1.3vw, 50px);
-  background-color: #0e0e0e;
+  background-color: rgb(14, 14, 14);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -412,7 +412,7 @@ body::-webkit-scrollbar-thumb {
   }
   .menu-header-container #menu-header .menu-item a {
     transition: 0.4s;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     text-align: center;
     font-size: clamp(18px, 1.3vw, 50px);
@@ -457,12 +457,10 @@ body::-webkit-scrollbar-thumb {
     font-size: clamp(18px, 1.3vw, 50px);
   }
 }
-
 .menu-footer-container {
   width: 100%;
   height: 45%;
 }
-
 .menu-footer-container #menu-footer {
   list-style: none;
   display: flex;
@@ -471,26 +469,22 @@ body::-webkit-scrollbar-thumb {
   margin: 0;
   padding: 0;
 }
-
 .menu-footer-container #menu-footer .menu-item {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-
 .menu-footer-container #menu-footer .menu-item a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   padding: 5px;
   font-size: clamp(16px, 1.5vw, 50px);
 }
-
 .menu-footer-container #menu-footer .menu-item a:hover {
   color: #b30e60;
   transition-duration: 0.4s;
 }
-
 @media screen and (min-width: 780px) {
   .menu-footer-container #menu-footer {
     list-style: none;
@@ -499,7 +493,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
   }
   .menu-footer-container #menu-footer a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 20px;
     font-size: clamp(16px, 1.5vw, 50px);
@@ -516,7 +510,6 @@ body::-webkit-scrollbar-thumb {
   height: 50px;
   background-color: transparent;
 }
-
 .menu-burger-container #burger_icon {
   width: 48px;
   height: 48px;
@@ -524,12 +517,10 @@ body::-webkit-scrollbar-thumb {
   transform: rotateZ(0deg);
   transition: transform 0.2s;
 }
-
 .menu-burger-container #burger_icon.ouvert {
   transform: rotateZ(90deg);
   transition: transform 0.2s;
 }
-
 .menu-burger-container #menu-burger {
   position: absolute;
   top: 48px;
@@ -547,12 +538,10 @@ body::-webkit-scrollbar-thumb {
   background-color: #2C212E;
   transition: 0.2s;
 }
-
 .menu-burger-container #menu-burger.ouvert {
   height: 250px;
   transition: 0.2s;
 }
-
 .menu-burger-container #menu-burger .menu-item {
   width: 40%;
   border: 2px solid #ff52a4;
@@ -563,22 +552,18 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: flex-start;
 }
-
 .menu-burger-container #menu-burger .menu-item a {
   width: 100%;
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
-
 .menu-burger-container #menu-burger .menu-item a:hover {
   color: #b30e60;
 }
-
 .menu-burger-container #menu-burger .menu-item a:active {
   color: #04467c;
 }
-
 @media only screen and (min-width: 780px) {
   .menu-burger-container {
     display: none;
@@ -588,11 +573,9 @@ body::-webkit-scrollbar-thumb {
 .footer .sidebar {
   margin-top: 40px;
 }
-
 .footer .sidebar .widget .wp-block-social-links {
   margin: 0;
 }
-
 .footer .sidebar .widget .wp-block-social-links .wp-social-link a {
   font-size: clamp(18px, 1.5vw, 50px);
 }
@@ -616,7 +599,6 @@ body::-webkit-scrollbar-thumb {
     transform: scale(1.1);
   }
 }
-
 /*---------
 Templates
 ---------*/
@@ -625,53 +607,45 @@ Templates
   flex-direction: column;
   gap: 0px;
 }
-
 .main_about .cover {
   margin: 0px;
   padding: 0px;
   width: 100%;
 }
-
 .main_about .cover div {
   background-color: transparent;
   display: flex;
   align-items: center;
 }
-
 .main_about .cover div div {
   height: 25%;
 }
-
 .main_about .cover div img {
   max-width: 100%;
   height: auto;
 }
-
 .main_about h3 {
   font-family: "Bebas Neue";
 }
-
 .main_about .titreType2 {
   transform: translateY(clamp(10px, 1.5vw, 15px));
   margin: auto;
   text-align: center;
   color: #FF52A4;
-  font-size: clamp(16px, 3.5vw, 30px);
-  background-color: #0e0e0e;
+  font-size: clamp(18px, 4vw, 50px);
+  background-color: rgb(14, 14, 14);
   width: clamp(200px, 13vw, 400px);
   border-radius: 20px;
   padding: 5px 8px;
 }
-
 .main_about .sommaire {
-  background-color: #0e0e0e;
+  background-color: rgb(14, 14, 14);
   width: 70%;
   padding: 2%;
   border-radius: 20px;
   margin: auto;
   font-size: clamp(18px, 1.3vw, 50px);
 }
-
 .main_about .wp-block-site-logo {
   display: flex;
   justify-content: center;
@@ -681,34 +655,29 @@ Templates
   height: 100%;
   background-color: transparent;
 }
-
 .main_about .wp-block-site-logo a {
   width: 100vw;
   display: flex;
   justify-content: center;
 }
-
 .main_about .wp-block-site-logo a .custom-logo {
   border-radius: 0;
 }
-
 .main_about h2 {
   position: relative;
   margin-bottom: 40px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
+  background-image: linear-gradient(45deg, rgb(111, 55, 146) 5%, rgb(53, 39, 62) 50%, rgb(32, 17, 41) 100%);
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
   font-size: clamp(18px, 2vw, 50px);
 }
-
 .main_about div {
   display: flex;
   flex-direction: column;
   height: clamp(150px, 30vw, 200px);
 }
-
 .main_about div figure {
   border: 1px solid white;
   display: flex;
@@ -716,18 +685,16 @@ Templates
   width: 100vw;
   height: 100%;
 }
-
 .main_about div figure img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(150px, 30vw, 200px);
 }
-
 .main_about div.container {
   padding-bottom: clamp(200px, 12vw, 250px);
 }
-
 .main_about .container_text {
   background-color: rgba(0, 0, 0, 0.274);
   position: absolute;
@@ -736,7 +703,6 @@ Templates
   flex-direction: column;
   text-align: center;
 }
-
 .main_about .container_text h3 {
   height: 25px;
   width: 100%;
@@ -745,7 +711,6 @@ Templates
   text-align: center;
   font-size: clamp(18px, 5vw, 60px);
 }
-
 .main_about .container_text p {
   position: relative;
   margin-top: clamp(30px, 15vw, 150px);
@@ -757,14 +722,12 @@ Templates
   width: 90%;
   padding: 0px 5%;
 }
-
 .main_about .container_text .bouton {
   cursor: pointer;
   width: 100vw;
   position: absolute;
   bottom: clamp(-170px, -26vw, -130px);
 }
-
 .main_about .container_text:nth-of-type(even) {
   padding-right: 0px;
 }
@@ -778,12 +741,12 @@ Templates
     display: none;
   }
   .main_about .titreType2 {
-    transform: translateY(clamp(38px, 3vw, 45px));
+    transform: translateY(clamp(38px, 3vw, 55px));
     margin: auto;
     text-align: center;
     color: #FF52A4;
-    font-size: clamp(16px, 5vw, 30px);
-    background-color: #0e0e0e;
+    font-size: clamp(18px, 3vw, 38px);
+    background-color: rgb(14, 14, 14);
     width: clamp(200px, 13vw, 400px);
     border-radius: 20px;
     padding: 5px 8px;
@@ -794,7 +757,7 @@ Templates
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: 30px;
-    background-color: #0e0e0e;
+    background-color: rgb(14, 14, 14);
     height: clamp(300px, 24vw, 500px);
     border-radius: 0px 20px 20px 0px;
   }
@@ -802,7 +765,8 @@ Templates
     border-radius: 20px 0px 0px 20px;
   }
   .main_about div .wp-block-image img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 20px;
     margin: 0px;
     width: 50vw;
@@ -829,7 +793,7 @@ Templates
     text-align: left;
     padding-left: 6%;
     display: flex;
-    line-height: 1.4rem;
+    line-height: clamp(16px, 1.5vw, 40px);
   }
   .main_about .container_text h3 {
     margin: 0px 0px;
@@ -849,40 +813,34 @@ Templates
     flex-direction: row;
   }
 }
-
 .main_projects {
   display: flex;
   flex-direction: column;
   gap: 0px;
 }
-
 .main_projects .wp-block-site-logo {
   display: flex;
   justify-content: center;
 }
-
 .main_projects h2 {
   position: relative;
   margin-bottom: 40px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
+  background-image: linear-gradient(45deg, rgb(111, 55, 146) 5%, rgb(53, 39, 62) 50%, rgb(32, 17, 41) 100%);
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
   font-size: clamp(18px, 1.3vw, 50px);
 }
-
 .main_projects .group div {
   display: flex;
   flex-direction: column;
 }
-
 .main_projects .group div .container {
   margin-top: 0px;
   height: clamp(130px, 30vw, 200px);
   padding-bottom: clamp(200px, 12vw, 250px);
 }
-
 .main_projects .group div .container figure {
   display: flex;
   align-items: center;
@@ -890,21 +848,19 @@ Templates
   width: 100vw;
   height: 100%;
 }
-
 .main_projects .group div .container figure img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0px;
   width: 100vw;
   height: clamp(130px, 30vw, 200px);
 }
-
 .main_projects .group div .container_text {
   position: absolute;
   height: clamp(130px, 30vw, 200px);
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.397);
 }
-
 .main_projects .group div .container_text h3 {
   text-align: center;
   width: 40%;
@@ -912,7 +868,6 @@ Templates
   padding-top: 80px;
   font-size: clamp(18px, 5vw, 60px);
 }
-
 .main_projects .group div .container_text p {
   display: none;
   position: relative;
@@ -923,12 +878,10 @@ Templates
   width: 90%;
   padding: 0px 5%;
 }
-
 .main_projects .group div .container_text p a {
   text-decoration: none;
   color: white;
 }
-
 .main_projects .group div .container_text .bouton {
   cursor: pointer;
   text-align: center;
@@ -942,7 +895,7 @@ Templates
   .main_projects .group {
     padding: 30px 0px;
     border-radius: 20px;
-    background-color: #0e0e0e;
+    background-color: rgb(14, 14, 14);
     margin: 0px auto;
     width: 90vw;
   }
@@ -996,35 +949,30 @@ Templates
     width: 25vw;
   }
 }
-
 .main_enseignants .wp-block-site-logo {
   display: flex;
   justify-content: center;
 }
-
 .main_enseignants .description {
   position: relative;
   margin: 40px 0px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
+  background-image: linear-gradient(45deg, rgb(111, 55, 146) 5%, rgb(53, 39, 62) 50%, rgb(32, 17, 41) 100%);
   padding: 0px;
   text-align: center;
   width: 100vw;
   margin-bottom: 80px;
 }
-
 .main_enseignants .description h2 {
   font-size: clamp(25px, 2vw, 50px);
 }
-
 .main_enseignants .description p {
   width: 90vw;
   margin: 0px auto;
   margin-bottom: 10px;
   font-size: clamp(18px, 1.3vw, 50px);
 }
-
 .main_enseignants h3 {
   font-family: "Bebas Neue";
   color: #FF52A4;
@@ -1035,39 +983,35 @@ Templates
   display: flex;
   gap: 0px;
   padding-bottom: 0px;
-  background-color: #0e0e0e;
+  background-color: rgb(14, 14, 14);
 }
-
 .container_prof div {
   width: 100vw;
 }
-
 .container_prof div figure {
   margin: 0px auto;
   width: 75vw;
   height: 100vw;
   transform: translateY(-20px);
 }
-
 .container_prof div figure img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 75vw;
   height: 100vw;
   border-radius: 40px;
-  border: 10px solid #0e0e0e;
+  border: 10px solid rgb(14, 14, 14);
 }
-
 .container_prof .container_text {
   text-align: center;
   width: 100vw;
-  background-color: #0e0e0e;
+  background-color: rgb(14, 14, 14);
   padding-bottom: clamp(10px, 5vw, 30px);
+  overflow-y: auto;
 }
-
 .container_prof .container_text h3 {
   font-size: clamp(18px, 1.8vw, 60px);
 }
-
 .container_prof .container_text p {
   width: 90%;
   margin: 0px auto;
@@ -1127,7 +1071,6 @@ Templates
     margin-left: 15px;
   }
 }
-
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -1137,82 +1080,72 @@ body {
   display: flex;
   justify-content: center;
 }
-
 .main-cours h2 {
   position: relative;
   margin-bottom: 40px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
+  background-image: linear-gradient(45deg, rgb(111, 55, 146) 5%, rgb(53, 39, 62) 50%, rgb(32, 17, 41) 100%);
   padding: clamp(15px, 2vh, 30px);
   text-align: center;
   font-size: clamp(18px, 1.3vw, 50px);
 }
-
 .main-cours .background_boite {
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.13);
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
-
 .main-cours .boite_modale p::-webkit-scrollbar {
   width: 5px;
 }
-
 .main-cours .boite_modale p::-webkit-scrollbar-track {
-  background: #0e0e0e;
+  background: rgb(14, 14, 14);
 }
-
 .main-cours .boite_modale p::-webkit-scrollbar-thumb {
   background-color: #FF52A4;
   border-radius: 10px;
 }
-
 .main-cours .boite_modale {
   z-index: 20;
   position: fixed;
   left: 15%;
   top: 150px;
-  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
+  background-image: linear-gradient(45deg, rgb(111, 55, 146) 5%, rgb(53, 39, 62) 50%, rgb(32, 17, 41) 100%);
   width: 70vw;
   height: 60vh;
   overflow-y: hidden;
   border-radius: 20px;
   border: 2px solid #FF52A4;
 }
-
 .main-cours .boite_modale div {
   display: flex;
   flex-direction: column;
 }
-
 .main-cours .boite_modale div div {
   width: 100%;
   height: 60%;
   margin: 0px auto;
 }
-
 .main-cours .boite_modale div div h3 {
   width: 100%;
   text-align: center;
 }
-
 .main-cours .boite_modale div div figure {
   margin: 0px auto;
   width: 90%;
   height: 25vh;
 }
-
 .main-cours .boite_modale div div figure img {
   width: 100%;
   height: 25vh;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
 }
-
 .main-cours .boite_modale div p {
   overflow-y: auto;
   text-align: center;
@@ -1220,48 +1153,42 @@ body {
   border-radius: 10px;
   margin: 0px auto 5px auto;
   width: 80%;
-  background-color: #0e0e0e;
+  background-color: rgb(14, 14, 14);
   height: 35%;
   font-size: clamp(14px, 1.1vw, 27px);
 }
-
 .main-cours .button {
   cursor: pointer;
   padding: 5px 5px 5px 10px;
   color: white;
   margin-left: 0px;
 }
-
 .main-cours .button:active {
-  background-color: #303030;
+  background-color: rgb(48, 48, 48);
 }
-
 .main-cours .session {
   margin-bottom: 20px;
 }
-
 .main-cours .session div {
   display: grid;
   grid-template-columns: 1fr;
-  background-color: #0e0e0e;
+  background-color: rgb(14, 14, 14);
   width: 90vw;
   margin: 10px auto;
 }
-
 .main-cours .session div figure {
   cursor: pointer;
   margin: 0px auto;
   width: clamp(200px, 50vw, 6000px);
   width: clamp(200px, 50vw, 6000px);
 }
-
 .main-cours .session div figure img {
   width: clamp(200px, 50vw, 6000px);
   width: clamp(200px, 50vw, 6000px);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
 }
-
 .main-cours .session div figure figcaption {
   text-align: center;
   width: clamp(200px, 50vw, 6000px);
@@ -1269,26 +1196,22 @@ body {
   padding-bottom: 10px;
   transform: translateY(-25px);
 }
-
 .main-cours .session div .text {
   display: none;
 }
-
 .main-cours .filter {
   width: 90vw;
   margin: 0px auto;
-  background-color: #0e0e0e;
+  background-color: rgb(14, 14, 14);
   padding: 10px 2px 18px 10px;
   font-size: clamp(16px, 1.1vw, 25px);
   border-radius: 10px;
   margin-top: 40px;
   height: 100px;
 }
-
 .main-cours .filter .target_filter {
   cursor: pointer;
 }
-
 .main-cours .filter .refresh {
   opacity: 100;
   pointer-events: fill;
@@ -1297,13 +1220,12 @@ body {
   top: calc(clamp(35px, 2.2vw, 110px) * -1);
   left: clamp(180px, 11vw, 300px);
   font-size: clamp(20px, 1.4vw, 30px);
-  background-color: #242424;
+  background-color: rgb(36, 36, 36);
   border-radius: 10px;
   border: 2px solid #FF52A4;
   width: clamp(90px, 6vw, 130px);
   padding: 3px;
 }
-
 .main-cours .filter .selection {
   display: flex;
   flex-wrap: wrap;
@@ -1316,13 +1238,11 @@ body {
   font-size: clamp(14px, 1.4vw, 30px);
   transform: translate(clamp(110px, 10vw, 400px), calc(clamp(70px, 5vw, 110px) * -1));
 }
-
 .main-cours .filter p {
   width: clamp(100px, 10vw, 300px);
   font-size: clamp(20px, 1.4vw, 30px);
   transform: translateY(5px);
 }
-
 .main-cours .filter span {
   transform: translateY(6px);
 }
@@ -1363,14 +1283,15 @@ body {
   .main-cours .boite_modale .text div div figure img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .main-cours .boite_modale .text p {
     width: 43%;
-    height: 80%;
+    height: 85%;
     margin: 20px auto 0px auto;
     text-align: left;
-    line-height: clamp(16px, 3.5vh, 50px);
+    line-height: clamp(16px, 3.5vh, 35px);
   }
   .main-cours .wp-block-group__inner-container {
     border-radius: 10px;
@@ -1397,7 +1318,8 @@ body {
   .main-cours .session div .Cours div figure img {
     width: clamp(200px, 20vw, 6000px);
     height: clamp(200px, 20vw, 6000px);
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .main-cours .session div .Cours div figure figcaption {
     text-align: center;
@@ -1409,7 +1331,6 @@ body {
     display: none;
   }
 }
-
 .main_404 {
   width: 100vw;
   height: 100vh;
@@ -1418,61 +1339,57 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .main_404 .home_link {
   background-color: #1c2f2f;
   border-radius: 15px;
   padding: 20px;
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .main-accueil {
   overflow-x: hidden;
   width: 100vw;
 }
-
 .main-accueil .leCarousel {
   margin-top: 10%;
 }
-
 .main-accueil .wp-block-site-logo {
   display: flex;
   justify-content: center;
   transform: translateX(-5px) translateY(-7px);
 }
-
 .main-accueil .wp-block-site-logo a img {
   opacity: 0%;
-  animation-name: aniStatic;
-  animation-duration: 0.5s;
-  animation-delay: 2.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: aniStatic;
+          animation-name: aniStatic;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
-
 .main-accueil .description {
   position: relative;
   margin: 40px 0px;
   border-top: 4px solid #FF52A4;
   border-bottom: 4px solid #FF52A4;
-  background-image: linear-gradient(45deg, #6f3792 5%, #35273e 50%, #201129 100%);
+  background-image: linear-gradient(45deg, rgb(111, 55, 146) 5%, rgb(53, 39, 62) 50%, rgb(32, 17, 41) 100%);
   padding: 0px;
   text-align: center;
   width: 100vw;
   margin-bottom: 80px;
 }
-
 .main-accueil .description div p {
   width: 90vw;
   margin: 0px auto;
   margin-bottom: 10px;
   font-size: clamp(18px, 1.3vw, 50px);
 }
-
 .main-accueil .description div p:first-of-type {
   padding-top: 20px;
 }
-
 .main-accueil .description div .savoir_plus {
   transition: 0.3s;
   background-color: #FF52A4;
@@ -1481,61 +1398,54 @@ body {
   padding: 5px 0px;
   transform: translateY(30px);
 }
-
 .main-accueil .description div .savoir_plus a {
   text-decoration: none;
   color: white;
 }
-
 .main-accueil .description div .savoir_plus:hover {
   transform: scale(1.05) translateY(30px);
 }
-
 .main-accueil .title {
   display: none;
 }
-
 .main-accueil .wp-block-cover__inner-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .main-accueil .wp-block-cover__inner-container .wp-block-image {
   position: absolute;
-  animation-name: aniLogo;
-  animation-duration: 0.5s;
-  animation-delay: 2.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: aniLogo;
+          animation-name: aniLogo;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
-
 .main-accueil .wp-block-cover__inner-container .wp-block-image img {
   height: 100%;
   width: 100%;
   max-width: 776px;
 }
-
 .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container {
   display: flex;
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0);
 }
-
 .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container figure.wp-block-image:not(#individual-image) {
   width: 100vw;
   height: clamp(300px, 80vw, 300px);
 }
-
 .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container .bouton_carousel {
   display: none;
 }
-
 .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container figcaption {
   height: clamp(50px, 3vw, 300px);
   font-size: clamp(20px, 1.5vw, 40px);
   background-color: rgba(0, 0, 0, 0.582);
 }
-
 .main-accueil .is-layout-flex.wp-block-gallery-2.wp-block-gallery.has-nested-images.columns-6.is-cropped.container figcaption a {
   text-decoration: none;
 }
@@ -1582,8 +1492,16 @@ body {
     right: 0px;
   }
 }
-
 /* Animation pour les logos */
+@-webkit-keyframes aniLogo {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+    display: none;
+  }
+}
 @keyframes aniLogo {
   from {
     opacity: 100%;
@@ -1593,8 +1511,7 @@ body {
     display: none;
   }
 }
-
-@keyframes aniStatic {
+@-webkit-keyframes aniStatic {
   from {
     opacity: 0%;
   }
@@ -1602,4 +1519,11 @@ body {
     opacity: 100%;
   }
 }
-/*# sourceMappingURL=style.css.map */
+@keyframes aniStatic {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
